@@ -1,0 +1,32 @@
+<? 
+require_once( "ppa/config.php" );
+ if( $_SESSION['username'] == "Intercable" || $_SESSION['username'] == "Dayscript" ){
+ ?>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="textos">
+  <tr>
+    <td><div align="center">
+        <form name="form1" method="post" action="laguia.php">
+		<input type="hidden" name="mes" value="<?=$_POST['mes']?>">
+		<input type="hidden" name="ano" value="<?=$_POST['ano']?>">
+          Puede especificar cambios de hora para cada uno de los canales:<br>
+          <table width="400" border="1" cellspacing="0" cellpadding="0" class="textos">
+			<?
+			for($i=0; $i<count($_POST['channels']); $i++){
+			  $channel = new Channel( $_POST['channels'][$i] );
+			  $name = strtoupper( $channel->getName() );
+				?><tr>
+				  <td><?=$name?></td>
+				  <td><input type="text" name="channels_time[<?=$_POST['channels'][$i]?>]" value="0" size="2" maxlength="2">
+				  	<input type="hidden" name="channels[]" value="<?=$_POST['channels'][$i]?>">
+				  </td>
+				</tr><?
+			}
+			?>
+          </table>
+          <br>
+          <input type="submit" name="Submit" value="Siguiente">
+        </form>
+      </div></td>
+  </tr>
+</table>
+<?}?>

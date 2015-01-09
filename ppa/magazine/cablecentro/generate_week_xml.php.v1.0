@@ -1,0 +1,122 @@
+<?
+$sql = "SELECT name FROM channel WHERE id=" . $_GET['id'];
+$row = db_fetch_array( db_query( $sql ) );
+
+function timeFormat( $time )
+{
+	$hour     = substr( $time, 0, 2);
+	$minute   = substr( $time, 3, 2);
+	$meridian = ( $hour / 12 ) >=1 ? "pm" : "am";
+
+	$hour       = $hour % 12;
+	$hour       = $hour == 0 ? "12" : $hour;
+	
+	return sprintf("%02d", $hour ) . ":" . sprintf("%02d", $minute ) . " " . $meridian;
+}
+
+header( "Content-type: text/xml" );
+header( "Content-Disposition: attachment; filename=\"" . $row['name'] . "_" . $_GET['date'] . ".xml\"" );
+require_once "ppa11/class/ProgramGrid.class.php";
+
+//$days = array("Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo" );
+$days = array("monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday" );
+class textFile
+{
+	var $hd;
+	var $filename;
+	function textFile( $name )
+	{
+		$this->filename = "/tmp/" . $name . rand(0,99999);
+//		$this->filename = $name;
+		$this->hd = fopen( $this->filename, "w+");
+	}
+	
+	function getFilename()
+	{
+		return $this->filename;
+	}
+	
+	function write($str)
+	{
+		fwrite($this->hd, $str );
+	}
+
+	function writeLn($str)
+	{
+		$this->write($str . "\n");
+	}
+	
+	function close()
+	{
+		fclose($this->hd);
+	}
+}
+
+$sql    = "SELECT title, wd, date, time, sum " .
+	"FROM ( " .
+	"SELECT concat( WEEKDAY( date ) , time, left(title,8 )) cat, WEEKDAY( date ) wd, title, date, time, count( * ) sum " .
+	"FROM `slot` " .
+	"WHERE channel =" . $_GET['id'] ." AND " .
+  "date BETWEEN '" . $_GET['date'] . "-01' AND '" . $_GET['date'] . "-31' " .
+	"GROUP BY 1 " .
+	"ORDER BY cat, date " .
+	")t " .
+	"ORDER BY wd, time, sum, date";
+
+$grid    = new textFile( "grid" );
+$special = new textFile( "special" );
+
+$result = db_query( $sql );
+$row = db_fetch_array( $result );
+$weekday = "";
+while( true )
+{
+	if( $row["wd"] != $weekday )
+	{
+		if($weekday != "" )
+		{
+			$grid->writeLn("</" . $days[$weekday] . ">");
+			$special->writeLn("</" . $days[$weekday] . ">");
+		}
+		$grid->writeLn("<" . $days[$row["wd"]] . ">");
+		$special->writeLn("<" . $days[$row["wd"]] . ">");
+		$weekday = $row["wd"];
+	}
+	if( $row["sum"] > 1 )
+	{
+		$grid->write(timeFormat($row["time"]) . "\t");
+		$grid->writeLn(htmlspecialchars( $row["title"] ) );
+		$row = db_fetch_array( $result );
+	}
+	else
+	{
+		do
+		{
+			$buffer_time = $row["time"];
+			$special->write(substr($row["date"],8) . "\t");
+			$special->write(timeFormat( $row["time"] ) . "\t");
+			$special->writeLn(htmlspecialchars( $row["title"] ));
+			$row = db_fetch_array( $result );
+		}while($buffer_time == $row["time"] );
+		$special->writeLn("");
+	}
+	if( !$row ) break;
+}
+$grid->writeLn("</" . $days[$weekday] . ">");
+$special->writeLn("</" . $days[$weekday] . ">");
+
+$grid->close();
+$special->close();
+
+echo '<?xml version="1.0" encoding="ISO-8859-1"?>';
+echo "<week_grid>";
+echo "<grid>";
+readfile( $grid->getFileName() );
+echo "</grid>";
+echo "<specials>";
+readfile( $special->getFileName() );
+echo "</specials>";
+echo "</week_grid>";
+unlink( $grid->getFileName() );
+unlink( $special->getFileName() );
+?>

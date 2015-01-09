@@ -1,0 +1,61 @@
+<?
+require_once( "ppa/config.php" );
+ if( $_SESSION['username'] == "Intercable" || $_SESSION['username'] == "Dayscript" ){
+?>
+<?
+  $ppa = new PPA(1);
+  $channels = $ppa->getChannels();
+
+?>
+<script language="JavaScript">
+function selectAll(){
+	for (var i=0; i<document.forms['form1'].elements.length; i++){
+                if (!document.forms['form1'].elements[i].checked){
+					document.forms['form1'].elements[i].checked = true;
+                }
+        }
+}
+function deselectAll(){
+	for (var i=0; i<document.forms['form1'].elements.length; i++){
+                if (document.forms['form1'].elements[i].checked){
+					document.forms['form1'].elements[i].checked = false;
+                }
+        }
+}
+</script>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="textos">
+  <tr>
+    <td><div align="center">
+        <form name="form1" method="post" action="laguia.php">
+		<input type="hidden" name="mes" value="<?=$_POST['mes']?>">
+		<input type="hidden" name="ano" value="<?=$_POST['ano']?>">
+          Escoja los canales:<br>
+          <table width="400" border="1" cellspacing="0" cellpadding="0" class="textos">
+            <tr>
+			<?
+                        $i = 0;
+			for($j = 0 ; $j < count( $channels ); $j++){
+			  $numslots = $channels[$j]->getNumSlotsInYearMonth( $_POST['ano'], $_POST['mes'] );
+			  if( $numslots > 0 ){
+			  ?>
+			  <td><input type="checkbox" checked name="channels[]" value="<?=$channels[$j]->getId()?>"><?=$channels[$j]->getName()?></td>
+			     <?
+			     $i++;
+			  if($i%3 == 0){
+                           ?></tr><tr><?
+	                   }
+			  }
+			  
+			}
+			?>
+            </tr>
+          </table>
+          <input type="button" name="Submit2" value="Seleccionar Todos" onClick="javascript:selectAll();">
+          <input type="button" name="Submit2" value="Deseleccionar Todos" onClick="javascript:deselectAll();">
+          <br>
+          <input type="submit" name="Submit" value="Siguiente">
+        </form>
+      </div></td>
+  </tr>
+</table>
+<?}?>

@@ -1,0 +1,280 @@
+.left{float:left}
+.right{float:right}
+#gridapp_container
+{
+	/*font-family: Tahoma, Arial Narrow, Tahoma, Arial;*/
+	font-size: 10px;
+}
+#synopsis_popup
+{
+/*font-family: Tahoma, Helvetica, Arial;*/
+font-size: 11px;
+font-style: normal;
+color: #000;
+width: 528px;
+padding: 0;margin:0;
+}
+#synopsis_popup .top
+{
+	background: transparent url(../images/synopsis_title.png) top left no-repeat;
+	height: 28px;
+}
+#synopsis_popup .top img
+{
+	margin: 10px 20px;
+	cursor: pointer;
+}
+#synopsis_popup .bottom
+{
+	background: transparent url(../images/synopsis_footer.png) bottom left no-repeat;
+	height: 60px;
+	clear:both;
+}
+#synopsis_popup .center
+{
+background-color: #fff;
+border-left: 2px solid #eee;
+border-right: 2px solid #eee;
+float:left;
+}
+#synopsis_popup div.title
+{
+	font-weight: bold;
+	font-size: 11pt;
+	color: #333;
+}
+#synopsis_popup div.subtitle
+{
+	color: #333;
+	border-bottom: 1px solid #333;
+}
+#synopsis_popup div.image
+{
+float:left;
+width:260px;height:260px;
+margin-top:5px;
+}
+#synopsis_popup div.image img
+{
+width:260px;height:260px;
+}
+#synopsis_popup div.synopsis
+{
+width:248px;
+float:left;
+padding:8px;
+display:inline;
+}
+#synopsis_popup div.synopsis h1
+{
+font-size:20px;
+}
+#synopsis_popup div.synopsis div.desc
+{
+float:left;
+padding:5px 0 5px 0;
+}
+#synopsis_popup div.synopsis div.attr
+{
+float:left;
+border-bottom:1px solid #EEF1F6;
+}
+
+#synopsis_popup div.synopsis div.attr h3
+{
+width:90px;
+float:left;
+padding:0;margin:0;
+font-size:11px;
+font-weight:bold;
+}
+
+#synopsis_popup div.synopsis div.attr div
+{
+width:150px;
+float:left;
+}
+
+.bluebackground
+{
+	background-color: #486892;
+}
+
+#ppa_gridapplication_container
+{
+	width: 749px;
+}
+#ppa_calendar_container
+{
+	width: 160px;
+	height: 260px;
+}
+#ppa_grid_container
+{
+	width: 631px;
+}
+td.children
+{
+background-color: #fff;
+}
+td.sports
+{
+background-color: #fff;
+}
+td.movie
+{
+	background-color: #fff;
+}
+.nav_button
+{
+	font-size: 10px;
+	font-weight: bold;
+	color: #fff;
+	position: relative;
+	background: #486892;
+	padding: 1px 1px;
+	border: 0px;
+	height:17px;
+	cursor: pointer;
+}
+.cat_table {
+	font-style: normal;
+	width: 100%;
+	background-color: #ccc;
+	border-spacing: 1px;
+}
+.cat_table td{
+border: 2px solid #fff;
+/*font-family: Tahoma, Arial Narrow, Tahoma, Arial;*/
+font-size: 10px;
+}
+.cat_table_title{
+	background: #fff url(../images/title_bg.jpg) top left repeat-x;
+	color: #333;
+	font-weight: bold;
+}
+.cat_table_title th
+{
+	vertical-align: top;
+	margin:0;padding:0;
+}
+.cat_table_title div.hour, .cat_table_title div.chn_title
+{
+	float: left;
+	margin: 5px 0 0 5px;
+	color:#666;
+}
+.cat_table_title img.goback
+{
+	display: inline;
+	float: left;
+	cursor: pointer;
+}
+.cat_table_title img.gonext
+{
+	display: inline;
+	float: right;
+	cursor: pointer;
+}
+td.cat_td_title_1, td.cat_td_title_2{
+	cursor: pointer;
+	color: #333;
+	height: 44px;
+	background: #fff url(../images/right_shadow.gif) top right repeat-y;
+	line-height:11px;
+	border:0;
+}
+.cat_td_line_1, .cat_td_line_2, .synopsis_body{
+	cursor: pointer;
+	background-color: #fff;
+	padding: 0 5px 0 5px;
+}
+.cat_td_line_1_over{
+	cursor: pointer;
+	background-color: #eee;
+		padding: 0 5px 0 5px;
+}
+div.program
+{
+	color: #444;
+	text-decoration: none;
+	font-weight:bold;
+}
+div.gender
+{
+	color: #666;
+}
+#gridapp_container div.city_title
+{
+background: #fff url(../images/city_title.jpg) top left no-repeat;
+height:25px;
+padding:5px 0 0 50px;
+margin-top:20px;
+}
+#gridapp_container div.city_title img
+{
+margin-right:10px;
+}
+#gridapp_container div.city_title div
+{
+margin-top:3px;
+}
+#gridapp_container div.city_title a, #gridapp_container div.city_title a:visited
+{
+font-weight:normal;
+color:#00f;
+}
+#gridapp_container div.ppa_chn_info
+{
+width:98px;
+height:45px;
+padding-left:5px;
+}
+#gridapp_container div.ppa_chn_name
+{
+float:left;
+color:#999;
+position:relative;
+top:5px;
+}
+#gridapp_container div.ppa_chn_name span
+{
+	color:#666;
+	font-weight:bold;
+}
+.cat_td_title_1 img, .cat_td_title_2 img
+{
+	width: 45px;
+	height: 45px;
+float:left;
+}
+.cat_td_title_1, .cat_td_title_2
+{
+	width: 45px;
+}
+.cat_td_title_1 div, .cat_td_title_2 div
+{
+	float: left;
+	width: 50px;
+	height: 25px;
+	margin: 0;
+	padding-left:3px;
+}
+.link, .link:hover, .link:visited
+{
+	color: #000;
+	text-decoration: none;
+}
+
+.background1{
+background-color: #486892;
+color: #FFFFFF;
+}
+.white_link
+{
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration:none;
+}
+

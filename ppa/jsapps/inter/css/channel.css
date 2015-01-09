@@ -1,0 +1,32 @@
+table#ppa_chn_listing
+{
+font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+font-size: 12px;
+width: 422px;
+height: 145px;
+border: 1px solid #999;
+}
+table#ppa_chn_listing h1
+{
+font-size: 16px;
+border-bottom: 2px solid #666;
+font-weight: bold;
+}
+table#ppa_chn_listing th
+{
+color:red;
+text-align: left;
+}
+table#ppa_chn_listing .col1_0,table#ppa_chn_listing .col1_1
+{
+color:#000;
+font-weight: bold;
+}
+table#ppa_chn_listing .col2_0,table#ppa_chn_listing .col2_1
+{
+color:#666;
+}
+table#ppa_chn_listing .col1_1,table#ppa_chn_listing .col2_1
+{
+background-color: #eee;
+}

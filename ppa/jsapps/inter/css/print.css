@@ -1,0 +1,63 @@
+#gridapp_container
+{
+	font-family: Tahoma, Arial Narrow, Tahoma, Arial;
+	font-size: 10px;
+}
+#gridapp_container div.print_container img
+{
+float:right;
+}
+#gridapp_container div.print_container h1.date
+{
+background:#999;
+color:#fff;
+width:220px;
+text-align:center;
+font-size:14px;
+}
+#gridapp_container div.print_container h1.channel
+{
+background:#ddd;
+font-size:12px;
+width:220px;
+text-align:center;
+font-weight:bold;
+}
+#gridapp_container div.print
+{
+border-right: dashed 1px #000;
+width:240px;height:840px;
+float:left;
+margin:3px;padding:3px;
+line-height:14px;
+display:inline;
+}
+#gridapp_container hr
+{
+clear:both;
+border:1px solid #fff;
+}
+#gridapp_container div.print h1,
+#gridapp_container div.print h2,
+#gridapp_container div.print h3
+{
+font-family: Tahoma, Arial Narrow, Tahoma, Arial;
+font-size: 10px;
+float:left;
+padding:0;margin:0;
+display:inline;
+}
+#gridapp_container div.print h1
+{
+font-weight: normal;
+width:50px;
+}
+#gridapp_container div.print h2
+{
+width:40px;
+}
+#gridapp_container div.print h3
+{
+font-weight: normal;
+width:150px;
+}
