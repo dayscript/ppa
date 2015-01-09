@@ -1,0 +1,10 @@
+DEVICE DIRECTORY FS-TYPE
+automount(pid2357) /net autofs
+devpts /dev/pts devpts
+/dev/sda1 /boot ext3
+/dev/sda3 / ext3
+/dev/sdb1 /var ext3
+none /proc/sys/fs/binfmt_misc binfmt_misc
+proc /proc proc
+sysfs /sys sysfs
+tmpfs /dev/shm tmpfs
