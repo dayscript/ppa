@@ -1,0 +1,5 @@
+!ScalaScript
+{
+    Optional Playback.MainScript = "Content:/main.sca";
+    Optional Playback.Timetable = "";
+}

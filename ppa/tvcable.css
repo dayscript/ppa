@@ -1,0 +1,39 @@
+.cat_table {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	border: 1px solid;
+	width: 100%;
+}
+.cat_table_title{
+	border: 1px solid;
+	background-color: 364a6d;
+	color: #FFFFFF;
+	text-align: center;
+	font-weight:bold;
+}
+.cat_td_title_1{
+	border: 1px solid;
+	background-color: 364a6d;
+	color: #FFFFFF;
+	text-align:center;
+	font-weight:bold;
+}
+.cat_td_title_2{
+	border: 1px solid;
+	background-color: 708fbf;
+	color: #FFFFFF;
+	text-align:center;
+	font-weight:bold;
+}
+.cat_td_line_1{
+	border: 1px solid;
+	border-color: BBBBBB;
+	background-color: d8dfeb;
+	color: #0;
+}
+.cat_td_line_2{
+	border: 1px solid;
+	border-color: BBBBBB;
+	background-color: ffffff;
+	color: #0;
+}
