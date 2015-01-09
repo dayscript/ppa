@@ -1,0 +1,49 @@
+<?
+require_once( "ppa/config.php" );
+if( $_SESSION['username'] == "Intercable" || $_SESSION['username'] == "Dayscript" ){
+  if( isset($_GET['eliminar_sinop']) ){
+    $sql4 = "delete from sinopsis where chapter=".$_GET['eliminar_sinop'];
+    db_query( $sql4 );
+  }
+  if( isset( $_POST['ano1'] )  ){
+    $ano1 = $_POST['ano1'];
+  }else{
+    if( isset( $_GET['ano1'] ) ){
+      $ano1 = $_GET['ano1'];
+    }
+  }
+  if( isset( $_POST['mes1'] )  ){
+    $mes1 = $_POST['mes1'];
+  }else{
+    if( isset( $_GET['mes1'] ) ){
+      $mes1 = $_GET['mes1'];
+    }
+  }
+  $temp =  trim( $mes1 );
+  if( $mes1 < 10 && $temp[0] != '0' ){
+    $mes1 = "0".$mes1;
+  }
+  $sinop_array = array();
+  $sql2 = "SELECT s.chapter FROM sinopsis s, chapter c where year = '".$ano1."' and month = '".$mes1."' and s.chapter = c.id order by c.title";
+  $res2 = db_query( $sql2 );
+  while( $data2 = db_fetch_array( $res2 ) ){
+    $chapter = new Chapter( $data2['chapter'] );
+    $sinop_array[$chapter->getId()] = $chapter->getTitle();
+  }
+  $num_sinopsis = count( $sinop_array );
+  $sinop_keys = array_keys( $sinop_array );
+?>
+   <table width="50%" border="1" cellspacing="0" cellpadding="0" class="textos">
+			<?
+for( $i = 0; $i < count( $sinop_array ); $i++ ){                       
+?>
+ <tr>
+<td>
+   <a href='#' style="text-decoration:none" onClick='window.open("ppa/info_chapter.php?id=<?=$sinop_keys[$i]?>", null, "height=150,width=300,status=yes,toolbar=no,menubar=no,location=no,scrollbars=yes" )'><?=$sinop_array[$sinop_keys[$i]]?></a>
+ </td>
+  <td><a href="intermedio.php?eliminar_sinop=<?=$sinop_keys[$i]?>&ano1=<?=$ano1?>&mes1=<?=$mes1?>">Eliminar</a></td>
+</tr>
+<? } ?>
+   </table>
+Se han asignado <?=$num_sinopsis?> programas
+<?}?>

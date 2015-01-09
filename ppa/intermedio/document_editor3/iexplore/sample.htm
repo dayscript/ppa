@@ -1,0 +1,29 @@
+<HTML>
+<head>
+<title>Easy Web Editor (EWE)</title>
+<script language="JScript">
+   function onLoad(){
+    var ewe = new EWE(null, 'sample.css');
+    ewe.load(document.all.eweContainer,'');
+
+  }
+  function sampleSave(){
+    if (ViewCurrent == 2)
+      toggleView();
+    document.forms['sampleSave'].HTMLContent.value = cleanup(document.all.ewe.innerHTML);
+    alert('This function shows the basics of saving, but is left up to the implementor to customize');
+    //document.forms['sampleSave'].submit();
+  }
+  var editorPath = "";
+</script>
+<script language="JScript" src="source/ewe.js"></script>
+</head>
+
+<body bgcolor="#FFFFFF" onLoad="onLoad();" onKeyDown="dispatcher();">
+<div id="eweContainer" unselectable="on"></div>
+
+<form method="post" id="sampleSave">
+  <input type="hidden" name="HTMLContent">
+</form>
+</body>
+</html>

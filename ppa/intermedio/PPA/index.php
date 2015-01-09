@@ -1,0 +1,369 @@
+<?
+session_start();
+if(isset($_POST['search'])){
+	$search = $_POST['search'];
+	session_register('search');
+	$_SESSION['search'] = $search;
+}
+$DEBUG=false;
+require_once("include/config.inc.php");
+require_once("class/PPA.class.php");
+$ppa = new PPA(1);
+if(isset($_POST['send'])){
+	$m = new Movie($_POST['id'], $_POST['title'], $_POST['spanishTitle'], $_POST['englishTitle'],
+	               $_POST['gender'], $_POST['rated'], $_POST['tvRated'], $_POST['year'], $_POST['actors'], 
+				   $_POST['director'], $_POST['description'], $_POST['country'], $_POST['language'], $_POST['ppa']);
+	$c = new Chapter($_POST['chapterId'], $_POST['title'], $_POST['spanishTitle'], 1, $_POST['description2'], $_POST['duration'],
+	               ($_POST['stereo']==1?1:0), ($_POST['surround']==1?1:0),($_POST['sap']==1?1:0),($_POST['closeCaption']==1?1:0),
+				   ($_POST['animated']==1?1:0),($_POST['blackAndWhite']==1?1:0),($_POST['repetition']==1?1:0),($_POST['onLive']==1?1:0),
+				   ($_POST['nudity']==1?1:0),($_POST['ofensiveLanguage']==1?1:0),($_POST['violence']==1?1:0),($_POST['adultContent']==1?1:0),$_POST['points']);
+	$m->addChapter($c);
+	$m->commit();
+}else if(isset($_POST['dup'])){
+	$m = new Movie(false, $_POST['title'], $_POST['spanishTitle'], $_POST['englishTitle'],
+	               $_POST['gender'], $_POST['rated'], $_POST['tvRated'], $_POST['year'], $_POST['actors'], 
+				   $_POST['director'], $_POST['description'], $_POST['country'], $_POST['language'], $_POST['ppa']);
+	$c = new Chapter(false, $_POST['title'], $_POST['spanishTitle'], 1, $_POST['description2'], $_POST['duration'],
+	               ($_POST['stereo']==1?1:0), ($_POST['surround']==1?1:0),($_POST['sap']==1?1:0),($_POST['closeCaption']==1?1:0),
+				   ($_POST['animated']==1?1:0),($_POST['blackAndWhite']==1?1:0),($_POST['repetition']==1?1:0),($_POST['onLive']==1?1:0),
+				   ($_POST['nudity']==1?1:0),($_POST['ofensiveLanguage']==1?1:0),($_POST['violence']==1?1:0),($_POST['adultContent']==1?1:0),$_POST['points']);
+	$m->addChapter($c);
+	$m->commit();
+} else if (isset($_GET['delete']) && $_GET['delete']){
+	$m = new Movie($_GET['id']);
+	$m->erase();
+	unset($m);
+}
+?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>PPA</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #1111FF;
+	text-decoration: none;
+}
+body,table {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #444444;
+}
+input, select, textarea, {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #444444;
+	border: 1px solid #000000;
+	background-color: #DDEEFF;
+}
+.large {
+	width: 300;
+}
+-->
+</style>
+</head>
+
+<body>
+<table width="600" border="0" cellpadding="0" cellspacing="1">
+  <?
+if( (isset($_GET['add']) && $_GET['add']) || (isset($_GET['edit']) && $_GET['edit']) ){
+	if(isset($_GET['edit']) && $_GET['edit']){
+		$mv = new Movie($_GET['id']);
+		$cs = $mv->getChapters();
+		if(count($cs)>0)$ch = $cs[0];
+		else $ch = new Chapter();
+	} else {
+		$mv = new Movie();
+		$ch = new Chapter();
+	}
+	$title = $mv->getTitle();
+	$spanishTitle = $mv->getSpanishTitle();
+	$englishTitle = $mv->getEnglishTitle();
+	$gender = $mv->getGender();
+	$rated = $mv->getRated();
+	$tvRated = $mv->getTvRated();
+	$duration = $ch->getDuration();
+	$year = $mv->getYear();
+	$actors = $mv->getActors();
+	$director = $mv->getDirector();
+	$description = $mv->getDescription();
+	$description2 = $ch->getDescription();
+	$country = $mv->getCountry();
+	$language = $mv->getLanguage();
+	$stereo = $ch->getStereo();
+	$surround = $ch->getSurround();
+	$sap = $ch->getSap();
+	$closeCaption = $ch->getCloseCaption();
+	$animated = $ch->getAnimated();
+	$blackAndWhite = $ch->getBlackAndWhite();
+	$repetition = $ch->getRepetition();
+	$onLive = $ch->getOnLive();
+	$nudity = $ch->getNudity();
+	$violence = $ch->getViolence();
+	$ofensiveLanguage = $ch->getOfensiveLanguage();
+	$adultContent = $ch->getAdultContent();
+	$points = $ch->getPoints();
+	$chapterId = $ch->getId();
+	?>
+  <form name="f1" action="<?=$_SERVER['PHP_SELF']?>" method="post">
+    <tr> 
+      <td width="146"><div align="right"><strong>T&iacute;tulo Original</strong></div></td>
+      <td width="15">&nbsp;</td>
+      <td width="439"> <div align="left"> 
+          <input class="large" type="text" name="title" value="<?=$title?>">
+        </div></td>
+    </tr>
+    <tr> 
+      <td><div align="right"><strong>T&iacute;tulo en Espa&ntilde;ol</strong></div></td>
+      <td>&nbsp;</td>
+      <td> <div align="left"> 
+          <input class="large" type="text" name="spanishTitle" value="<?=$spanishTitle?>">
+        </div></td>
+    </tr>
+    <tr> 
+      <td><div align="right"><strong>T&iacute;tulo en Ingl&eacute;s</strong></div></td>
+      <td>&nbsp;</td>
+      <td> <div align="left"> 
+          <input class="large" type="text" name="englishTitle" value="<?=$englishTitle?>">
+        </div></td>
+    </tr>
+    <tr> 
+      <td><div align="right"><strong>G&eacute;nero</strong></div></td>
+      <td>&nbsp;</td>
+      <td> <div align="left"> 
+          <select name="gender" class="large">
+            <option <?=($gender=="Acción"?"selected":"")?> value="Acción">Acción</option>
+            <option <?=($gender=="Aventura"?"selected":"")?> value="Aventura">Aventura</option>
+            <option <?=($gender=="Animación"?"selected":"")?> value="Animación">Animación</option>
+            <option <?=($gender=="Comedia"?"selected":"")?> value="Comedia">Comedia</option>
+            <option <?=($gender=="Crimen"?"selected":"")?> value="Crimen">Crimen</option>
+            <option <?=($gender=="Documental"?"selected":"")?> value="Documental">Documental</option>
+            <option <?=($gender=="Drama"?"selected":"")?> value="Drama">Drama</option>
+            <option <?=($gender=="Familia"?"selected":"")?> value="Familia">Familia</option>
+            <option <?=($gender=="Fantasía"?"selected":"")?> value="Fantasía">Fantasía</option>
+            <option <?=($gender=="Horror"?"selected":"")?> value="Horror">Horror</option>
+            <option <?=($gender=="Musical"?"selected":"")?> value="Musical">Musical</option>
+            <option <?=($gender=="Misterio"?"selected":"")?> value="Misterio">Misterio</option>
+            <option <?=($gender=="Romance"?"selected":"")?> value="Romance">Romance</option>
+            <option <?=($gender=="Ciencia Ficción"?"selected":"")?> value="Ciencia Ficción">Ciencia 
+            Ficción</option>
+            <option <?=($gender=="Cortometraje"?"selected":"")?> value="Cortometraje">Cortometraje</option>
+            <option <?=($gender=="Suspenso"?"selected":"")?> value="Suspenso">Suspenso</option>
+            <option <?=($gender=="Guerra"?"selected":"")?> value="Guerra">Guerra</option>
+            <option <?=($gender=="Oeste"?"selected":"")?> value="Oeste">Oeste</option>
+          </select>
+        </div></td>
+    </tr>
+    <tr> 
+      <td><div align="right"><strong>Movie Rating <a href="ratings.php" target="_blank">Ayuda</a></strong></div></td>
+      <td>&nbsp;</td>
+      <td> <div align="left"> 
+          <select name="rated" class="large">
+            <option <?=($rated=="G"?"selected":"")?> value="G">G</option>
+            <option <?=($rated=="PG"?"selected":"")?> value="PG">PG</option>
+            <option <?=($rated=="PG-13"?"selected":"")?> value="PG-13">PG-13</option>
+            <option <?=($rated=="R"?"selected":"")?> value="R">R</option>
+            <option <?=($rated=="NC-17"?"selected":"")?> value="NC-17">NC-17</option>
+          </select>
+        </div></td>
+    </tr>
+    <tr> 
+      <td><div align="right"><strong>TV Rating <a href="ratings.php#tv" target="_blank">Ayuda</a></strong></div></td>
+      <td>&nbsp;</td>
+      <td> <div align="left"> 
+          <select name="tvRated" class="large">
+            <option <?=($tvRated=="TVY"?"selected":"")?> value="TVY">TVY</option>
+            <option <?=($tvRated=="TVY7"?"selected":"")?> value="TVY7">TVY7</option>
+            <option <?=($tvRated=="TVG"?"selected":"")?> value="TVG">TVG</option>
+            <option <?=($tvRated=="TVPG"?"selected":"")?> value="TVPG">TVPG</option>
+            <option <?=($tvRated=="TV14"?"selected":"")?> value="TV14">TV14</option>
+            <option <?=($tvRated=="TVMA"?"selected":"")?> value="TVMA">TVMA</option>
+          </select>
+        </div></td>
+    </tr>
+    <tr> 
+      <td><div align="right"><strong>Duraci&oacute;n (minutos)</strong></div></td>
+      <td>&nbsp;</td>
+      <td> <div align="left"> 
+          <input type="text" name="duration" value="<?=$duration?>" class="large">
+        </div></td>
+    </tr>
+    <tr> 
+      <td><div align="right"><strong>A&ntilde;o</strong></div></td>
+      <td>&nbsp;</td>
+      <td> <div align="left"> 
+          <input type="text" name="year" value="<?=$year?>" class="large">
+        </div></td>
+    </tr>
+    <tr> 
+      <td><div align="right"><strong>Actores</strong></div></td>
+      <td>&nbsp;</td>
+      <td> <div align="left"> 
+          <input type="text" name="actors" value="<?=$actors?>" class="large">
+        </div></td>
+    </tr>
+    <tr> 
+      <td><div align="right"><strong>Director</strong></div></td>
+      <td>&nbsp;</td>
+      <td> <div align="left"> 
+          <input type="text" name="director" value="<?=$director?>" class="large">
+        </div></td>
+    </tr>
+    <tr> 
+      <td><div align="right"><strong>Description Corta</strong></div></td>
+      <td>&nbsp;</td>
+      <td> <div align="left"> 
+          <textarea name="description" class="large" rows="3"><?=$description?></textarea>
+        </div></td>
+    </tr>
+    <tr> 
+      <td><div align="right"><strong>Description Larga</strong></div></td>
+      <td>&nbsp;</td>
+      <td> <div align="left"> 
+          <textarea name="description2" class="large" rows="4"><?=$description2?></textarea>
+        </div></td>
+    </tr>
+    <tr> 
+      <td><div align="right"><strong>Pa&iacute;s</strong></div></td>
+      <td>&nbsp;</td>
+      <td> <div align="left"> 
+          <input type="text" name="country" value="<?=$country?>" class="large">
+        </div></td>
+    </tr>
+    <tr> 
+      <td><div align="right"><strong>Idioma</strong></div></td>
+      <td>&nbsp;</td>
+      <td> <div align="left"> 
+          <select name="language" class="large">
+            <option <?=($language=="Español"?"selected":"")?> value="Español">Español</option>
+            <option <?=($language=="Inglés"?"selected":"")?> value="Inglés">Inglés</option>
+          </select>
+        </div></td>
+    </tr>
+    <tr> 
+      <td><div align="right"><strong>Calificaci&oacute;n</strong></div></td>
+      <td>&nbsp;</td>
+      <td><select name="points" class="large">
+          <option <?=($points=="1"?"selected":"")?> value="1">1</option>
+          <option <?=($points=="2"?"selected":"")?> value="2">2</option>
+          <option <?=($points=="3"?"selected":"")?> value="3">3</option>
+          <option <?=($points=="4"?"selected":"")?> value="4">4</option>
+          <option <?=($points=="5"?"selected":"")?> value="5">5</option>
+          <option <?=($points=="6"?"selected":"")?> value="6">6</option>
+          <option <?=($points=="7"?"selected":"")?> value="7">7</option>
+          <option <?=($points=="8"?"selected":"")?> value="8">8</option>
+          <option <?=($points=="9"?"selected":"")?> value="9">9</option>
+          <option <?=($points=="10"?"selected":"")?> value="10">10</option>
+        </select></td>
+    </tr>
+    <tr> 
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr> 
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <input type="hidden" name="ppa" value="<?=$ppa->getId()?>">
+    <input type="hidden" name="id" value="<?=($_GET['add']?"0":$_GET['id'])?>">
+    <input type="hidden" name="chapterId" value="<?=($chapterId?$chapterId:"0")?>">
+    <tr> 
+      <td align="center" colspan="3"> <table cellpadding="0" cellspacing="0" border="0" width="100%">
+          <tr> 
+            <td> <input type="checkbox" <?=($stereo=="1"?"checked":"")?> name="stereo" value="1">
+              Stereo<br> <input type="checkbox" <?=($surround=="1"?"checked":"")?> name="surround" value="1">
+              Surround<br> <input type="checkbox" <?=($sap=="1"?"checked":"")?> name="sap" value="1">
+              SAP <br> <input type="checkbox" <?=($closeCaption=="1"?"checked":"")?> name="closeCaption" value="1">
+              Closed Captioned </td>
+            <td> <input type="checkbox" <?=($animated=="1"?"checked":"")?> name="animated" value="1">
+              Animado<br> <input type="checkbox" <?=($blackAndWhite=="1"?"checked":"")?> name="blackAndWhite" value="1">
+              Blanco y Negro<br> <input type="checkbox" <?=($repetition=="1"?"checked":"")?> name="repetition" value="1">
+              Repetici&oacute;n <br> <input type="checkbox" <?=($onLive=="1"?"checked":"")?> name="onLive" value="1">
+              En Vivo</td>
+            <td> <input type="checkbox" <?=($nudity=="1"?"checked":"")?> name="nudity" value="1">
+              Desnudos<br> <input type="checkbox" <?=($ofensiveLanguage=="1"?"checked":"")?> name="ofensiveLanguage" value="1">
+              Lenguaje Ofensivo<br> <input type="checkbox" <?=($violence=="1"?"checked":"")?> name="violence" value="1">
+              Violencia<br> <input type="checkbox" <?=($adultContent=="1"?"checked":"")?> name="adultContent" value="1">
+              Contenido Adulto</td>
+          </tr>
+        </table></td>
+    </tr>
+    <tr> 
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr> 
+      <td height="39" colspan="3" align="center"><input type="submit" name="send" value="<?=($_GET['add']?"Crear":"Actualizar")?>" class="large">
+        <br>
+        <input type="submit" name="send2" value="Regresar" class="large" onClick="javascript:window.document.location.href=index.php">
+	  </td>
+    </tr>
+    <tr bgcolor="#CCCCCC"> 
+      <td height="39" colspan="3" align="center">
+	  <? if (!$_GET['add']){
+		  ?>Es posible duplicar los datos de esta Película, y guardarlos como un registro nuevo.
+		  <br><input type="submit" name="dup" value="Guardar como nuevo registro" class="large"><?
+		 }
+		 ?>
+	  </td>
+    </tr>
+	<tr><td colspan="3">
+	</td></tr>
+  </form>
+  <?
+}else{
+?>
+	<form name="f2" action="<?=$_SERVER['PHP_SELF']?>" method="post">
+		<input type="text" class="large" name="search" value="<?=(isset($_SESSION['search'])?$_SESSION['search']:"")?>">
+		<input type="submit" name="buscar" value="Buscar">
+	</form>
+	<?
+	if (isset($_SESSION['search'])){
+		$movies = $ppa->getMovies($_SESSION['search']);
+		for ($i=0; $i<count($movies); $i++){
+			?>
+		  <tr> 
+			<td bgcolor="#DDEEFF"> <strong> 
+			  <?=$movies[$i]->getTitle()?>
+			  </strong> </td>
+			<td bgcolor="#FFFFFF">&nbsp;</td>
+			<td align="center" bgcolor="#DDEEFF"><a href="<?=$_SERVER['PHP_SELF']?>?edit=1&id=<?=$movies[$i]->getId()?>">Editar</a> 
+			  <a href="<?=$_SERVER['PHP_SELF']?>?delete=1&id=<?=$movies[$i]->getId()?>">Borrar</a></td>
+		  </tr>
+	    <?
+		}
+		?>
+	  <tr> 
+		<td colspan="3" align="center" bgcolor="#FFFFCC"><a href="<?=$_SERVER['PHP_SELF']?>?add=1">Agregar 
+		  Película</a></td>
+	  </tr><?
+	}
+}
+?>
+</table>
+<form action="http://www.imdb.com/Find" method=post target="_blank">
+<table cellpadding="0" cellspacing="" border="0" width="600">
+<tr>
+      <td align="center" bgcolor="#000000"> <font color="#FFFFFF" size=2><br>
+        Escriba el nombre de una <strong>Película</strong> o <strong>Programa 
+        de Televisión</strong> y haga click en "IMDB" para obtener información 
+        desde <em>www.imdb.com</em></font><font size=2><br>
+        &nbsp;</font> 
+        <input type=hidden name=select value="All">
+		<input align="absmiddle" type=text name="for" class="large" value="<?=(isset($title)?$title:(isset($_SESSION['search'])?$_SESSION['search']:""))?>">&nbsp;
+		<input type="image" value="Ir" src="images/logoimdb.gif" align="middle" width="55" height="27">
+        <br>
+        <br>
+      </td>
+    </tr>
+</table>
+</form>
+</body>
+</html>

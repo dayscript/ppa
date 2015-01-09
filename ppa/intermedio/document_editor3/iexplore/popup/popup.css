@@ -1,0 +1,9 @@
+body,table{
+  font-family:Verdana;
+  font-size:10pt;
+}
+
+td.columnHeader{
+  color:#002569;
+  font-weight:500;
+}

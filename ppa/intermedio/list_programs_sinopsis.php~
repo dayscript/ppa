@@ -1,0 +1,68 @@
+<?
+require_once( "ppa/config.php" );
+if( $_SESSION['username'] == "Intercable" || $_SESSION['username'] == "Dayscript" ){
+  $channels = array();
+  $chapters = array();
+  $chapters_id = array();
+  for( $i = 0 ; $i < count( $_POST['channels1'] ); $i++ ){
+    $channel =  new Channel( $_POST['channels1'][$i] );
+    $channels[] = $channel;
+    $chapters[] = $channel->getChaptersInYearMonth( $_POST['ano1'], $_POST['mes1'] );
+  }
+  for( $i = 0; $i < count( $chapters ); $i++ ){
+    for( $j = 0; $j < count( $chapters[$i] ); $j++ ){
+      if( !in_array( $chapters[$i][$j]->getId(), $chapters_id ) ){
+	$chapters_id[] = $chapters[$i][$j]->getId();
+      }
+    }
+  }
+$sinop_array = array();
+$sql2 = "select chapter from sinopsis where month = '".$_POST['mes1']."' and year = '".$_POST['ano1']."'";
+$res2 = db_query( $sql2 );
+while( $data2 = db_fetch_array( $res2 ) ){
+  $sinop_array[] = $data2['chapter'];
+}
+
+?>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="textos">
+  <tr>
+    <td><div align="center">
+        <form name="form1" method="post" action="intermedio.php">
+		<input type="hidden" name="mes1" value="<?=$_POST['mes1']?>">
+		<input type="hidden" name="ano1" value="<?=$_POST['ano1']?>">
+          Puede seleccionar el programa el cual quiere adicionar al listado de sinposis:<br>
+			<?
+			for($i=0; $i<count($channels); $i++){
+			  ?>
+                             <br><br>
+				<strong><?=strtoupper($channels[$i]->getName())?></strong>
+          <table width="400" border="1" cellspacing="0" cellpadding="0" class="textos">
+                                <? for( $j = 0; $j < count( $chapters[$i] ); $j++ ){ 
+				    if( trim( $chapters[$i][$j]->getTitle() ) != "" ){
+                                  ?>
+                                 <tr>
+                                    <? if( in_array( $chapters[$i][$j]->getId(), $sinop_array ) ){?>   
+				  <td>
+                                    <a href='#' style="text-decoration:none" onClick='window.open("ppa/info_chapter.php?id=<?=$chapters[$i][$j]->getId()?>", null, "height=150,width=300,status=yes,toolbar=no,menubar=no,location=no,scrollbars=yes" )'><font color="#FF9900"><strong><?=$chapters[$i][$j]->getTitle()?></strong></font></a>
+                                    </td>
+                                   <td>&nbsp;</td>
+				    <?}else{?>
+				  <td>
+                                    <a href='#' style="text-decoration:none" onClick='window.open("ppa/info_chapter.php?id=<?=$chapters[$i][$j]->getId()?>", null, "height=150,width=300,status=yes,toolbar=no,menubar=no,location=no,scrollbars=yes" )'><?=$chapters[$i][$j]->getTitle()?></a>
+                                    </td>
+                                   <td><input type="checkbox" name="chapter_select[]" value="<?=$chapters[$i][$j]->getId()?>"></td>
+                                    <? } ?>
+				</tr>
+                                  <?}?>
+                               <? } ?>
+               </table>
+			<?
+			}
+			?>
+          <br>
+          <input type="submit" name="Submit" value="Asignar">
+        </form>
+      </div></td>
+  </tr>
+</table>
+<?}?>

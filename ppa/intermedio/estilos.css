@@ -1,0 +1,49 @@
+a, a:hover, a:visited {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-color: #999999;
+    border-collapse: collapse;
+    border-bottom: 1px solid #74AE0B;
+    border-width: 1px; 
+    border-style: none none none none;
+    text-transform: capitalize;
+    color: #336699;
+	text-decoration: none;
+}
+body,table {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #444444;
+}
+input, select, textarea, {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #444444;
+	border: 0px solid #000000;
+	background-color: #DDEEFF;
+}
+.large {
+	width: 300;
+}
+div.tabs a {
+    /* The normal, unselected tabs. They are all links */
+    background: transparent;
+    border-color: #999999;
+    border-width: 1px; 
+    border-style: none none none none;
+    color: #336699;
+    font-weight: bold;
+    font-size: 14px;
+    padding:4px 4px;
+    text-transform: capitalize;
+    margin:0px 3px;
+}
+
+div.tabs a.selected {
+    /* The selected tab. There's only one of this */
+    background: #E0AE9E;
+    border: 1px solid #999999;
+    border-bottom: #E0AE9E 1px solid;
+    color: #FFFFFF;
+    font-weight: bold;
+}

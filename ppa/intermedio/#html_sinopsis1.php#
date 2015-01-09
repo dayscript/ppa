@@ -1,0 +1,990 @@
+<?
+require_once( "ppa/config.php" );
+if( $_SESSION['username'] == "Intercable" || $_SESSION['username'] == "Dayscript" ){
+//Retorna un arreglo de los id de canal al cual pertenece el título de programa
+function channel_date_program( $id_chapter, $ano, $mes, $timediff ){
+  $chapter = new Chapter( $id_chapter );
+  $sub_str_arr = array();
+  $day_array = array( 'Dom', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa' );
+  $date = $ano."-".$mes;
+  $return_str = "";
+  $slots = $chapter->getSlotsfromYearMonth( $ano, $mes );
+  $return_str = "";
+
+  for( $i = 0; $i < count( $slots ); $i++ ){
+    $channel = new Channel($slots[$i]->getChannel());
+    $date = $slots[$i]->getDate();
+    $date .= " ".$slots[$i]->getTime();
+    $date = date( "Y-m-d H:i:s", strtotime( $date )+((60*60)+$timediff) );
+    $sub_str_arr[$channel->getName()][] = $date;
+  }
+
+  $keys = array_keys( $sub_str_arr );
+  for( $i = 0; $i < count( $sub_str_arr ); $i++ ){
+    $return_str .= "Por ".$keys[$i].'&nbsp;';
+    for( $j = 0; $j < count( $sub_str_arr[$keys[$i]] ); $j++ ){
+      $date = $sub_str_arr[$keys[$i]][$j];
+      $day = date( "w", strtotime( $date ) );
+      $day = $day_array[$day];
+      $day_month = date( 'j', strtotime( $date ) );
+      $hour = date( 'g:i a', strtotime( $date ) );
+      if( strstr( $hour, 'am' ) ){
+	$hour = str_replace( 'am', 'a.m.', $hour );
+      }else{
+	if( strstr( $hour, 'pm' ) ){
+	  $hour = str_replace( 'pm', 'p.m.', $hour );
+	}
+      }
+      $return_str .= $day.". ".$day_month." - ".$hour;
+      /*
+      if( $j+1 > count( $sub_str_arr[$keys[$i]] )-1 && $i+1 < count( $sub_str_arr )+1  ){
+	$return_str .= $day.". ".$day_month." - ".$hour." / ";
+      }else{
+	$return_str .= $day.". ".$day_month." - ".$hour;
+      }
+      */
+      /*
+      if( count( $sub_str_arr ) == 1 || $i+1 > count( $sub_str_arr )-1 ){
+	$return_str .= $day.". ".$day_month." - ".$hour;
+      }else{
+      $return_str .= $day.". ".$day_month." - ".$hour." / ";
+      }
+      */
+    }
+    if( $i+1 < count( $sub_str_arr ) ){
+      $return_str .= " / ";
+    }
+  }
+
+  return $return_str;
+}
+ $temp =  trim( $_POST['mes1'] );
+ if(  $_POST['mes1'] < 10 && $temp[0] != '0' ){
+    $_POST['mes1'] = "0". $_POST['mes1'];
+ }
+$sql = "SELECT s.title, s.chapter FROM sinopsis s, chapter c where intermedio=1 and year = '".$_POST['ano1']."' and month = '".$_POST['mes1']."' and s.chapter = c.id order by s.title";
+$query = db_query( $sql );
+while( $row = db_fetch_array( $query ) ){
+   $chapter = new Chapter( $row['chapter'] );
+//   $title = strtolower( trim( $chapter->getSpanishTitle() ) ); 
+   $title = strtolower( trim( $row['title'] ) ); 
+   if( $title == "" ){
+     $title = strtolower( trim( $chapter->getTitle() ) ); 
+   }
+   $arry_title[] = $title;
+   switch( $title ){
+      case ( $title[0] == 'a' ):{
+        $arry_a[] = $chapter;
+         break;
+      }
+      case ( $title[0] == 'b' ):{
+	$arry_b[] = $chapter;
+        break;
+      }
+      case ( $title[0] == 'c' ):{
+	$arry_c[] = $chapter;
+        break;
+      }
+      case ( $title[0] == 'd' ):{
+	$arry_d[] = $chapter;
+        break;
+      }
+      case ( $title[0] == 'e' ):{
+	$arry_e[] = $chapter;
+        break;
+      }
+      case ( $title[0] == 'f' ):{
+	$arry_f[] = $chapter;
+        break;
+      }
+      case ( $title[0] == 'g' ):{
+	$arry_g[] = $chapter;
+        break;
+      }
+      case ( $title[0] == 'h' ):{
+	$arry_h[] = $chapter;
+        break;
+      }
+      case ( $title[0] == 'i' ):{
+	$arry_i[] = $chapter;
+        break;
+      }
+      case ( $title[0] == 'j' ):{
+	$arry_j[] = $chapter;
+        break;
+      }
+      case ( $title[0] == 'k' ):{
+	$arry_k[] = $chapter;
+        break;
+      }
+      case ( $title[0] == 'l' ):{
+	$arry_l[] = $chapter;
+        break;
+      }
+      case ( $title[0] == 'm' ):{
+	$arry_m[] = $chapter;
+        break;
+      }
+      case ( $title[0] == 'n' ):{
+	$arry_n[] = $chapter;
+        break;
+      }
+      case ( $title[0] == 'o' ):{
+	$arry_o[] = $chapter;
+        break;
+      }
+      case ( $title[0] == 'p' ):{
+	$arry_p[] = $chapter;
+        break;
+      }
+      case ( $title[0] == 'q' ):{
+	$arry_q[] = $chapter;
+        break;
+      }
+      case ( $title[0] == 'r' ):{
+	$arry_r[] = $chapter;
+        break;
+      }
+      case ( $title[0] == 's' ):{
+	$arry_s[] = $chapter;
+        break;
+      }
+      case ( $title[0] == 't' ):{
+	$arry_t[] = $chapter;
+        break;
+      }
+      case ( $title[0] == 'u' ):{
+	$arry_u[] = $chapter;
+        break;
+      }
+      case ( $title[0] == 'v' ):{
+	$arry_v[] = $chapter;
+        break;
+      }
+      case ( $title[0] == 'w' ):{
+	$arry_w[] = $chapter;
+        break;
+      }
+      case ( $title[0] == 'x' ):{
+	$arry_x[] = $chapter;
+        break;
+      }
+      case ( $title[0] == 'y' ):{
+	$arry_y[] = $chapter;
+        break;
+      }
+      case ( $title[0] == 'z' ):{
+	$arry_z[] = $chapter;
+        break;
+      }
+      default:{
+	$arry_otro[] = $chapter;
+      } 	
+   }   
+}
+ $arry_chapters = array_merge( $arry_a,  $arry_b,  $arry_c,  $arry_d,  $arry_e,  $arry_f,  $arry_g,  $arry_h,  $arry_i,  $arry_j,  $arry_k,  $arry_l,  $arry_m,  $arry_n,  $arry_o,  $arry_p,  $arry_q,  $arry_r,  $arry_s , $arry_t,  $arry_u,  $arry_v,  $arry_w,  $arry_x,  $arry_y,  $arry_z,  $arry_otro);
+?>
+<table>
+<? for( $i2 = 0; $i2 < count( $arry_chapters ); $i2++ ){?>
+<?
+  //$chapter = new Chapter( $row['chapter'] );
+$chapter = $arry_chapters[$i2];
+//$title = strtolower( trim( $chapter->getSpanishTitle() ) ); 
+$title = $arry_title[$i2]; 
+/*
+ if( $title == "" ){
+   $title = strtolower( trim( $chapter->getTitle() ) ); 
+ }
+*/
+$row['title'] = $title;
+$type = $chapter->getType();
+eval("$"."id_obj = "."$"."chapter->get".$type."();");
+eval( "$"."obj = new ".$type."(".$id_obj.");" );
+$row['description'] = $chapter->getDescription();
+$row['gender'] = $obj->getGender();
+if( $type == "Movie" ){
+  $row['actor'] = $obj->getActors();
+  $row['director'] = $obj->getDirector();
+}else{
+ $row['actor'] = $obj->getStarring();
+ $row['director'] = "";
+}
+$row['description'] = trim( $row['description'] );
+if( $row['description'][strlen($row['description'])-1] != '.' ){
+  $row['description'] .= '.';
+}
+switch( $title ){
+ case ( $title[0] == 'a' ):{
+   if( !$entre_a ){
+     echo '<tr><td><b><font size="5" color="#FFCC00">- A -</font></b></td></tr>';
+     $entre_a = true;
+   }
+   if( !@in_array( $title, $inserted_titles) ){
+     $inserted_titles[] = $title;
+     echo "<tr><td><font class='titulo_sinop'>".ucwords( strtolower( $row['title'] ) )."</font></td></tr>";
+	 if( trim( $row['gender'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop' >".$row['gender']."</font></td></tr>";
+	 }
+	 if( trim( $row['actor'] ) != "" ){	 
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Con ".$row['actor']."</font></td></tr>";
+	 }
+	 if( trim( $row['director'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Dir. ".$row['director']."</font></td></tr>";
+	 }
+     echo "<tr><td>";
+	 if( trim( $row['description'] ) != "" ){
+       echo "<font class='description_sinop'>".str_replace( "<br>", " ", $row['description'] )."</font>";
+	 }
+     echo "<font class='horario_sinop'>".channel_date_program( $chapter->getId(), $_POST['ano1'], $_POST['mes1'], 1 )."</font>";
+     echo "</td></tr>";
+	 
+   }
+   break;
+ }
+ case ( $title[0] == 'b' ):{
+   if( !$entre_b ){
+     echo '<tr><td><b><font size="5" color="#FFCC00">- B -</font></b></td></tr>';
+     $entre_b = true;
+   }
+   if( !@in_array( $title, $inserted_titles) ){
+     $inserted_titles[] = $title;
+     echo "<tr><td><font class='titulo_sinop'>".ucwords( strtolower( $row['title'] ) )."</font></td></tr>";
+	 if( trim( $row['gender'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop' >".$row['gender']."</font></td></tr>";
+	 }
+	 if( trim( $row['actor'] ) != "" ){	 
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Con ".$row['actor']."</font></td></tr>";
+	 }
+	 if( trim( $row['director'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Dir. ".$row['director']."</font></td></tr>";
+	 }
+     echo "<tr><td>";
+	 if( trim( $row['description'] ) != "" ){
+       echo "<font class='description_sinop'>".str_replace( "<br>", " ", $row['description'] )."</font>";
+	 }
+     echo "<font class='horario_sinop'>".channel_date_program( $chapter->getId(), $_POST['ano1'], $_POST['mes1'], 1 )."</font>";
+     echo "</td></tr>";
+	 
+   }
+   break;
+ }
+ case ( $title[0] == 'c' ):{
+   if( !$entre_c ){
+     echo '<tr><td><b><font size="5" color="#FFCC00">- C -</font></b></td></tr>';
+     $entre_c = true;
+   }
+   if( !@in_array( $title, $inserted_titles) ){
+     $inserted_titles[] = $title;
+     echo "<tr><td><font class='titulo_sinop'>".ucwords( strtolower( $row['title'] ) )."</font></td></tr>";
+	 if( trim( $row['gender'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop' >".$row['gender']."</font></td></tr>";
+	 }
+	 if( trim( $row['actor'] ) != "" ){	 
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Con ".$row['actor']."</font></td></tr>";
+	 }
+	 if( trim( $row['director'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Dir. ".$row['director']."</font></td></tr>";
+	 }
+     echo "<tr><td>";
+	 if( trim( $row['description'] ) != "" ){
+       echo "<font class='description_sinop'>".str_replace( "<br>", " ", $row['description'] )."</font>";
+	 }
+     echo "<font class='horario_sinop'>".channel_date_program( $chapter->getId(), $_POST['ano1'], $_POST['mes1'], 1 )."</font>";
+     echo "</td></tr>";
+	 
+   }
+   break;
+ }
+ case ( $title[0] == 'd' ):{
+   if( !$entre_d ){
+     echo '<tr><td><b><font size="5" color="#FFCC00">- D -</font></b></td></tr>';
+     $entre_d = true;
+   }
+   if( !@in_array( $title, $inserted_titles) ){
+     $inserted_titles[] = $title;
+     echo "<tr><td><font class='titulo_sinop'>".ucwords( strtolower( $row['title'] ) )."</font></td></tr>";
+	 if( trim( $row['gender'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop' >".$row['gender']."</font></td></tr>";
+	 }
+	 if( trim( $row['actor'] ) != "" ){	 
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Con ".$row['actor']."</font></td></tr>";
+	 }
+	 if( trim( $row['director'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Dir. ".$row['director']."</font></td></tr>";
+	 }
+     echo "<tr><td>";
+	 if( trim( $row['description'] ) != "" ){
+       echo "<font class='description_sinop'>".str_replace( "<br>", " ", $row['description'] )."</font>";
+	 }
+     echo "<font class='horario_sinop'>".channel_date_program( $chapter->getId(), $_POST['ano1'], $_POST['mes1'], 1 )."</font>";
+     echo "</td></tr>";
+	 
+   }
+   break;
+ }
+ case ( $title[0] == 'e' ):{
+   echo "<table>";
+   if( !$entre_e ){
+     echo '<tr><td><b><font size="5" color="#FFCC00">- E -</font></b></td></tr>';
+     $entre_e = true;
+   }
+   if( !@in_array( $title, $inserted_titles) ){
+     $inserted_titles[] = $title;
+     echo "<tr><td><font class='titulo_sinop'>".ucwords( strtolower( $row['title'] ) )."</font></td></tr>";
+	 if( trim( $row['gender'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop' >".$row['gender']."</font></td></tr>";
+	 }
+	 if( trim( $row['actor'] ) != "" ){	 
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Con ".$row['actor']."</font></td></tr>";
+	 }
+	 if( trim( $row['director'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Dir. ".$row['director']."</font></td></tr>";
+	 }
+     echo "<tr><td>";
+	 if( trim( $row['description'] ) != "" ){
+       echo "<font class='description_sinop'>".str_replace( "<br>", " ", $row['description'] )."</font>";
+	 }
+     echo "<font class='horario_sinop'>".channel_date_program( $chapter->getId(), $_POST['ano1'], $_POST['mes1'], 1 )."</font>";
+     echo "</td></tr>";
+	 
+   }
+   echo "</table>";
+   break;
+ }
+ case ( $title[0] == 'f' ):{
+   if( !$entre_f ){
+     echo '<tr><td><b><font size="5" color="#FFCC00">- F -</font></b></td></tr>';
+     $entre_f = true;
+   }
+   if( !@in_array( $title, $inserted_titles) ){
+     $inserted_titles[] = $title;
+     echo "<tr><td><font class='titulo_sinop'>".ucwords( strtolower( $row['title'] ) )."</font></td></tr>";
+	 if( trim( $row['gender'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop' >".$row['gender']."</font></td></tr>";
+	 }
+	 if( trim( $row['actor'] ) != "" ){	 
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Con ".$row['actor']."</font></td></tr>";
+	 }
+	 if( trim( $row['director'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Dir. ".$row['director']."</font></td></tr>";
+	 }
+     echo "<tr><td>";
+	 if( trim( $row['description'] ) != "" ){
+       echo "<font class='description_sinop'>".str_replace( "<br>", " ", $row['description'] )."</font>";
+	 }
+     echo "<font class='horario_sinop'>".channel_date_program( $chapter->getId(), $_POST['ano1'], $_POST['mes1'], 1 )."</font>";
+     echo "</td></tr>";
+	 
+   }
+   break;
+ }
+ case ( $title[0] == 'g' ):{
+   if( !$entre_g ){
+     echo '<tr><td><b><font size="5" color="#FFCC00">- G -</font></b></td></tr>';
+     $entre_g = true;
+   }
+   if( !@in_array( $title, $inserted_titles) ){
+     $inserted_titles[] = $title;
+     echo "<tr><td><font class='titulo_sinop'>".ucwords( strtolower( $row['title'] ) )."</font></td></tr>";
+	 if( trim( $row['gender'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop' >".$row['gender']."</font></td></tr>";
+	 }
+	 if( trim( $row['actor'] ) != "" ){	 
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Con ".$row['actor']."</font></td></tr>";
+	 }
+	 if( trim( $row['director'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Dir. ".$row['director']."</font></td></tr>";
+	 }
+     echo "<tr><td>";
+	 if( trim( $row['description'] ) != "" ){
+       echo "<font class='description_sinop'>".str_replace( "<br>", " ", $row['description'] )."</font>";
+	 }
+     echo "<font class='horario_sinop'>".channel_date_program( $chapter->getId(), $_POST['ano1'], $_POST['mes1'], 1 )."</font>";
+     echo "</td></tr>";
+	 
+   }
+   
+   break;
+ }
+ case ( $title[0] == 'h' ):{
+   
+   if( !$entre_h ){
+     echo '<tr><td><b><font size="5" color="#FFCC00">- H -</font></b></td></tr>';
+     $entre_h = true;
+   }
+   if( !@in_array( $title, $inserted_titles) ){
+     $inserted_titles[] = $title;
+     echo "<tr><td><font class='titulo_sinop'>".ucwords( strtolower( $row['title'] ) )."</font></td></tr>";
+	 if( trim( $row['gender'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop' >".$row['gender']."</font></td></tr>";
+	 }
+	 if( trim( $row['actor'] ) != "" ){	 
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Con ".$row['actor']."</font></td></tr>";
+	 }
+	 if( trim( $row['director'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Dir. ".$row['director']."</font></td></tr>";
+	 }
+     echo "<tr><td>";
+	 if( trim( $row['description'] ) != "" ){
+       echo "<font class='description_sinop'>".str_replace( "<br>", " ", $row['description'] )."</font>";
+	 }
+     echo "<font class='horario_sinop'>".channel_date_program( $chapter->getId(), $_POST['ano1'], $_POST['mes1'], 1 )."</font>";
+     echo "</td></tr>";
+	 
+   }
+   
+   break;
+ }
+ case ( $title[0] == 'i' ):{
+   
+   if( !$entre_i ){
+     echo '<tr><td><b><font size="5" color="#FFCC00">- I -</font></b></td></tr>';
+     $entre_i = true;
+   }
+   if( !@in_array( $title, $inserted_titles) ){
+     $inserted_titles[] = $title;
+     echo "<tr><td><font class='titulo_sinop'>".ucwords( strtolower( $row['title'] ) )."</font></td></tr>";
+	 if( trim( $row['gender'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop' >".$row['gender']."</font></td></tr>";
+	 }
+	 if( trim( $row['actor'] ) != "" ){	 
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Con ".$row['actor']."</font></td></tr>";
+	 }
+	 if( trim( $row['director'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Dir. ".$row['director']."</font></td></tr>";
+	 }
+     echo "<tr><td>";
+	 if( trim( $row['description'] ) != "" ){
+       echo "<font class='description_sinop'>".str_replace( "<br>", " ", $row['description'] )."</font>";
+	 }
+     echo "<font class='horario_sinop'>".channel_date_program( $chapter->getId(), $_POST['ano1'], $_POST['mes1'], 1 )."</font>";
+     echo "</td></tr>";
+	 
+   }
+   
+   break;
+ }
+ case ( $title[0] == 'j' ):{
+   
+   if( !$entre_j ){
+     echo '<tr><td><b><font size="5" color="#FFCC00">- J -</font></b></td></tr>';
+     $entre_j = true;
+   }
+   if( !@in_array( $title, $inserted_titles) ){
+     $inserted_titles[] = $title;
+     echo "<tr><td><font class='titulo_sinop'>".ucwords( strtolower( $row['title'] ) )."</font></td></tr>";
+	 if( trim( $row['gender'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop' >".$row['gender']."</font></td></tr>";
+	 }
+	 if( trim( $row['actor'] ) != "" ){	 
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Con ".$row['actor']."</font></td></tr>";
+	 }
+	 if( trim( $row['director'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Dir. ".$row['director']."</font></td></tr>";
+	 }
+     echo "<tr><td>";
+	 if( trim( $row['description'] ) != "" ){
+       echo "<font class='description_sinop'>".str_replace( "<br>", " ", $row['description'] )."</font>";
+	 }
+     echo "<font class='horario_sinop'>".channel_date_program( $chapter->getId(), $_POST['ano1'], $_POST['mes1'], 1 )."</font>";
+     echo "</td></tr>";
+	 
+   }
+   
+   break;
+ }
+ case ( $title[0] == 'k' ):{
+   
+   if( !$entre_k ){
+     echo '<tr><td><b><font size="5" color="#FFCC00">- K -</font></b></td></tr>';
+     $entre_k = true;
+   }
+   if( !@in_array( $title, $inserted_titles) ){
+     $inserted_titles[] = $title;
+     echo "<tr><td><font class='titulo_sinop'>".ucwords( strtolower( $row['title'] ) )."</font></td></tr>";
+	 if( trim( $row['gender'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop' >".$row['gender']."</font></td></tr>";
+	 }
+	 if( trim( $row['actor'] ) != "" ){	 
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Con ".$row['actor']."</font></td></tr>";
+	 }
+	 if( trim( $row['director'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Dir. ".$row['director']."</font></td></tr>";
+	 }
+     echo "<tr><td>";
+	 if( trim( $row['description'] ) != "" ){
+       echo "<font class='description_sinop'>".str_replace( "<br>", " ", $row['description'] )."</font>";
+	 }
+     echo "<font class='horario_sinop'>".channel_date_program( $chapter->getId(), $_POST['ano1'], $_POST['mes1'], 1 )."</font>";
+     echo "</td></tr>";
+	 
+   }
+   
+   break;
+ }
+ case ( $title[0] == 'l' ):{
+   
+   if( !$entre_l ){
+     echo '<tr><td><b><font size="5" color="#FFCC00">- L -</font></b></td></tr>';
+     $entre_l = true;
+   }
+   if( !@in_array( $title, $inserted_titles) ){
+     $inserted_titles[] = $title;
+     echo "<tr><td><font class='titulo_sinop'>".ucwords( strtolower( $row['title'] ) )."</font></td></tr>";
+	 if( trim( $row['gender'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop' >".$row['gender']."</font></td></tr>";
+	 }
+	 if( trim( $row['actor'] ) != "" ){	 
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Con ".$row['actor']."</font></td></tr>";
+	 }
+	 if( trim( $row['director'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Dir. ".$row['director']."</font></td></tr>";
+	 }
+     echo "<tr><td>";
+	 if( trim( $row['description'] ) != "" ){
+       echo "<font class='description_sinop'>".str_replace( "<br>", " ", $row['description'] )."</font>";
+	 }
+     echo "<font class='horario_sinop'>".channel_date_program( $chapter->getId(), $_POST['ano1'], $_POST['mes1'], 1 )."</font>";
+     echo "</td></tr>";
+	 
+   }
+   
+   break;
+ }
+ case ( $title[0] == 'm' ):{
+   
+   if( !$entre_m ){
+     echo '<tr><td><b><font size="5" color="#FFCC00">- M -</font></b></td></tr>';
+     $entre_m = true;
+   }
+   if( !@in_array( $title, $inserted_titles) ){
+     $inserted_titles[] = $title;
+     echo "<tr><td><font class='titulo_sinop'>".ucwords( strtolower( $row['title'] ) )."</font></td></tr>";
+	 if( trim( $row['gender'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop' >".$row['gender']."</font></td></tr>";
+	 }
+	 if( trim( $row['actor'] ) != "" ){	 
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Con ".$row['actor']."</font></td></tr>";
+	 }
+	 if( trim( $row['director'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Dir. ".$row['director']."</font></td></tr>";
+	 }
+     echo "<tr><td>";
+	 if( trim( $row['description'] ) != "" ){
+       echo "<font class='description_sinop'>".str_replace( "<br>", " ", $row['description'] )."</font>";
+	 }
+     echo "<font class='horario_sinop'>".channel_date_program( $chapter->getId(), $_POST['ano1'], $_POST['mes1'], 1 )."</font>";
+     echo "</td></tr>";
+	 
+   }
+   
+   break;
+ }
+ case ( $title[0] == 'n' ):{
+   
+   if( !$entre_n ){
+     echo '<tr><td><b><font size="5" color="#FFCC00">- N -</font></b></td></tr>';
+     $entre_n = true;
+   }
+   if( !@in_array( $title, $inserted_titles) ){
+     $inserted_titles[] = $title;
+     echo "<tr><td><font class='titulo_sinop'>".ucwords( strtolower( $row['title'] ) )."</font></td></tr>";
+	 if( trim( $row['gender'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop' >".$row['gender']."</font></td></tr>";
+	 }
+	 if( trim( $row['actor'] ) != "" ){	 
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Con ".$row['actor']."</font></td></tr>";
+	 }
+	 if( trim( $row['director'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Dir. ".$row['director']."</font></td></tr>";
+	 }
+     echo "<tr><td>";
+	 if( trim( $row['description'] ) != "" ){
+       echo "<font class='description_sinop'>".str_replace( "<br>", " ", $row['description'] )."</font>";
+	 }
+     echo "<font class='horario_sinop'>".channel_date_program( $chapter->getId(), $_POST['ano1'], $_POST['mes1'], 1 )."</font>";
+     echo "</td></tr>";
+	 
+   }
+   
+   break;
+ }
+ case ( $title[0] == 'o' ):{
+   
+   if( !$entre_o ){
+     echo '<tr><td><b><font size="5" color="#FFCC00">- O -</font></b></td></tr>';
+     $entre_o = true;
+   }
+   if( !@in_array( $title, $inserted_titles) ){
+     $inserted_titles[] = $title;
+     echo "<tr><td><font class='titulo_sinop'>".ucwords( strtolower( $row['title'] ) )."</font></td></tr>";
+	 if( trim( $row['gender'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop' >".$row['gender']."</font></td></tr>";
+	 }
+	 if( trim( $row['actor'] ) != "" ){	 
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Con ".$row['actor']."</font></td></tr>";
+	 }
+	 if( trim( $row['director'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Dir. ".$row['director']."</font></td></tr>";
+	 }
+     echo "<tr><td>";
+	 if( trim( $row['description'] ) != "" ){
+       echo "<font class='description_sinop'>".str_replace( "<br>", " ", $row['description'] )."</font>";
+	 }
+     echo "<font class='horario_sinop'>".channel_date_program( $chapter->getId(), $_POST['ano1'], $_POST['mes1'], 1 )."</font>";
+     echo "</td></tr>";
+	 
+   }
+   
+   break;
+ }
+ case ( $title[0] == 'p' ):{
+   
+   if( !$entre_p ){
+     echo '<tr><td><b><font size="5" color="#FFCC00">- P -</font></b></td></tr>';
+     $entre_p = true;
+   }
+   if( !@in_array( $title, $inserted_titles) ){
+     $inserted_titles[] = $title;
+     echo "<tr><td><font class='titulo_sinop'>".ucwords( strtolower( $row['title'] ) )."</font></td></tr>";
+	 if( trim( $row['gender'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop' >".$row['gender']."</font></td></tr>";
+	 }
+	 if( trim( $row['actor'] ) != "" ){	 
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Con ".$row['actor']."</font></td></tr>";
+	 }
+	 if( trim( $row['director'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Dir. ".$row['director']."</font></td></tr>";
+	 }
+     echo "<tr><td>";
+	 if( trim( $row['description'] ) != "" ){
+       echo "<font class='description_sinop'>".str_replace( "<br>", " ", $row['description'] )."</font>";
+	 }
+     echo "<font class='horario_sinop'>".channel_date_program( $chapter->getId(), $_POST['ano1'], $_POST['mes1'], 1 )."</font>";
+     echo "</td></tr>";
+	 
+   }
+   
+   break;
+ }
+ case ( $title[0] == 'q' ):{
+   
+   if( !$entre_q ){
+     echo '<tr><td><b><font size="5" color="#FFCC00">- Q -</font></b></td></tr>';
+     $entre_q = true;
+   }
+   if( !@in_array( $title, $inserted_titles) ){
+     $inserted_titles[] = $title;
+     echo "<tr><td><font class='titulo_sinop'>".ucwords( strtolower( $row['title'] ) )."</font></td></tr>";
+	 if( trim( $row['gender'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop' >".$row['gender']."</font></td></tr>";
+	 }
+	 if( trim( $row['actor'] ) != "" ){	 
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Con ".$row['actor']."</font></td></tr>";
+	 }
+	 if( trim( $row['director'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Dir. ".$row['director']."</font></td></tr>";
+	 }
+     echo "<tr><td>";
+	 if( trim( $row['description'] ) != "" ){
+       echo "<font class='description_sinop'>".str_replace( "<br>", " ", $row['description'] )."</font>";
+	 }
+     echo "<font class='horario_sinop'>".channel_date_program( $chapter->getId(), $_POST['ano1'], $_POST['mes1'], 1 )."</font>";
+     echo "</td></tr>";
+	 
+   }
+   
+   break;
+ }
+ case ( $title[0] == 'r' ):{
+   
+   if( !$entre_r ){
+     echo '<tr><td><b><font size="5" color="#FFCC00">- R -</font></b></td></tr>';
+     $entre_r = true;
+   }
+   if( !@in_array( $title, $inserted_titles) ){
+     $inserted_titles[] = $title;
+     echo "<tr><td><font class='titulo_sinop'>".ucwords( strtolower( $row['title'] ) )."</font></td></tr>";
+	 if( trim( $row['gender'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop' >".$row['gender']."</font></td></tr>";
+	 }
+	 if( trim( $row['actor'] ) != "" ){	 
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Con ".$row['actor']."</font></td></tr>";
+	 }
+	 if( trim( $row['director'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Dir. ".$row['director']."</font></td></tr>";
+	 }
+     echo "<tr><td>";
+	 if( trim( $row['description'] ) != "" ){
+       echo "<font class='description_sinop'>".str_replace( "<br>", " ", $row['description'] )."</font>";
+	 }
+     echo "<font class='horario_sinop'>".channel_date_program( $chapter->getId(), $_POST['ano1'], $_POST['mes1'], 1 )."</font>";
+     echo "</td></tr>";
+	 
+   }
+   
+   break;
+ }
+ case ( $title[0] == 's' ):{
+   
+   if( !$entre_s ){
+     echo '<tr><td><b><font size="5" color="#FFCC00">- S -</font></b></td></tr>';
+     $entre_s = true;
+   }
+   if( !@in_array( $title, $inserted_titles) ){
+     $inserted_titles[] = $title;
+     echo "<tr><td><font class='titulo_sinop'>".ucwords( strtolower( $row['title'] ) )."</font></td></tr>";
+	 if( trim( $row['gender'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop' >".$row['gender']."</font></td></tr>";
+	 }
+	 if( trim( $row['actor'] ) != "" ){	 
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Con ".$row['actor']."</font></td></tr>";
+	 }
+	 if( trim( $row['director'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Dir. ".$row['director']."</font></td></tr>";
+	 }
+     echo "<tr><td>";
+	 if( trim( $row['description'] ) != "" ){
+       echo "<font class='description_sinop'>".str_replace( "<br>", " ", $row['description'] )."</font>";
+	 }
+     echo "<font class='horario_sinop'>".channel_date_program( $chapter->getId(), $_POST['ano1'], $_POST['mes1'], 1 )."</font>";
+     echo "</td></tr>";
+	 
+   }
+   
+   break;
+ }
+ case ( $title[0] == 't' ):{
+   
+   if( !$entre_t ){
+     echo '<tr><td><b><font size="5" color="#FFCC00">- T -</font></b></td></tr>';
+     $entre_t = true;
+   }
+   if( !@in_array( $title, $inserted_titles) ){
+     $inserted_titles[] = $title;
+     echo "<tr><td><font class='titulo_sinop'>".ucwords( strtolower( $row['title'] ) )."</font></td></tr>";
+	 if( trim( $row['gender'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop' >".$row['gender']."</font></td></tr>";
+	 }
+	 if( trim( $row['actor'] ) != "" ){	 
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Con ".$row['actor']."</font></td></tr>";
+	 }
+	 if( trim( $row['director'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Dir. ".$row['director']."</font></td></tr>";
+	 }
+     echo "<tr><td>";
+	 if( trim( $row['description'] ) != "" ){
+       echo "<font class='description_sinop'>".str_replace( "<br>", " ", $row['description'] )."</font>";
+	 }
+     echo "<font class='horario_sinop'>".channel_date_program( $chapter->getId(), $_POST['ano1'], $_POST['mes1'], 1 )."</font>";
+     echo "</td></tr>";
+	 
+   }
+   
+   break;
+ }
+ case ( $title[0] == 'u' ):{
+   
+   if( !$entre_u ){
+     echo '<tr><td><b><font size="5" color="#FFCC00">- U -</font></b></td></tr>';
+     $entre_u = true;
+   }
+   if( !@in_array( $title, $inserted_titles) ){
+     $inserted_titles[] = $title;
+     echo "<tr><td><font class='titulo_sinop'>".ucwords( strtolower( $row['title'] ) )."</font></td></tr>";
+	 if( trim( $row['gender'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop' >".$row['gender']."</font></td></tr>";
+	 }
+	 if( trim( $row['actor'] ) != "" ){	 
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Con ".$row['actor']."</font></td></tr>";
+	 }
+	 if( trim( $row['director'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Dir. ".$row['director']."</font></td></tr>";
+	 }
+     echo "<tr><td>";
+	 if( trim( $row['description'] ) != "" ){
+       echo "<font class='description_sinop'>".str_replace( "<br>", " ", $row['description'] )."</font>";
+	 }
+     echo "<font class='horario_sinop'>".channel_date_program( $chapter->getId(), $_POST['ano1'], $_POST['mes1'], 1 )."</font>";
+     echo "</td></tr>";
+	 
+   }
+   
+   break;
+ }
+ case ( $title[0] == 'v' ):{
+   
+   if( !$entre_v ){
+     echo '<tr><td><b><font size="5" color="#FFCC00">- V -</font></b></td></tr>';
+     $entre_v = true;
+   }
+   if( !@in_array( $title, $inserted_titles) ){
+     $inserted_titles[] = $title;
+     echo "<tr><td><font class='titulo_sinop'>".ucwords( strtolower( $row['title'] ) )."</font></td></tr>";
+	 if( trim( $row['gender'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop' >".$row['gender']."</font></td></tr>";
+	 }
+	 if( trim( $row['actor'] ) != "" ){	 
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Con ".$row['actor']."</font></td></tr>";
+	 }
+	 if( trim( $row['director'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Dir. ".$row['director']."</font></td></tr>";
+	 }
+     echo "<tr><td>";
+	 if( trim( $row['description'] ) != "" ){
+       echo "<font class='description_sinop'>".str_replace( "<br>", " ", $row['description'] )."</font>";
+	 }
+     echo "<font class='horario_sinop'>".channel_date_program( $chapter->getId(), $_POST['ano1'], $_POST['mes1'], 1 )."</font>";
+     echo "</td></tr>";
+	 
+   }
+   
+   break;
+ }
+ case ( $title[0] == 'w' ):{
+   
+   if( !$entre_w ){
+     echo '<tr><td><b><font size="5" color="#FFCC00">- W -</font></b></td></tr>';
+     $entre_w = true;
+   }
+   if( !@in_array( $title, $inserted_titles) ){
+     $inserted_titles[] = $title;
+     echo "<tr><td><font class='titulo_sinop'>".ucwords( strtolower( $row['title'] ) )."</font></td></tr>";
+	 if( trim( $row['gender'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop' >".$row['gender']."</font></td></tr>";
+	 }
+	 if( trim( $row['actor'] ) != "" ){	 
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Con ".$row['actor']."</font></td></tr>";
+	 }
+	 if( trim( $row['director'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Dir. ".$row['director']."</font></td></tr>";
+	 }
+     echo "<tr><td>";
+	 if( trim( $row['description'] ) != "" ){
+       echo "<font class='description_sinop'>".str_replace( "<br>", " ", $row['description'] )."</font>";
+	 }
+     echo "<font class='horario_sinop'>".channel_date_program( $chapter->getId(), $_POST['ano1'], $_POST['mes1'], 1 )."</font>";
+     echo "</td></tr>";
+	 
+   }
+   
+   break;
+ }
+ case ( $title[0] == 'x' ):{
+   
+   if( !$entre_x ){
+     echo '<tr><td><b><font size="5" color="#FFCC00">- X -</font></b></td></tr>';
+     $entre_x = true;
+   }
+   if( !@in_array( $title, $inserted_titles) ){
+     $inserted_titles[] = $title;
+     echo "<tr><td><font class='titulo_sinop'>".ucwords( strtolower( $row['title'] ) )."</font></td></tr>";
+	 if( trim( $row['gender'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop' >".$row['gender']."</font></td></tr>";
+	 }
+	 if( trim( $row['actor'] ) != "" ){	 
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Con ".$row['actor']."</font></td></tr>";
+	 }
+	 if( trim( $row['director'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Dir. ".$row['director']."</font></td></tr>";
+	 }
+     echo "<tr><td>";
+	 if( trim( $row['description'] ) != "" ){
+       echo "<font class='description_sinop'>".str_replace( "<br>", " ", $row['description'] )."</font>";
+	 }
+     echo "<font class='horario_sinop'>".channel_date_program( $chapter->getId(), $_POST['ano1'], $_POST['mes1'], 1 )."</font>";
+     echo "</td></tr>";
+	 
+   }
+   
+   break;
+ }
+ case ( $title[0] == 'y' ):{
+   
+   if( !$entre_y ){
+     echo '<tr><td><b><font size="5" color="#FFCC00">- Y -</font></b></td></tr>';
+     $entre_y = true;
+   }
+   if( !@in_array( $title, $inserted_titles) ){
+     $inserted_titles[] = $title;
+     echo "<tr><td><font class='titulo_sinop'>".ucwords( strtolower( $row['title'] ) )."</font></td></tr>";
+	 if( trim( $row['gender'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop' >".$row['gender']."</font></td></tr>";
+	 }
+	 if( trim( $row['actor'] ) != "" ){	 
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Con ".$row['actor']."</font></td></tr>";
+	 }
+	 if( trim( $row['director'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Dir. ".$row['director']."</font></td></tr>";
+	 }
+     echo "<tr><td>";
+	 if( trim( $row['description'] ) != "" ){
+       echo "<font class='description_sinop'>".str_replace( "<br>", " ", $row['description'] )."</font>";
+	 }
+     echo "<font class='horario_sinop'>".channel_date_program( $chapter->getId(), $_POST['ano1'], $_POST['mes1'], 1 )."</font>";
+     echo "</td></tr>";
+	 
+   }
+   
+   break;
+ }
+ case ( $title[0] == 'z' ):{
+   if( !$entre_z ){
+     echo '<tr><td><b><font size="5" color="#FFCC00">- Z -</font></b></td></tr>';
+     $entre_z = true;
+   }
+   if( !@in_array( $title, $inserted_titles) ){
+     $inserted_titles[] = $title;
+     echo "<tr><td><font class='titulo_sinop'>".ucwords( strtolower( $row['title'] ) )."</font></td></tr>";
+	 if( trim( $row['gender'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop' >".$row['gender']."</font></td></tr>";
+	 }
+	 if( trim( $row['actor'] ) != "" ){	 
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Con ".$row['actor']."</font></td></tr>";
+	 }
+	 if( trim( $row['director'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Dir. ".$row['director']."</font></td></tr>";
+	 }
+     echo "<tr><td>";
+	 if( trim( $row['description'] ) != "" ){
+       echo "<font class='description_sinop'>".str_replace( "<br>", " ", $row['description'] )."</font>";
+	 }
+     echo "<font class='horario_sinop'>".channel_date_program( $chapter->getId(), $_POST['ano1'], $_POST['mes1'], 1 )."</font>";
+     echo "</td></tr>";
+	 
+   }
+   
+   break;
+ }
+ default:{
+   if( !$entre_otro ){
+     echo '<tr><td><b><font size="5" color="#FFCC00">- # -</font></b></td></tr>';
+     $entre_otro = true;
+   }
+   if( !@in_array( $title, $inserted_titles) ){
+     $inserted_titles[] = $title;
+     echo "<tr><td><font class='titulo_sinop'>".ucwords( strtolower( $row['title'] ) )."</font></td></tr>";
+	 if( trim( $row['gender'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop' >".$row['gender']."</font></td></tr>";
+	 }
+	 if( trim( $row['actor'] ) != "" ){	 
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Con ".$row['actor']."</font></td></tr>";
+	 }
+	 if( trim( $row['director'] ) != "" ){
+       echo "<tr><td><font class='gender_actor_dir_sinop'> Dir. ".$row['director']."</font></td></tr>";
+	 }
+     echo "<tr><td>";
+	 if( trim( $row['description'] ) != "" ){
+       echo "<font class='description_sinop'>".str_replace( "<br>", " ", $row['description'] )."</font>";
+	 }
+     echo "<font class='horario_sinop'>".channel_date_program( $chapter->getId(), $_POST['ano1'], $_POST['mes1'], 1 )."</font>";
+     echo "</td></tr>";
+	 
+   }
+ }
+}
+?>
+<? }?>
+<?=count($inserted_titles)?>
+<? } ?>
+</table>

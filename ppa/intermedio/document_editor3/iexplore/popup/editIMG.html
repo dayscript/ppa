@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>Editar Propiedades de Imagen</title>
+<script language="JScript">
+var pimg;
+function loadIMG(img){
+  pimg = img;
+  var frm = document.frmProp;
+  frm.width.value = (pimg.style.width)?parseInt(pimg.style.width):pimg.width;
+  frm.height.value = (pimg.style.height)?parseInt(pimg.style.height):pimg.height;
+  frm.align.value = (pimg.style.align)?parseInt(pimg.style.align):pimg.align;
+  frm.border.value = img.border;
+}
+function editImage(){
+  var frm = document.frmProp;
+  pimg.height =  frm.height.value;
+  pimg.align =  frm.align.value;
+  pimg.width = frm.width.value;
+  pimg.border = frm.border.value;
+  pimg.style.removeAttribrute("height",0);
+  pimg.style.removeAttribute("width", 0)
+
+  parent.popupToggle(parent.document.all.editImage);
+  parent.document.all.ewe.focus();
+}
+</script>
+</head>
+<link REL="StyleSheet" TYPE="text/css" HREF="popup.css">
+<body style="background-color:#FFFFFF;overflow:hidden;" onClick="parent.popupClick(parent.document.all.table);" unselectable="on">
+  <form name="frmProp" onSubmit="return false;" unselectable="on">
+  <input type="hidden" name="filepath">
+  <table width="350" border="0" cellspacing="0" cellpadding="1" unselectable="on">
+    <tr unselectable="on">
+      <td class="columnHeader" style="font-weight: 600;" unselectable="on" colspan="3">Propiedades 
+        de la Imagen 
+        <hr size="1" noshad></td>
+    </tr>
+    <tr unselectable="on">
+      <td width="14" unselectable="on">&nbsp;</td>
+      <td width="141" class="columnHeader" unselectable="on">Ancho: </td>
+      <td width="189" unselectable="on"><input type="text" size="2" maxlength="4" name="width">px</td>
+    </tr>
+    <tr unselectable="on">
+      <td width="14" unselectable="on">&nbsp;</td>
+      <td width="141" class="columnHeader" unselectable="on">Alto: </td>
+      <td width="189" unselectable="on"><input type="text" size="2" maxlength="4" name="height">px</td>
+    </tr>
+    <tr unselectable="on">
+      <td width="14" unselectable="on">&nbsp;</td>
+      <td width="141" class="columnHeader" unselectable="on">Alineación: </td>
+      <td width="189" unselectable="on"><select name="align">
+	  	<option value="left">Izquierda</option>
+	  	<option value="center">Centro</option>
+	  	<option value="right">Derecha</option>
+	  </select>
+		</td>
+    </tr>
+    <tr unselectable="on">
+      <td width="14" unselectable="on">&nbsp;</td>
+      <td width="141" class="columnHeader" unselectable="on">Tama&ntilde;o del 
+        Borde : </td>
+      <td width="189" unselectable="on"><input type="text" size="2" maxlength="4" name="border" value="0"></td>
+    </tr>
+    <tr unselectable="on">
+      <td width="14" unselectable="on">&nbsp;</td>
+      <td width="141" class="columnHeader" unselectable="on">&nbsp;</td>
+      <td width="189" unselectable="on"><input type="button" value="Editar Imagen" onClick="editImage();"></td>
+    </tr>
+  </table>
+  </form>
+</body>
+</html>

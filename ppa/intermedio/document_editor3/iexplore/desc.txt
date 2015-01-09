@@ -1,0 +1,21 @@
+Version 0.61 description 12/Jan/2003 12:37
+-Draggin popups should now work in IE 5.5
+-can replace an image with another
+-popups should popup at a more reasonable place (including context menu)
+-added remove format button (as requested)
+-better handling of enter key and newlines (I hope)
+-cleanup called on toggle too!
+-context menu should dissapear nicely now
+
+  
+
+for translators:
+
+added image item:
+
+  <img id="removeformat">
+    <alt>Remove Formatting</alt>
+  </img>
+
+© Karl Seguin
+karl@openmymind.net

@@ -1,0 +1,350 @@
+BODY {
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 12px;
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+.required, .edit, .delete {
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 10px;
+	COLOR: #eeeeee;
+	FONT-FAMILY: Verdana, Helvetica, sans-serif;
+	BACKGROUND-COLOR: #888888
+}
+.deleted {
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 10px;
+	COLOR: #222222;
+	FONT-FAMILY: Verdana, Helvetica, sans-serif;
+	BACKGROUND-COLOR: #DDDDDD;
+	text-decoration: line-through
+}
+
+
+.inputimage{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #222222;
+	margin: 0px;
+	padding: 0px;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+.inputtext, input, textarea{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #222222;
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid #aaaaaa;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+	clear: none;
+	float: none;
+	BACKGROUND-COLOR: #EEEEEE
+}
+select{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #222222;
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid #aaaaaa;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+	width: 220px;
+	clear: none;
+	float: none;
+	BACKGROUND-COLOR: #EEEEEE	
+}
+.short{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #222222;
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid #aaaaaa;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+	width: 100px;
+	clear: none;
+	float: none;
+	BACKGROUND-COLOR: #EEEEEE	
+}
+.textos,a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #222222;
+	
+}
+.titulo {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+}
+.subtitulo {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+}
+.destacados {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: italic;
+	font-weight: bold;
+}
+.destacadossin {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: italic;
+	font-weight: normal;
+}
+.subyarado {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: underline;
+
+}
+.subrayadocolor {
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #0066FF;
+	text-decoration: underline;
+}
+.textoscolor {
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FF00FF;
+}
+.tituloprin {
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #006699;
+}
+.selected{
+	background : #DDEEDD;
+}
+.style4 {
+		  color:#FFFFFF;
+        font-size: 12px;
+        font-style: normal;
+        line-height: normal;
+        font-weight: bold;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;		  
+}
+
+.description {
+	color:#777777;
+    font-size: 9px;
+    font-style: normal;
+    line-height: normal;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+	border: 1px solid #CCC;
+}
+/*Estilos agregados por César L para módulo de reportes PPA*/
+
+.center_{
+	border-collapse: separate;
+	border-spacing: 3px;
+	margin-left: auto;
+	margin-right: auto;
+	table-layout: fixed;
+}
+.center_2{
+	border-collapse: separate;
+	border-spacing: 5px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.filters_{
+	border: 1px solid #888;
+	font-size: 11px;
+}
+.filters_ th{
+	background: #B4B4B4;
+}
+.filters_ td{
+	vertical-align: top;
+}
+.date_calendar{
+	border-style: solid;
+	border-width: thin;
+	width: 200;
+	cursor: pointer;
+	background: #333;
+}
+.reg_wraper{
+	display: table;
+	width: 100%;
+	border:1px solid #4c4c4c;
+	margin-bottom: 5px;
+}
+.reg_wraper img{
+	border:0;
+}
+.rep_expresion{
+	float:left;
+}
+.rep_enable,
+.rep_delete{
+	float: right;
+}
+.list_{
+	width: 100%;
+}
+.list_ td{
+	font-size: 10px;
+	color: #444;
+}
+.list_ th{
+	background: #3D3D3D;
+	color: #FFF;
+	font-size: 10px;
+}
+
+
+/* test_programming */
+.test_programming table{
+	font-size: 10px;
+	line-height: normal;
+	background-color: #FFF;
+} 
+.test_programming table table{
+	background-color: #EEE;
+}
+.test_programming h2{
+	margin: 0px;
+}
+.test_programming table tr{
+	background-color: #DDD;
+}
+.test_programming table tr:hover{
+	background-color: #CCC;
+}
+.test_programming table td,
+.test_programming table th{
+	padding: 3px;
+}
+.test_programming table.reporting td{
+	background-color: #EFEDEA;
+} 
+.test_programming .imgsHolder   {
+	height: 22px;
+	position: relative;
+}
+.test_programming .imgsHolder img   {
+	position: absolute;
+	border: solid 1px transparent;
+	margin: 1px;
+}
+.test_programming .imgsHolder img.active   {
+	border: solid 1px #F00;
+}
+.test_programming .imgsHolder img:hover   {
+	width: auto;
+	height: auto;
+}
+.test_programming .imgsHolder.loading{
+	background: #FFF url('../ppa11/images/loading6.gif') no-repeat right center;
+}
+
+
+
+.test_programming table tr.test_ok > td{
+	border:1px solid green;
+}
+.test_programming table tr.test_err > td{
+	border:1px solid #B1200A;
+}
+.test_programming table tr.test_correct > td{
+	border:1px solid #FE850C;
+}
+.test_programming table img{
+	cursor:pointer;
+	width: 18px;
+	/*height: 24px;*/
+}
+.test_programming table .content_icon{
+	text-align: left;
+}
+
+.test_programming table .comment_old{
+	font-size: 10px;
+}
+
+.test_programming #conventions img{
+	width: 16px;
+	height: 16px;
+}
+
+
+.test_programming table .item_test,
+.test_programming table .item_test_old{
+	font-weight: 500;
+	float:left; 
+	margin:2px 0px 2px 0px;
+}
+.test_programming table .item_test .check_title{
+	width:80px; 
+	float:left;
+}
+.test_programming table .item_test .check_title .err,
+.test_programming table .item_test_old .check_title .err{
+	color: #B1200A;
+}
+.test_programming table .item_test .check_title .ok,
+.test_programming table .item_test_old .check_title .ok{
+	color: green;
+}
+.test_programming table .item_test .check_title .correct,
+.test_programming table .item_test_old .check_title .correct{
+	color: #FE850C;
+}
+
+.test_programming table .item_test .check_date,
+.test_programming table .item_test_old .check_date{
+	width:180px; 
+	float:left;
+	color:green;
+}
+.test_programming table .item_test_old .check_date{
+	color: #B1200A;
+}
+
+.test_programming table .no_data{
+	color: #B1200A;
+}
+
+label.full  {
+	display: block;
+	cursor: pointer;
+	padding: 3px;
+}
+
+tr.rsinopsis    {
+	background-color: #EEE;
+}
+tr.rsinopsis td{
+	padding: 4px;
+}
+
+tr.rsinopsis td a,
+tr.rsinopsis td a:hover,
+tr.rsinopsis td a:visited   {
+	display: block;
+	text-decoration: none;
+}
+tr.rsinopsis td a:hover {
+	text-decoration: underline;
+}
