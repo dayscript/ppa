@@ -1,0 +1,21 @@
+<?
+/*
+require_once("config1.php");
+if( isset( $_GET['channel_id'] ) && isset( $_GET['date'] ) && isset( $_GET['time'] ) ){
+$sql = 'SELECT id, time, date FROM slot WHERE channel = '.$_GET['channel_id'].' AND date >=  "'.$_GET['date'].'" AND time >=  "'.$_GET['time'].'" ORDER  BY date, time';
+$query = db_query( $sql );
+while( $row = db_fetch_array( $query ) ){
+   $time = $row['time'];
+   $newtime = date( "H:i:s", strtotime( $row['date']." ".$row['time'] ) + $_GET['numhoras']*(60*60) );
+   $newdate = date( "Y-m-d", strtotime( $row['date']." ".$row['time'] ) + $_GET['numhoras']*(60*60) );
+
+	$sql1 = "update slot set time = '".$newtime."', date = '".$newdate."' where id = ".$row['id']." ";
+	db_query( $sql1 );
+}
+
+
+echo "<strong>Fin</strong>";
+	
+}
+*/
+?>

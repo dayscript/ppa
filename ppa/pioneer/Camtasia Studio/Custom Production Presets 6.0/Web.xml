@@ -1,0 +1,1544 @@
+<ConfigArchive>
+  <ProfileName>Web</ProfileName>
+  <ProfileDesc>Creates a high quality, low file size MP4 for playback on multiple browsers.</ProfileDesc>
+  <Version>1.0</Version>
+  <ProdPrevColumnDataSize>0</ProdPrevColumnDataSize>
+  <ProdPrevColumnOrderDataSize>0</ProdPrevColumnOrderDataSize>
+  <ProdPrevSortedColumn>0</ProdPrevSortedColumn>
+  <ProdPrevSortedColumnDir>1</ProdPrevSortedColumnDir>
+  <ProdPrevWinX>-1</ProdPrevWinX>
+  <ProdPrevWinY>-1</ProdPrevWinY>
+  <ProdPrevWinWidth>-1</ProdPrevWinWidth>
+  <ProdPrevWinHeight>-1</ProdPrevWinHeight>
+  <TempDir>C:\DOCUME~1\iparamo\CONFIG~1\Temp\</TempDir>
+  <StretchToFitEditor>1</StretchToFitEditor>
+  <CSHasBeenOpened>1</CSHasBeenOpened>
+  <AutoPlay>0</AutoPlay>
+  <CreateProductionFolder>1</CreateProductionFolder>
+  <CamtasiaPlayer>1</CamtasiaPlayer>
+  <ShowProductionResults>0</ShowProductionResults>
+  <CreateAutoRunFile>1</CreateAutoRunFile>
+  <ShowWelcomeDlg>1</ShowWelcomeDlg>
+  <LastRecChoice>0</LastRecChoice>
+  <AutoSaveEnable>1</AutoSaveEnable>
+  <AutoSaveDuration>10</AutoSaveDuration>
+  <ProjectSettingsMedia>0</ProjectSettingsMedia>
+  <SaveFrameAsExt>.png</SaveFrameAsExt>
+  <SaveAudioAsExt>.wav</SaveAudioAsExt>
+  <WritePIPFile>0</WritePIPFile>
+  <DiablePIPVideo>0</DiablePIPVideo>
+  <DontShowPIPPlacement>0</DontShowPIPPlacement>
+  <LastShownAsPiIP>1</LastShownAsPiIP>
+  <FlashTemplate>10</FlashTemplate>
+  <FlashSizePresetWidth>640</FlashSizePresetWidth>
+  <FlashSizePresetHeight>498</FlashSizePresetHeight>
+  <FlashSizeCustom>0</FlashSizeCustom>
+  <FlashSizeCustomWidth>400</FlashSizeCustomWidth>
+  <FlashSizeCustomHeight>318</FlashSizeCustomHeight>
+  <FlashSizeShowWidthHeight>0</FlashSizeShowWidthHeight>
+  <ImportedOldProfiles>1</ImportedOldProfiles>
+  <CopiedDefaultProfilesStr>6.0.0</CopiedDefaultProfilesStr>
+  <WelcomeDlgSelection>0</WelcomeDlgSelection>
+  <EnabledTips>16777215</EnabledTips>
+  <SaveRecordingMru></SaveRecordingMru>
+  <FileSaveAsMru></FileSaveAsMru>
+  <RecentRecordingsMru></RecentRecordingsMru>
+  <ProductionFolderMru>C:\Documents and Settings\iparamo\Escritorio\manuales_ESL*C:\Documents and Settings\iparamo\Escritorio\manuales_ESL\nueva*C:\Documents and Settings\iparamo\Escritorio\manuales_ESL\editar*C:\Documents and Settings\iparamo\Escritorio\manuales_ESL\Eliminar*C:\Documents and Settings\iparamo\Escritorio\manuales_ESL\agregar*C:\Documents and Settings\iparamo\Escritorio\manuales_ESL\eliminar*C:\Documents and Settings\iparamo\Mis documentos\Camtasia Studio*</ProductionFolderMru>
+  <PackAndShowVideoMru></PackAndShowVideoMru>
+  <MRUOpenProjectFolder></MRUOpenProjectFolder>
+  <MRUImportFolder></MRUImportFolder>
+  <MRUBatchAddFilesProjectsFolder></MRUBatchAddFilesProjectsFolder>
+  <ProdWinLeft>369</ProdWinLeft>
+  <ProdWinTop>157</ProdWinTop>
+  <ProdWinRight>1169</ProdWinRight>
+  <ProdWinBottom>737</ProdWinBottom>
+  <ProdWinShowCmd>3</ProdWinShowCmd>
+  <StatusBarShowing>1</StatusBarShowing>
+  <ToolBarShowing>1</ToolBarShowing>
+  <ProjHeight>337</ProjHeight>
+  <PlayLeft>507</PlayLeft>
+  <PlayTop>94</PlayTop>
+  <PlayRight>874</PlayRight>
+  <PlayBottom>461</PlayBottom>
+  <PlayDocked>1</PlayDocked>
+  <PlayWidth>806</PlayWidth>
+  <TaskShowing>1</TaskShowing>
+  <DefaultImageDuration>5000</DefaultImageDuration>
+  <DefaultCalloutDuration>5000</DefaultCalloutDuration>
+  <DefaultCalloutSelection>0</DefaultCalloutSelection>
+  <ShowZoomRects>0</ShowZoomRects>
+  <UserOverlayDirectory></UserOverlayDirectory>
+  <AutoDisableShrinkToFit>1</AutoDisableShrinkToFit>
+  <TransSpeedMilliseconds>3000</TransSpeedMilliseconds>
+  <SnapToBookmarks>1</SnapToBookmarks>
+  <SnapToClipEdges>1</SnapToClipEdges>
+  <SnapToAudio2>1</SnapToAudio2>
+  <SnapToAudio3>1</SnapToAudio3>
+  <SnapToCaptions>1</SnapToCaptions>
+  <AutoPromptForName>1</AutoPromptForName>
+  <HelpEditCount>0</HelpEditCount>
+  <HelpCalloutCount>0</HelpCalloutCount>
+  <HelpTitleCount>0</HelpTitleCount>
+  <HelpAssistMeCount>3</HelpAssistMeCount>
+  <HelpClickRecordCount>1</HelpClickRecordCount>
+  <HelpDragToTimelineCount>0</HelpDragToTimelineCount>
+  <HelpDragSelection>3</HelpDragSelection>
+  <HelpCaptionRedTextCount>0</HelpCaptionRedTextCount>
+  <HelpCaptionClickStartCount>0</HelpCaptionClickStartCount>
+  <CameraPlayLeft>152</CameraPlayLeft>
+  <CameraPlayTop>376</CameraPlayTop>
+  <CameraPlayRight>480</CameraPlayRight>
+  <CameraPlayBottom>624</CameraPlayBottom>
+  <CameraPlayDocked>0</CameraPlayDocked>
+  <CameraPlayWidth>200</CameraPlayWidth>
+  <CameraShowing>0</CameraShowing>
+  <CameraSize>2</CameraSize>
+  <DefaultTitleDuration>5000</DefaultTitleDuration>
+  <DefaultProdPreviewDuration>30000</DefaultProdPreviewDuration>
+  <DefaultQuestions><Start>0</Start>
+<UniqueID>0xFFFFFFFF</UniqueID>
+<ClipID>-1</ClipID>
+<Props>
+<FontIndex>0</FontIndex>
+<SubmitText>Submit</SubmitText>
+<NumberingScheme>0</NumberingScheme>
+<AttemptsAllowed>1</AttemptsAllowed>
+<CorrectResponse>
+<Action>0</Action>
+<JumpTime>0</JumpTime>
+<URL></URL>
+</CorrectResponse>
+<IncorrectResponse>
+<Action>0</Action>
+<JumpTime>0</JumpTime>
+<URL></URL>
+</IncorrectResponse>
+<ForegroundColor>0x00000000</ForegroundColor>
+<BackgroundColor>0x00FFFFFF</BackgroundColor>
+<StrCorrectResponse>Correct</StrCorrectResponse>
+<StrIncorrectResponse>Incorrect</StrIncorrectResponse>
+<StrSurveyResponse>Thank you</StrSurveyResponse>
+<Survey>0</Survey>
+<Scored>1</Scored>
+<ShowFeedback>1</ShowFeedback>
+</Props>
+<QuestionArray>
+<QuestionArray_Object>
+<QuestionVersion>2</QuestionVersion>
+<QuestionType>0</QuestionType>
+<Question>wtwe</Question>
+<Props>
+<FontIndex>0</FontIndex>
+<SubmitText>Submit</SubmitText>
+<NumberingScheme>0</NumberingScheme>
+<AttemptsAllowed>1</AttemptsAllowed>
+<CorrectResponse>
+<Action>0</Action>
+<JumpTime>0</JumpTime>
+<URL></URL>
+</CorrectResponse>
+<IncorrectResponse>
+<Action>0</Action>
+<JumpTime>0</JumpTime>
+<URL></URL>
+</IncorrectResponse>
+<ForegroundColor>0x00000000</ForegroundColor>
+<BackgroundColor>0x00FFFFFF</BackgroundColor>
+<StrCorrectResponse>Correct</StrCorrectResponse>
+<StrIncorrectResponse>Incorrect</StrIncorrectResponse>
+<StrSurveyResponse>Thank you</StrSurveyResponse>
+<Survey>0</Survey>
+<Scored>1</Scored>
+<ShowFeedback>1</ShowFeedback>
+</Props>
+<Answer_Array1>
+<Answer_Array1_Object>
+<Answer>ewrw</Answer>
+<Response>$$USE_DEFAULT$$</Response>
+<DetailedResponse></DetailedResponse>
+</Answer_Array1_Object>
+<Answer_Array1_Object>
+<Answer>cb</Answer>
+<Response>$$USE_DEFAULT$$</Response>
+<DetailedResponse></DetailedResponse>
+</Answer_Array1_Object>
+<Answer_Array1_Object>
+<Answer>er</Answer>
+<Response>$$USE_DEFAULT$$</Response>
+<DetailedResponse></DetailedResponse>
+</Answer_Array1_Object>
+</Answer_Array1>
+<CorrectAnswer>0x00000004</CorrectAnswer>
+<TemplateFile>mult_choice3.swf</TemplateFile>
+<Radio>1</Radio>
+<UseDefaultProps>1</UseDefaultProps>
+<FITB_Answer_Array>
+</FITB_Answer_Array>
+</QuestionArray_Object>
+</QuestionArray>
+<Title></Title>
+<UseAsMarker>1</UseAsMarker>
+<IndentLevel>0</IndentLevel>
+</DefaultQuestions>
+  <DefaultQuizProps><FontIndex>0</FontIndex>
+<SubmitText>Submit</SubmitText>
+<NumberingScheme>0</NumberingScheme>
+<AttemptsAllowed>1</AttemptsAllowed>
+<CorrectResponse>
+<Action>0</Action>
+<JumpTime>0</JumpTime>
+<URL></URL>
+</CorrectResponse>
+<IncorrectResponse>
+<Action>0</Action>
+<JumpTime>0</JumpTime>
+<URL></URL>
+</IncorrectResponse>
+<ForegroundColor>0x00000000</ForegroundColor>
+<BackgroundColor>0x00FFFFFF</BackgroundColor>
+<StrCorrectResponse>Correct</StrCorrectResponse>
+<StrIncorrectResponse>Incorrect</StrIncorrectResponse>
+<StrSurveyResponse>Thank you</StrSurveyResponse>
+<Survey>0</Survey>
+<Scored>1</Scored>
+<ShowFeedback>1</ShowFeedback>
+</DefaultQuizProps>
+  <DefaultSurveyProps></DefaultSurveyProps>
+  <ShowQuizPlaceholder>1</ShowQuizPlaceholder>
+  <DefQuestionType>0</DefQuestionType>
+  <EnableBalloonHelp>1</EnableBalloonHelp>
+  <CustomProduceUploadToWeb>0</CustomProduceUploadToWeb>
+  <ProduceUploadByFTP>0</ProduceUploadByFTP>
+  <TitleClipBackgroundColor>0x00000000</TitleClipBackgroundColor>
+  <TitleClipTextColor>0x00FFFFFF</TitleClipTextColor>
+  <AutoZoomBladeRunner>1</AutoZoomBladeRunner>
+  <AutoZoomForceRatio>0</AutoZoomForceRatio>
+  <BladeRunnerColor>0x0000FF00</BladeRunnerColor>
+  <AdvancedOpen>0</AdvancedOpen>
+  <CalloutViewPropertiesOpen>1</CalloutViewPropertiesOpen>
+  <CalloutListBoxGroupOpen>0</CalloutListBoxGroupOpen>
+  <CalloutListColumns>35</CalloutListColumns>
+  <ZoomDuration>10000000</ZoomDuration>
+  <AskImportPPTSlides>1</AskImportPPTSlides>
+  <NeverImportPPTSlides>0</NeverImportPPTSlides>
+  <LoadingMovieMru></LoadingMovieMru>
+  <StartScreenMru></StartScreenMru>
+  <EndScreenMru></EndScreenMru>
+  <ThumbnailMru></ThumbnailMru>
+  <TOCImageMru></TOCImageMru>
+  <TitleBarMru></TitleBarMru>
+  <AddZoomHotkey>90</AddZoomHotkey>
+  <AddTransitionHotkey>84</AddTransitionHotkey>
+  <AddCalloutHotkey>67</AddCalloutHotkey>
+  <AddCaptionHotkey>65</AddCaptionHotkey>
+  <AddMarkerHotkey>333</AddMarkerHotkey>
+  <SplitHotkey>324</SplitHotkey>
+  <ExtendFrameHotkey>325</ExtendFrameHotkey>
+  <ProjMetadataSize>383</ProjMetadataSize>
+  <ProjMetadataValue0></ProjMetadataValue0>
+  <ProjMetadataArrayKey0>0</ProjMetadataArrayKey0>
+  <ProjMetadataValue1></ProjMetadataValue1>
+  <ProjMetadataArrayKey1>0</ProjMetadataArrayKey1>
+  <ProjMetadataValue2></ProjMetadataValue2>
+  <ProjMetadataArrayKey2>0</ProjMetadataArrayKey2>
+  <ProjMetadataValue3></ProjMetadataValue3>
+  <ProjMetadataArrayKey3>0</ProjMetadataArrayKey3>
+  <ProjMetadataValue4></ProjMetadataValue4>
+  <ProjMetadataArrayKey4>0</ProjMetadataArrayKey4>
+  <ProjMetadataValue5></ProjMetadataValue5>
+  <ProjMetadataArrayKey5>0</ProjMetadataArrayKey5>
+  <ProjMetadataValue6></ProjMetadataValue6>
+  <ProjMetadataArrayKey6>0</ProjMetadataArrayKey6>
+  <ProjMetadataValue7></ProjMetadataValue7>
+  <ProjMetadataArrayKey7>0</ProjMetadataArrayKey7>
+  <ProjMetadataValue8></ProjMetadataValue8>
+  <ProjMetadataArrayKey8>0</ProjMetadataArrayKey8>
+  <ProjMetadataValue9></ProjMetadataValue9>
+  <ProjMetadataArrayKey9>0</ProjMetadataArrayKey9>
+  <ProjMetadataValue10></ProjMetadataValue10>
+  <ProjMetadataArrayKey10>0</ProjMetadataArrayKey10>
+  <ProjMetadataValue11></ProjMetadataValue11>
+  <ProjMetadataArrayKey11>0</ProjMetadataArrayKey11>
+  <ProjMetadataValue12></ProjMetadataValue12>
+  <ProjMetadataArrayKey12>0</ProjMetadataArrayKey12>
+  <ProjMetadataValue13></ProjMetadataValue13>
+  <ProjMetadataArrayKey13>0</ProjMetadataArrayKey13>
+  <ProjMetadataValue14></ProjMetadataValue14>
+  <ProjMetadataArrayKey14>0</ProjMetadataArrayKey14>
+  <ProjMetadataValue15></ProjMetadataValue15>
+  <ProjMetadataArrayKey15>0</ProjMetadataArrayKey15>
+  <ProjMetadataValue16></ProjMetadataValue16>
+  <ProjMetadataArrayKey16>0</ProjMetadataArrayKey16>
+  <ProjMetadataValue17></ProjMetadataValue17>
+  <ProjMetadataArrayKey17>0</ProjMetadataArrayKey17>
+  <ProjMetadataValue18></ProjMetadataValue18>
+  <ProjMetadataArrayKey18>0</ProjMetadataArrayKey18>
+  <ProjMetadataValue19></ProjMetadataValue19>
+  <ProjMetadataArrayKey19>0</ProjMetadataArrayKey19>
+  <ProjMetadataValue20></ProjMetadataValue20>
+  <ProjMetadataArrayKey20>0</ProjMetadataArrayKey20>
+  <ProjMetadataValue21></ProjMetadataValue21>
+  <ProjMetadataArrayKey21>0</ProjMetadataArrayKey21>
+  <ProjMetadataValue22></ProjMetadataValue22>
+  <ProjMetadataArrayKey22>0</ProjMetadataArrayKey22>
+  <ProjMetadataValue23></ProjMetadataValue23>
+  <ProjMetadataArrayKey23>0</ProjMetadataArrayKey23>
+  <ProjMetadataValue24></ProjMetadataValue24>
+  <ProjMetadataArrayKey24>0</ProjMetadataArrayKey24>
+  <ProjMetadataValue25></ProjMetadataValue25>
+  <ProjMetadataArrayKey25>0</ProjMetadataArrayKey25>
+  <ProjMetadataValue26></ProjMetadataValue26>
+  <ProjMetadataArrayKey26>0</ProjMetadataArrayKey26>
+  <ProjMetadataValue27></ProjMetadataValue27>
+  <ProjMetadataArrayKey27>0</ProjMetadataArrayKey27>
+  <ProjMetadataValue28></ProjMetadataValue28>
+  <ProjMetadataArrayKey28>0</ProjMetadataArrayKey28>
+  <ProjMetadataValue29></ProjMetadataValue29>
+  <ProjMetadataArrayKey29>0</ProjMetadataArrayKey29>
+  <ProjMetadataValue30></ProjMetadataValue30>
+  <ProjMetadataArrayKey30>0</ProjMetadataArrayKey30>
+  <ProjMetadataValue31></ProjMetadataValue31>
+  <ProjMetadataArrayKey31>0</ProjMetadataArrayKey31>
+  <ProjMetadataValue32></ProjMetadataValue32>
+  <ProjMetadataArrayKey32>0</ProjMetadataArrayKey32>
+  <ProjMetadataValue33></ProjMetadataValue33>
+  <ProjMetadataArrayKey33>0</ProjMetadataArrayKey33>
+  <ProjMetadataValue34></ProjMetadataValue34>
+  <ProjMetadataArrayKey34>0</ProjMetadataArrayKey34>
+  <ProjMetadataValue35></ProjMetadataValue35>
+  <ProjMetadataArrayKey35>0</ProjMetadataArrayKey35>
+  <ProjMetadataValue36></ProjMetadataValue36>
+  <ProjMetadataArrayKey36>0</ProjMetadataArrayKey36>
+  <ProjMetadataValue37></ProjMetadataValue37>
+  <ProjMetadataArrayKey37>0</ProjMetadataArrayKey37>
+  <ProjMetadataValue38></ProjMetadataValue38>
+  <ProjMetadataArrayKey38>0</ProjMetadataArrayKey38>
+  <ProjMetadataValue39></ProjMetadataValue39>
+  <ProjMetadataArrayKey39>0</ProjMetadataArrayKey39>
+  <ProjMetadataValue40></ProjMetadataValue40>
+  <ProjMetadataArrayKey40>0</ProjMetadataArrayKey40>
+  <ProjMetadataValue41></ProjMetadataValue41>
+  <ProjMetadataArrayKey41>0</ProjMetadataArrayKey41>
+  <ProjMetadataValue42></ProjMetadataValue42>
+  <ProjMetadataArrayKey42>0</ProjMetadataArrayKey42>
+  <ProjMetadataValue43></ProjMetadataValue43>
+  <ProjMetadataArrayKey43>0</ProjMetadataArrayKey43>
+  <ProjMetadataValue44></ProjMetadataValue44>
+  <ProjMetadataArrayKey44>0</ProjMetadataArrayKey44>
+  <ProjMetadataValue45></ProjMetadataValue45>
+  <ProjMetadataArrayKey45>0</ProjMetadataArrayKey45>
+  <ProjMetadataValue46></ProjMetadataValue46>
+  <ProjMetadataArrayKey46>0</ProjMetadataArrayKey46>
+  <ProjMetadataValue47></ProjMetadataValue47>
+  <ProjMetadataArrayKey47>0</ProjMetadataArrayKey47>
+  <ProjMetadataValue48></ProjMetadataValue48>
+  <ProjMetadataArrayKey48>0</ProjMetadataArrayKey48>
+  <ProjMetadataValue49></ProjMetadataValue49>
+  <ProjMetadataArrayKey49>0</ProjMetadataArrayKey49>
+  <ProjMetadataValue50></ProjMetadataValue50>
+  <ProjMetadataArrayKey50>0</ProjMetadataArrayKey50>
+  <ProjMetadataValue51></ProjMetadataValue51>
+  <ProjMetadataArrayKey51>0</ProjMetadataArrayKey51>
+  <ProjMetadataValue52></ProjMetadataValue52>
+  <ProjMetadataArrayKey52>0</ProjMetadataArrayKey52>
+  <ProjMetadataValue53></ProjMetadataValue53>
+  <ProjMetadataArrayKey53>0</ProjMetadataArrayKey53>
+  <ProjMetadataValue54></ProjMetadataValue54>
+  <ProjMetadataArrayKey54>0</ProjMetadataArrayKey54>
+  <ProjMetadataValue55></ProjMetadataValue55>
+  <ProjMetadataArrayKey55>0</ProjMetadataArrayKey55>
+  <ProjMetadataValue56></ProjMetadataValue56>
+  <ProjMetadataArrayKey56>0</ProjMetadataArrayKey56>
+  <ProjMetadataValue57></ProjMetadataValue57>
+  <ProjMetadataArrayKey57>0</ProjMetadataArrayKey57>
+  <ProjMetadataValue58></ProjMetadataValue58>
+  <ProjMetadataArrayKey58>0</ProjMetadataArrayKey58>
+  <ProjMetadataValue59></ProjMetadataValue59>
+  <ProjMetadataArrayKey59>0</ProjMetadataArrayKey59>
+  <ProjMetadataValue60></ProjMetadataValue60>
+  <ProjMetadataArrayKey60>0</ProjMetadataArrayKey60>
+  <ProjMetadataValue61></ProjMetadataValue61>
+  <ProjMetadataArrayKey61>0</ProjMetadataArrayKey61>
+  <ProjMetadataValue62></ProjMetadataValue62>
+  <ProjMetadataArrayKey62>0</ProjMetadataArrayKey62>
+  <ProjMetadataValue63></ProjMetadataValue63>
+  <ProjMetadataArrayKey63>0</ProjMetadataArrayKey63>
+  <ProjMetadataValue64></ProjMetadataValue64>
+  <ProjMetadataArrayKey64>0</ProjMetadataArrayKey64>
+  <ProjMetadataValue65></ProjMetadataValue65>
+  <ProjMetadataArrayKey65>0</ProjMetadataArrayKey65>
+  <ProjMetadataValue66></ProjMetadataValue66>
+  <ProjMetadataArrayKey66>0</ProjMetadataArrayKey66>
+  <ProjMetadataValue67></ProjMetadataValue67>
+  <ProjMetadataArrayKey67>0</ProjMetadataArrayKey67>
+  <ProjMetadataValue68></ProjMetadataValue68>
+  <ProjMetadataArrayKey68>0</ProjMetadataArrayKey68>
+  <ProjMetadataValue69></ProjMetadataValue69>
+  <ProjMetadataArrayKey69>0</ProjMetadataArrayKey69>
+  <ProjMetadataValue70></ProjMetadataValue70>
+  <ProjMetadataArrayKey70>0</ProjMetadataArrayKey70>
+  <ProjMetadataValue71></ProjMetadataValue71>
+  <ProjMetadataArrayKey71>0</ProjMetadataArrayKey71>
+  <ProjMetadataValue72></ProjMetadataValue72>
+  <ProjMetadataArrayKey72>0</ProjMetadataArrayKey72>
+  <ProjMetadataValue73></ProjMetadataValue73>
+  <ProjMetadataArrayKey73>0</ProjMetadataArrayKey73>
+  <ProjMetadataValue74></ProjMetadataValue74>
+  <ProjMetadataArrayKey74>0</ProjMetadataArrayKey74>
+  <ProjMetadataValue75></ProjMetadataValue75>
+  <ProjMetadataArrayKey75>0</ProjMetadataArrayKey75>
+  <ProjMetadataValue76></ProjMetadataValue76>
+  <ProjMetadataArrayKey76>0</ProjMetadataArrayKey76>
+  <ProjMetadataValue77></ProjMetadataValue77>
+  <ProjMetadataArrayKey77>0</ProjMetadataArrayKey77>
+  <ProjMetadataValue78></ProjMetadataValue78>
+  <ProjMetadataArrayKey78>0</ProjMetadataArrayKey78>
+  <ProjMetadataValue79></ProjMetadataValue79>
+  <ProjMetadataArrayKey79>0</ProjMetadataArrayKey79>
+  <ProjMetadataValue80></ProjMetadataValue80>
+  <ProjMetadataArrayKey80>0</ProjMetadataArrayKey80>
+  <ProjMetadataValue81></ProjMetadataValue81>
+  <ProjMetadataArrayKey81>0</ProjMetadataArrayKey81>
+  <ProjMetadataValue82></ProjMetadataValue82>
+  <ProjMetadataArrayKey82>0</ProjMetadataArrayKey82>
+  <ProjMetadataValue83></ProjMetadataValue83>
+  <ProjMetadataArrayKey83>0</ProjMetadataArrayKey83>
+  <ProjMetadataValue84></ProjMetadataValue84>
+  <ProjMetadataArrayKey84>0</ProjMetadataArrayKey84>
+  <ProjMetadataValue85></ProjMetadataValue85>
+  <ProjMetadataArrayKey85>0</ProjMetadataArrayKey85>
+  <ProjMetadataValue86></ProjMetadataValue86>
+  <ProjMetadataArrayKey86>0</ProjMetadataArrayKey86>
+  <ProjMetadataValue87></ProjMetadataValue87>
+  <ProjMetadataArrayKey87>0</ProjMetadataArrayKey87>
+  <ProjMetadataValue88></ProjMetadataValue88>
+  <ProjMetadataArrayKey88>0</ProjMetadataArrayKey88>
+  <ProjMetadataValue89></ProjMetadataValue89>
+  <ProjMetadataArrayKey89>0</ProjMetadataArrayKey89>
+  <ProjMetadataValue90></ProjMetadataValue90>
+  <ProjMetadataArrayKey90>0</ProjMetadataArrayKey90>
+  <ProjMetadataValue91></ProjMetadataValue91>
+  <ProjMetadataArrayKey91>0</ProjMetadataArrayKey91>
+  <ProjMetadataValue92></ProjMetadataValue92>
+  <ProjMetadataArrayKey92>0</ProjMetadataArrayKey92>
+  <ProjMetadataValue93></ProjMetadataValue93>
+  <ProjMetadataArrayKey93>0</ProjMetadataArrayKey93>
+  <ProjMetadataValue94></ProjMetadataValue94>
+  <ProjMetadataArrayKey94>0</ProjMetadataArrayKey94>
+  <ProjMetadataValue95></ProjMetadataValue95>
+  <ProjMetadataArrayKey95>0</ProjMetadataArrayKey95>
+  <ProjMetadataValue96></ProjMetadataValue96>
+  <ProjMetadataArrayKey96>0</ProjMetadataArrayKey96>
+  <ProjMetadataValue97></ProjMetadataValue97>
+  <ProjMetadataArrayKey97>0</ProjMetadataArrayKey97>
+  <ProjMetadataValue98></ProjMetadataValue98>
+  <ProjMetadataArrayKey98>0</ProjMetadataArrayKey98>
+  <ProjMetadataValue99></ProjMetadataValue99>
+  <ProjMetadataArrayKey99>0</ProjMetadataArrayKey99>
+  <ProjMetadataValue100></ProjMetadataValue100>
+  <ProjMetadataArrayKey100>0</ProjMetadataArrayKey100>
+  <ProjMetadataValue101></ProjMetadataValue101>
+  <ProjMetadataArrayKey101>0</ProjMetadataArrayKey101>
+  <ProjMetadataValue102></ProjMetadataValue102>
+  <ProjMetadataArrayKey102>0</ProjMetadataArrayKey102>
+  <ProjMetadataValue103></ProjMetadataValue103>
+  <ProjMetadataArrayKey103>0</ProjMetadataArrayKey103>
+  <ProjMetadataValue104></ProjMetadataValue104>
+  <ProjMetadataArrayKey104>0</ProjMetadataArrayKey104>
+  <ProjMetadataValue105></ProjMetadataValue105>
+  <ProjMetadataArrayKey105>0</ProjMetadataArrayKey105>
+  <ProjMetadataValue106></ProjMetadataValue106>
+  <ProjMetadataArrayKey106>0</ProjMetadataArrayKey106>
+  <ProjMetadataValue107></ProjMetadataValue107>
+  <ProjMetadataArrayKey107>0</ProjMetadataArrayKey107>
+  <ProjMetadataValue108></ProjMetadataValue108>
+  <ProjMetadataArrayKey108>0</ProjMetadataArrayKey108>
+  <ProjMetadataValue109></ProjMetadataValue109>
+  <ProjMetadataArrayKey109>0</ProjMetadataArrayKey109>
+  <ProjMetadataValue110></ProjMetadataValue110>
+  <ProjMetadataArrayKey110>0</ProjMetadataArrayKey110>
+  <ProjMetadataValue111></ProjMetadataValue111>
+  <ProjMetadataArrayKey111>0</ProjMetadataArrayKey111>
+  <ProjMetadataValue112></ProjMetadataValue112>
+  <ProjMetadataArrayKey112>0</ProjMetadataArrayKey112>
+  <ProjMetadataValue113></ProjMetadataValue113>
+  <ProjMetadataArrayKey113>0</ProjMetadataArrayKey113>
+  <ProjMetadataValue114></ProjMetadataValue114>
+  <ProjMetadataArrayKey114>0</ProjMetadataArrayKey114>
+  <ProjMetadataValue115></ProjMetadataValue115>
+  <ProjMetadataArrayKey115>0</ProjMetadataArrayKey115>
+  <ProjMetadataValue116></ProjMetadataValue116>
+  <ProjMetadataArrayKey116>0</ProjMetadataArrayKey116>
+  <ProjMetadataValue117></ProjMetadataValue117>
+  <ProjMetadataArrayKey117>0</ProjMetadataArrayKey117>
+  <ProjMetadataValue118></ProjMetadataValue118>
+  <ProjMetadataArrayKey118>0</ProjMetadataArrayKey118>
+  <ProjMetadataValue119></ProjMetadataValue119>
+  <ProjMetadataArrayKey119>0</ProjMetadataArrayKey119>
+  <ProjMetadataValue120></ProjMetadataValue120>
+  <ProjMetadataArrayKey120>0</ProjMetadataArrayKey120>
+  <ProjMetadataValue121></ProjMetadataValue121>
+  <ProjMetadataArrayKey121>0</ProjMetadataArrayKey121>
+  <ProjMetadataValue122></ProjMetadataValue122>
+  <ProjMetadataArrayKey122>0</ProjMetadataArrayKey122>
+  <ProjMetadataValue123></ProjMetadataValue123>
+  <ProjMetadataArrayKey123>0</ProjMetadataArrayKey123>
+  <ProjMetadataValue124></ProjMetadataValue124>
+  <ProjMetadataArrayKey124>0</ProjMetadataArrayKey124>
+  <ProjMetadataValue125></ProjMetadataValue125>
+  <ProjMetadataArrayKey125>0</ProjMetadataArrayKey125>
+  <ProjMetadataValue126></ProjMetadataValue126>
+  <ProjMetadataArrayKey126>0</ProjMetadataArrayKey126>
+  <ProjMetadataValue127></ProjMetadataValue127>
+  <ProjMetadataArrayKey127>0</ProjMetadataArrayKey127>
+  <ProjMetadataValue128></ProjMetadataValue128>
+  <ProjMetadataArrayKey128>0</ProjMetadataArrayKey128>
+  <ProjMetadataValue129></ProjMetadataValue129>
+  <ProjMetadataArrayKey129>0</ProjMetadataArrayKey129>
+  <ProjMetadataValue130></ProjMetadataValue130>
+  <ProjMetadataArrayKey130>0</ProjMetadataArrayKey130>
+  <ProjMetadataValue131></ProjMetadataValue131>
+  <ProjMetadataArrayKey131>0</ProjMetadataArrayKey131>
+  <ProjMetadataValue132></ProjMetadataValue132>
+  <ProjMetadataArrayKey132>0</ProjMetadataArrayKey132>
+  <ProjMetadataValue133></ProjMetadataValue133>
+  <ProjMetadataArrayKey133>0</ProjMetadataArrayKey133>
+  <ProjMetadataValue134></ProjMetadataValue134>
+  <ProjMetadataArrayKey134>0</ProjMetadataArrayKey134>
+  <ProjMetadataValue135></ProjMetadataValue135>
+  <ProjMetadataArrayKey135>0</ProjMetadataArrayKey135>
+  <ProjMetadataValue136></ProjMetadataValue136>
+  <ProjMetadataArrayKey136>0</ProjMetadataArrayKey136>
+  <ProjMetadataValue137></ProjMetadataValue137>
+  <ProjMetadataArrayKey137>0</ProjMetadataArrayKey137>
+  <ProjMetadataValue138></ProjMetadataValue138>
+  <ProjMetadataArrayKey138>0</ProjMetadataArrayKey138>
+  <ProjMetadataValue139></ProjMetadataValue139>
+  <ProjMetadataArrayKey139>0</ProjMetadataArrayKey139>
+  <ProjMetadataValue140></ProjMetadataValue140>
+  <ProjMetadataArrayKey140>0</ProjMetadataArrayKey140>
+  <ProjMetadataValue141></ProjMetadataValue141>
+  <ProjMetadataArrayKey141>0</ProjMetadataArrayKey141>
+  <ProjMetadataValue142></ProjMetadataValue142>
+  <ProjMetadataArrayKey142>0</ProjMetadataArrayKey142>
+  <ProjMetadataValue143></ProjMetadataValue143>
+  <ProjMetadataArrayKey143>0</ProjMetadataArrayKey143>
+  <ProjMetadataValue144></ProjMetadataValue144>
+  <ProjMetadataArrayKey144>0</ProjMetadataArrayKey144>
+  <ProjMetadataValue145></ProjMetadataValue145>
+  <ProjMetadataArrayKey145>0</ProjMetadataArrayKey145>
+  <ProjMetadataValue146></ProjMetadataValue146>
+  <ProjMetadataArrayKey146>0</ProjMetadataArrayKey146>
+  <ProjMetadataValue147></ProjMetadataValue147>
+  <ProjMetadataArrayKey147>0</ProjMetadataArrayKey147>
+  <ProjMetadataValue148></ProjMetadataValue148>
+  <ProjMetadataArrayKey148>0</ProjMetadataArrayKey148>
+  <ProjMetadataValue149></ProjMetadataValue149>
+  <ProjMetadataArrayKey149>0</ProjMetadataArrayKey149>
+  <ProjMetadataValue150></ProjMetadataValue150>
+  <ProjMetadataArrayKey150>0</ProjMetadataArrayKey150>
+  <ProjMetadataValue151></ProjMetadataValue151>
+  <ProjMetadataArrayKey151>0</ProjMetadataArrayKey151>
+  <ProjMetadataValue152></ProjMetadataValue152>
+  <ProjMetadataArrayKey152>0</ProjMetadataArrayKey152>
+  <ProjMetadataValue153></ProjMetadataValue153>
+  <ProjMetadataArrayKey153>0</ProjMetadataArrayKey153>
+  <ProjMetadataValue154></ProjMetadataValue154>
+  <ProjMetadataArrayKey154>0</ProjMetadataArrayKey154>
+  <ProjMetadataValue155></ProjMetadataValue155>
+  <ProjMetadataArrayKey155>0</ProjMetadataArrayKey155>
+  <ProjMetadataValue156></ProjMetadataValue156>
+  <ProjMetadataArrayKey156>0</ProjMetadataArrayKey156>
+  <ProjMetadataValue157></ProjMetadataValue157>
+  <ProjMetadataArrayKey157>0</ProjMetadataArrayKey157>
+  <ProjMetadataValue158></ProjMetadataValue158>
+  <ProjMetadataArrayKey158>0</ProjMetadataArrayKey158>
+  <ProjMetadataValue159></ProjMetadataValue159>
+  <ProjMetadataArrayKey159>0</ProjMetadataArrayKey159>
+  <ProjMetadataValue160></ProjMetadataValue160>
+  <ProjMetadataArrayKey160>0</ProjMetadataArrayKey160>
+  <ProjMetadataValue161></ProjMetadataValue161>
+  <ProjMetadataArrayKey161>0</ProjMetadataArrayKey161>
+  <ProjMetadataValue162></ProjMetadataValue162>
+  <ProjMetadataArrayKey162>0</ProjMetadataArrayKey162>
+  <ProjMetadataValue163></ProjMetadataValue163>
+  <ProjMetadataArrayKey163>0</ProjMetadataArrayKey163>
+  <ProjMetadataValue164></ProjMetadataValue164>
+  <ProjMetadataArrayKey164>0</ProjMetadataArrayKey164>
+  <ProjMetadataValue165></ProjMetadataValue165>
+  <ProjMetadataArrayKey165>0</ProjMetadataArrayKey165>
+  <ProjMetadataValue166></ProjMetadataValue166>
+  <ProjMetadataArrayKey166>0</ProjMetadataArrayKey166>
+  <ProjMetadataValue167></ProjMetadataValue167>
+  <ProjMetadataArrayKey167>0</ProjMetadataArrayKey167>
+  <ProjMetadataValue168></ProjMetadataValue168>
+  <ProjMetadataArrayKey168>0</ProjMetadataArrayKey168>
+  <ProjMetadataValue169></ProjMetadataValue169>
+  <ProjMetadataArrayKey169>0</ProjMetadataArrayKey169>
+  <ProjMetadataValue170></ProjMetadataValue170>
+  <ProjMetadataArrayKey170>0</ProjMetadataArrayKey170>
+  <ProjMetadataValue171></ProjMetadataValue171>
+  <ProjMetadataArrayKey171>0</ProjMetadataArrayKey171>
+  <ProjMetadataValue172></ProjMetadataValue172>
+  <ProjMetadataArrayKey172>0</ProjMetadataArrayKey172>
+  <ProjMetadataValue173></ProjMetadataValue173>
+  <ProjMetadataArrayKey173>0</ProjMetadataArrayKey173>
+  <ProjMetadataValue174></ProjMetadataValue174>
+  <ProjMetadataArrayKey174>0</ProjMetadataArrayKey174>
+  <ProjMetadataValue175></ProjMetadataValue175>
+  <ProjMetadataArrayKey175>0</ProjMetadataArrayKey175>
+  <ProjMetadataValue176></ProjMetadataValue176>
+  <ProjMetadataArrayKey176>0</ProjMetadataArrayKey176>
+  <ProjMetadataValue177></ProjMetadataValue177>
+  <ProjMetadataArrayKey177>0</ProjMetadataArrayKey177>
+  <ProjMetadataValue178></ProjMetadataValue178>
+  <ProjMetadataArrayKey178>0</ProjMetadataArrayKey178>
+  <ProjMetadataValue179></ProjMetadataValue179>
+  <ProjMetadataArrayKey179>0</ProjMetadataArrayKey179>
+  <ProjMetadataValue180></ProjMetadataValue180>
+  <ProjMetadataArrayKey180>0</ProjMetadataArrayKey180>
+  <ProjMetadataValue181></ProjMetadataValue181>
+  <ProjMetadataArrayKey181>0</ProjMetadataArrayKey181>
+  <ProjMetadataValue182></ProjMetadataValue182>
+  <ProjMetadataArrayKey182>0</ProjMetadataArrayKey182>
+  <ProjMetadataValue183></ProjMetadataValue183>
+  <ProjMetadataArrayKey183>0</ProjMetadataArrayKey183>
+  <ProjMetadataValue184></ProjMetadataValue184>
+  <ProjMetadataArrayKey184>0</ProjMetadataArrayKey184>
+  <ProjMetadataValue185></ProjMetadataValue185>
+  <ProjMetadataArrayKey185>0</ProjMetadataArrayKey185>
+  <ProjMetadataValue186></ProjMetadataValue186>
+  <ProjMetadataArrayKey186>0</ProjMetadataArrayKey186>
+  <ProjMetadataValue187></ProjMetadataValue187>
+  <ProjMetadataArrayKey187>0</ProjMetadataArrayKey187>
+  <ProjMetadataValue188></ProjMetadataValue188>
+  <ProjMetadataArrayKey188>0</ProjMetadataArrayKey188>
+  <ProjMetadataValue189></ProjMetadataValue189>
+  <ProjMetadataArrayKey189>0</ProjMetadataArrayKey189>
+  <ProjMetadataValue190></ProjMetadataValue190>
+  <ProjMetadataArrayKey190>0</ProjMetadataArrayKey190>
+  <ProjMetadataValue191></ProjMetadataValue191>
+  <ProjMetadataArrayKey191>0</ProjMetadataArrayKey191>
+  <ProjMetadataValue192></ProjMetadataValue192>
+  <ProjMetadataArrayKey192>0</ProjMetadataArrayKey192>
+  <ProjMetadataValue193></ProjMetadataValue193>
+  <ProjMetadataArrayKey193>0</ProjMetadataArrayKey193>
+  <ProjMetadataValue194></ProjMetadataValue194>
+  <ProjMetadataArrayKey194>0</ProjMetadataArrayKey194>
+  <ProjMetadataValue195></ProjMetadataValue195>
+  <ProjMetadataArrayKey195>0</ProjMetadataArrayKey195>
+  <ProjMetadataValue196></ProjMetadataValue196>
+  <ProjMetadataArrayKey196>0</ProjMetadataArrayKey196>
+  <ProjMetadataValue197></ProjMetadataValue197>
+  <ProjMetadataArrayKey197>0</ProjMetadataArrayKey197>
+  <ProjMetadataValue198></ProjMetadataValue198>
+  <ProjMetadataArrayKey198>0</ProjMetadataArrayKey198>
+  <ProjMetadataValue199></ProjMetadataValue199>
+  <ProjMetadataArrayKey199>0</ProjMetadataArrayKey199>
+  <ProjMetadataValue200></ProjMetadataValue200>
+  <ProjMetadataArrayKey200>0</ProjMetadataArrayKey200>
+  <ProjMetadataValue201></ProjMetadataValue201>
+  <ProjMetadataArrayKey201>0</ProjMetadataArrayKey201>
+  <ProjMetadataValue202></ProjMetadataValue202>
+  <ProjMetadataArrayKey202>0</ProjMetadataArrayKey202>
+  <ProjMetadataValue203></ProjMetadataValue203>
+  <ProjMetadataArrayKey203>0</ProjMetadataArrayKey203>
+  <ProjMetadataValue204></ProjMetadataValue204>
+  <ProjMetadataArrayKey204>0</ProjMetadataArrayKey204>
+  <ProjMetadataValue205></ProjMetadataValue205>
+  <ProjMetadataArrayKey205>0</ProjMetadataArrayKey205>
+  <ProjMetadataValue206></ProjMetadataValue206>
+  <ProjMetadataArrayKey206>0</ProjMetadataArrayKey206>
+  <ProjMetadataValue207></ProjMetadataValue207>
+  <ProjMetadataArrayKey207>0</ProjMetadataArrayKey207>
+  <ProjMetadataValue208></ProjMetadataValue208>
+  <ProjMetadataArrayKey208>0</ProjMetadataArrayKey208>
+  <ProjMetadataValue209></ProjMetadataValue209>
+  <ProjMetadataArrayKey209>0</ProjMetadataArrayKey209>
+  <ProjMetadataValue210></ProjMetadataValue210>
+  <ProjMetadataArrayKey210>0</ProjMetadataArrayKey210>
+  <ProjMetadataValue211></ProjMetadataValue211>
+  <ProjMetadataArrayKey211>0</ProjMetadataArrayKey211>
+  <ProjMetadataValue212></ProjMetadataValue212>
+  <ProjMetadataArrayKey212>0</ProjMetadataArrayKey212>
+  <ProjMetadataValue213></ProjMetadataValue213>
+  <ProjMetadataArrayKey213>0</ProjMetadataArrayKey213>
+  <ProjMetadataValue214></ProjMetadataValue214>
+  <ProjMetadataArrayKey214>0</ProjMetadataArrayKey214>
+  <ProjMetadataValue215></ProjMetadataValue215>
+  <ProjMetadataArrayKey215>0</ProjMetadataArrayKey215>
+  <ProjMetadataValue216></ProjMetadataValue216>
+  <ProjMetadataArrayKey216>0</ProjMetadataArrayKey216>
+  <ProjMetadataValue217></ProjMetadataValue217>
+  <ProjMetadataArrayKey217>0</ProjMetadataArrayKey217>
+  <ProjMetadataValue218></ProjMetadataValue218>
+  <ProjMetadataArrayKey218>0</ProjMetadataArrayKey218>
+  <ProjMetadataValue219></ProjMetadataValue219>
+  <ProjMetadataArrayKey219>0</ProjMetadataArrayKey219>
+  <ProjMetadataValue220></ProjMetadataValue220>
+  <ProjMetadataArrayKey220>0</ProjMetadataArrayKey220>
+  <ProjMetadataValue221></ProjMetadataValue221>
+  <ProjMetadataArrayKey221>0</ProjMetadataArrayKey221>
+  <ProjMetadataValue222></ProjMetadataValue222>
+  <ProjMetadataArrayKey222>0</ProjMetadataArrayKey222>
+  <ProjMetadataValue223></ProjMetadataValue223>
+  <ProjMetadataArrayKey223>0</ProjMetadataArrayKey223>
+  <ProjMetadataValue224></ProjMetadataValue224>
+  <ProjMetadataArrayKey224>0</ProjMetadataArrayKey224>
+  <ProjMetadataValue225></ProjMetadataValue225>
+  <ProjMetadataArrayKey225>0</ProjMetadataArrayKey225>
+  <ProjMetadataValue226></ProjMetadataValue226>
+  <ProjMetadataArrayKey226>0</ProjMetadataArrayKey226>
+  <ProjMetadataValue227></ProjMetadataValue227>
+  <ProjMetadataArrayKey227>0</ProjMetadataArrayKey227>
+  <ProjMetadataValue228></ProjMetadataValue228>
+  <ProjMetadataArrayKey228>0</ProjMetadataArrayKey228>
+  <ProjMetadataValue229></ProjMetadataValue229>
+  <ProjMetadataArrayKey229>0</ProjMetadataArrayKey229>
+  <ProjMetadataValue230></ProjMetadataValue230>
+  <ProjMetadataArrayKey230>0</ProjMetadataArrayKey230>
+  <ProjMetadataValue231></ProjMetadataValue231>
+  <ProjMetadataArrayKey231>0</ProjMetadataArrayKey231>
+  <ProjMetadataValue232></ProjMetadataValue232>
+  <ProjMetadataArrayKey232>0</ProjMetadataArrayKey232>
+  <ProjMetadataValue233></ProjMetadataValue233>
+  <ProjMetadataArrayKey233>0</ProjMetadataArrayKey233>
+  <ProjMetadataValue234></ProjMetadataValue234>
+  <ProjMetadataArrayKey234>0</ProjMetadataArrayKey234>
+  <ProjMetadataValue235></ProjMetadataValue235>
+  <ProjMetadataArrayKey235>0</ProjMetadataArrayKey235>
+  <ProjMetadataValue236></ProjMetadataValue236>
+  <ProjMetadataArrayKey236>0</ProjMetadataArrayKey236>
+  <ProjMetadataValue237></ProjMetadataValue237>
+  <ProjMetadataArrayKey237>0</ProjMetadataArrayKey237>
+  <ProjMetadataValue238></ProjMetadataValue238>
+  <ProjMetadataArrayKey238>0</ProjMetadataArrayKey238>
+  <ProjMetadataValue239></ProjMetadataValue239>
+  <ProjMetadataArrayKey239>0</ProjMetadataArrayKey239>
+  <ProjMetadataValue240></ProjMetadataValue240>
+  <ProjMetadataArrayKey240>0</ProjMetadataArrayKey240>
+  <ProjMetadataValue241></ProjMetadataValue241>
+  <ProjMetadataArrayKey241>0</ProjMetadataArrayKey241>
+  <ProjMetadataValue242></ProjMetadataValue242>
+  <ProjMetadataArrayKey242>0</ProjMetadataArrayKey242>
+  <ProjMetadataValue243></ProjMetadataValue243>
+  <ProjMetadataArrayKey243>0</ProjMetadataArrayKey243>
+  <ProjMetadataValue244></ProjMetadataValue244>
+  <ProjMetadataArrayKey244>0</ProjMetadataArrayKey244>
+  <ProjMetadataValue245></ProjMetadataValue245>
+  <ProjMetadataArrayKey245>0</ProjMetadataArrayKey245>
+  <ProjMetadataValue246></ProjMetadataValue246>
+  <ProjMetadataArrayKey246>0</ProjMetadataArrayKey246>
+  <ProjMetadataValue247></ProjMetadataValue247>
+  <ProjMetadataArrayKey247>0</ProjMetadataArrayKey247>
+  <ProjMetadataValue248></ProjMetadataValue248>
+  <ProjMetadataArrayKey248>0</ProjMetadataArrayKey248>
+  <ProjMetadataValue249></ProjMetadataValue249>
+  <ProjMetadataArrayKey249>0</ProjMetadataArrayKey249>
+  <ProjMetadataValue250></ProjMetadataValue250>
+  <ProjMetadataArrayKey250>0</ProjMetadataArrayKey250>
+  <ProjMetadataValue251></ProjMetadataValue251>
+  <ProjMetadataArrayKey251>0</ProjMetadataArrayKey251>
+  <ProjMetadataValue252></ProjMetadataValue252>
+  <ProjMetadataArrayKey252>0</ProjMetadataArrayKey252>
+  <ProjMetadataValue253></ProjMetadataValue253>
+  <ProjMetadataArrayKey253>0</ProjMetadataArrayKey253>
+  <ProjMetadataValue254></ProjMetadataValue254>
+  <ProjMetadataArrayKey254>0</ProjMetadataArrayKey254>
+  <ProjMetadataValue255></ProjMetadataValue255>
+  <ProjMetadataArrayKey255>0</ProjMetadataArrayKey255>
+  <ProjMetadataValue256></ProjMetadataValue256>
+  <ProjMetadataArrayKey256>0</ProjMetadataArrayKey256>
+  <ProjMetadataValue257></ProjMetadataValue257>
+  <ProjMetadataArrayKey257>0</ProjMetadataArrayKey257>
+  <ProjMetadataValue258></ProjMetadataValue258>
+  <ProjMetadataArrayKey258>0</ProjMetadataArrayKey258>
+  <ProjMetadataValue259></ProjMetadataValue259>
+  <ProjMetadataArrayKey259>0</ProjMetadataArrayKey259>
+  <ProjMetadataValue260></ProjMetadataValue260>
+  <ProjMetadataArrayKey260>0</ProjMetadataArrayKey260>
+  <ProjMetadataValue261></ProjMetadataValue261>
+  <ProjMetadataArrayKey261>0</ProjMetadataArrayKey261>
+  <ProjMetadataValue262></ProjMetadataValue262>
+  <ProjMetadataArrayKey262>0</ProjMetadataArrayKey262>
+  <ProjMetadataValue263></ProjMetadataValue263>
+  <ProjMetadataArrayKey263>0</ProjMetadataArrayKey263>
+  <ProjMetadataValue264></ProjMetadataValue264>
+  <ProjMetadataArrayKey264>0</ProjMetadataArrayKey264>
+  <ProjMetadataValue265></ProjMetadataValue265>
+  <ProjMetadataArrayKey265>0</ProjMetadataArrayKey265>
+  <ProjMetadataValue266></ProjMetadataValue266>
+  <ProjMetadataArrayKey266>0</ProjMetadataArrayKey266>
+  <ProjMetadataValue267></ProjMetadataValue267>
+  <ProjMetadataArrayKey267>0</ProjMetadataArrayKey267>
+  <ProjMetadataValue268></ProjMetadataValue268>
+  <ProjMetadataArrayKey268>0</ProjMetadataArrayKey268>
+  <ProjMetadataValue269></ProjMetadataValue269>
+  <ProjMetadataArrayKey269>0</ProjMetadataArrayKey269>
+  <ProjMetadataValue270></ProjMetadataValue270>
+  <ProjMetadataArrayKey270>0</ProjMetadataArrayKey270>
+  <ProjMetadataValue271></ProjMetadataValue271>
+  <ProjMetadataArrayKey271>0</ProjMetadataArrayKey271>
+  <ProjMetadataValue272></ProjMetadataValue272>
+  <ProjMetadataArrayKey272>0</ProjMetadataArrayKey272>
+  <ProjMetadataValue273></ProjMetadataValue273>
+  <ProjMetadataArrayKey273>0</ProjMetadataArrayKey273>
+  <ProjMetadataValue274></ProjMetadataValue274>
+  <ProjMetadataArrayKey274>0</ProjMetadataArrayKey274>
+  <ProjMetadataValue275></ProjMetadataValue275>
+  <ProjMetadataArrayKey275>0</ProjMetadataArrayKey275>
+  <ProjMetadataValue276></ProjMetadataValue276>
+  <ProjMetadataArrayKey276>0</ProjMetadataArrayKey276>
+  <ProjMetadataValue277></ProjMetadataValue277>
+  <ProjMetadataArrayKey277>0</ProjMetadataArrayKey277>
+  <ProjMetadataValue278></ProjMetadataValue278>
+  <ProjMetadataArrayKey278>0</ProjMetadataArrayKey278>
+  <ProjMetadataValue279></ProjMetadataValue279>
+  <ProjMetadataArrayKey279>0</ProjMetadataArrayKey279>
+  <ProjMetadataValue280></ProjMetadataValue280>
+  <ProjMetadataArrayKey280>0</ProjMetadataArrayKey280>
+  <ProjMetadataValue281></ProjMetadataValue281>
+  <ProjMetadataArrayKey281>0</ProjMetadataArrayKey281>
+  <ProjMetadataValue282></ProjMetadataValue282>
+  <ProjMetadataArrayKey282>0</ProjMetadataArrayKey282>
+  <ProjMetadataValue283></ProjMetadataValue283>
+  <ProjMetadataArrayKey283>0</ProjMetadataArrayKey283>
+  <ProjMetadataValue284></ProjMetadataValue284>
+  <ProjMetadataArrayKey284>0</ProjMetadataArrayKey284>
+  <ProjMetadataValue285></ProjMetadataValue285>
+  <ProjMetadataArrayKey285>0</ProjMetadataArrayKey285>
+  <ProjMetadataValue286></ProjMetadataValue286>
+  <ProjMetadataArrayKey286>0</ProjMetadataArrayKey286>
+  <ProjMetadataValue287></ProjMetadataValue287>
+  <ProjMetadataArrayKey287>0</ProjMetadataArrayKey287>
+  <ProjMetadataValue288></ProjMetadataValue288>
+  <ProjMetadataArrayKey288>0</ProjMetadataArrayKey288>
+  <ProjMetadataValue289></ProjMetadataValue289>
+  <ProjMetadataArrayKey289>0</ProjMetadataArrayKey289>
+  <ProjMetadataValue290></ProjMetadataValue290>
+  <ProjMetadataArrayKey290>0</ProjMetadataArrayKey290>
+  <ProjMetadataValue291></ProjMetadataValue291>
+  <ProjMetadataArrayKey291>0</ProjMetadataArrayKey291>
+  <ProjMetadataValue292></ProjMetadataValue292>
+  <ProjMetadataArrayKey292>0</ProjMetadataArrayKey292>
+  <ProjMetadataValue293></ProjMetadataValue293>
+  <ProjMetadataArrayKey293>0</ProjMetadataArrayKey293>
+  <ProjMetadataValue294></ProjMetadataValue294>
+  <ProjMetadataArrayKey294>0</ProjMetadataArrayKey294>
+  <ProjMetadataValue295></ProjMetadataValue295>
+  <ProjMetadataArrayKey295>0</ProjMetadataArrayKey295>
+  <ProjMetadataValue296></ProjMetadataValue296>
+  <ProjMetadataArrayKey296>0</ProjMetadataArrayKey296>
+  <ProjMetadataValue297></ProjMetadataValue297>
+  <ProjMetadataArrayKey297>0</ProjMetadataArrayKey297>
+  <ProjMetadataValue298></ProjMetadataValue298>
+  <ProjMetadataArrayKey298>0</ProjMetadataArrayKey298>
+  <ProjMetadataValue299></ProjMetadataValue299>
+  <ProjMetadataArrayKey299>0</ProjMetadataArrayKey299>
+  <ProjMetadataValue300></ProjMetadataValue300>
+  <ProjMetadataArrayKey300>0</ProjMetadataArrayKey300>
+  <ProjMetadataValue301></ProjMetadataValue301>
+  <ProjMetadataArrayKey301>0</ProjMetadataArrayKey301>
+  <ProjMetadataValue302></ProjMetadataValue302>
+  <ProjMetadataArrayKey302>0</ProjMetadataArrayKey302>
+  <ProjMetadataValue303></ProjMetadataValue303>
+  <ProjMetadataArrayKey303>0</ProjMetadataArrayKey303>
+  <ProjMetadataValue304></ProjMetadataValue304>
+  <ProjMetadataArrayKey304>0</ProjMetadataArrayKey304>
+  <ProjMetadataValue305></ProjMetadataValue305>
+  <ProjMetadataArrayKey305>0</ProjMetadataArrayKey305>
+  <ProjMetadataValue306></ProjMetadataValue306>
+  <ProjMetadataArrayKey306>0</ProjMetadataArrayKey306>
+  <ProjMetadataValue307></ProjMetadataValue307>
+  <ProjMetadataArrayKey307>0</ProjMetadataArrayKey307>
+  <ProjMetadataValue308></ProjMetadataValue308>
+  <ProjMetadataArrayKey308>0</ProjMetadataArrayKey308>
+  <ProjMetadataValue309></ProjMetadataValue309>
+  <ProjMetadataArrayKey309>0</ProjMetadataArrayKey309>
+  <ProjMetadataValue310></ProjMetadataValue310>
+  <ProjMetadataArrayKey310>0</ProjMetadataArrayKey310>
+  <ProjMetadataValue311></ProjMetadataValue311>
+  <ProjMetadataArrayKey311>0</ProjMetadataArrayKey311>
+  <ProjMetadataValue312></ProjMetadataValue312>
+  <ProjMetadataArrayKey312>0</ProjMetadataArrayKey312>
+  <ProjMetadataValue313></ProjMetadataValue313>
+  <ProjMetadataArrayKey313>0</ProjMetadataArrayKey313>
+  <ProjMetadataValue314></ProjMetadataValue314>
+  <ProjMetadataArrayKey314>0</ProjMetadataArrayKey314>
+  <ProjMetadataValue315></ProjMetadataValue315>
+  <ProjMetadataArrayKey315>0</ProjMetadataArrayKey315>
+  <ProjMetadataValue316></ProjMetadataValue316>
+  <ProjMetadataArrayKey316>0</ProjMetadataArrayKey316>
+  <ProjMetadataValue317></ProjMetadataValue317>
+  <ProjMetadataArrayKey317>0</ProjMetadataArrayKey317>
+  <ProjMetadataValue318></ProjMetadataValue318>
+  <ProjMetadataArrayKey318>0</ProjMetadataArrayKey318>
+  <ProjMetadataValue319></ProjMetadataValue319>
+  <ProjMetadataArrayKey319>0</ProjMetadataArrayKey319>
+  <ProjMetadataValue320></ProjMetadataValue320>
+  <ProjMetadataArrayKey320>0</ProjMetadataArrayKey320>
+  <ProjMetadataValue321></ProjMetadataValue321>
+  <ProjMetadataArrayKey321>0</ProjMetadataArrayKey321>
+  <ProjMetadataValue322></ProjMetadataValue322>
+  <ProjMetadataArrayKey322>0</ProjMetadataArrayKey322>
+  <ProjMetadataValue323></ProjMetadataValue323>
+  <ProjMetadataArrayKey323>0</ProjMetadataArrayKey323>
+  <ProjMetadataValue324></ProjMetadataValue324>
+  <ProjMetadataArrayKey324>0</ProjMetadataArrayKey324>
+  <ProjMetadataValue325></ProjMetadataValue325>
+  <ProjMetadataArrayKey325>0</ProjMetadataArrayKey325>
+  <ProjMetadataValue326></ProjMetadataValue326>
+  <ProjMetadataArrayKey326>0</ProjMetadataArrayKey326>
+  <ProjMetadataValue327></ProjMetadataValue327>
+  <ProjMetadataArrayKey327>0</ProjMetadataArrayKey327>
+  <ProjMetadataValue328></ProjMetadataValue328>
+  <ProjMetadataArrayKey328>0</ProjMetadataArrayKey328>
+  <ProjMetadataValue329></ProjMetadataValue329>
+  <ProjMetadataArrayKey329>0</ProjMetadataArrayKey329>
+  <ProjMetadataValue330></ProjMetadataValue330>
+  <ProjMetadataArrayKey330>0</ProjMetadataArrayKey330>
+  <ProjMetadataValue331></ProjMetadataValue331>
+  <ProjMetadataArrayKey331>0</ProjMetadataArrayKey331>
+  <ProjMetadataValue332></ProjMetadataValue332>
+  <ProjMetadataArrayKey332>0</ProjMetadataArrayKey332>
+  <ProjMetadataValue333></ProjMetadataValue333>
+  <ProjMetadataArrayKey333>0</ProjMetadataArrayKey333>
+  <ProjMetadataValue334></ProjMetadataValue334>
+  <ProjMetadataArrayKey334>0</ProjMetadataArrayKey334>
+  <ProjMetadataValue335></ProjMetadataValue335>
+  <ProjMetadataArrayKey335>0</ProjMetadataArrayKey335>
+  <ProjMetadataValue336></ProjMetadataValue336>
+  <ProjMetadataArrayKey336>0</ProjMetadataArrayKey336>
+  <ProjMetadataValue337></ProjMetadataValue337>
+  <ProjMetadataArrayKey337>0</ProjMetadataArrayKey337>
+  <ProjMetadataValue338></ProjMetadataValue338>
+  <ProjMetadataArrayKey338>0</ProjMetadataArrayKey338>
+  <ProjMetadataValue339></ProjMetadataValue339>
+  <ProjMetadataArrayKey339>0</ProjMetadataArrayKey339>
+  <ProjMetadataValue340></ProjMetadataValue340>
+  <ProjMetadataArrayKey340>0</ProjMetadataArrayKey340>
+  <ProjMetadataValue341></ProjMetadataValue341>
+  <ProjMetadataArrayKey341>0</ProjMetadataArrayKey341>
+  <ProjMetadataValue342></ProjMetadataValue342>
+  <ProjMetadataArrayKey342>0</ProjMetadataArrayKey342>
+  <ProjMetadataValue343></ProjMetadataValue343>
+  <ProjMetadataArrayKey343>0</ProjMetadataArrayKey343>
+  <ProjMetadataValue344></ProjMetadataValue344>
+  <ProjMetadataArrayKey344>0</ProjMetadataArrayKey344>
+  <ProjMetadataValue345></ProjMetadataValue345>
+  <ProjMetadataArrayKey345>0</ProjMetadataArrayKey345>
+  <ProjMetadataValue346></ProjMetadataValue346>
+  <ProjMetadataArrayKey346>0</ProjMetadataArrayKey346>
+  <ProjMetadataValue347></ProjMetadataValue347>
+  <ProjMetadataArrayKey347>0</ProjMetadataArrayKey347>
+  <ProjMetadataValue348></ProjMetadataValue348>
+  <ProjMetadataArrayKey348>0</ProjMetadataArrayKey348>
+  <ProjMetadataValue349></ProjMetadataValue349>
+  <ProjMetadataArrayKey349>0</ProjMetadataArrayKey349>
+  <ProjMetadataValue350></ProjMetadataValue350>
+  <ProjMetadataArrayKey350>0</ProjMetadataArrayKey350>
+  <ProjMetadataValue351></ProjMetadataValue351>
+  <ProjMetadataArrayKey351>0</ProjMetadataArrayKey351>
+  <ProjMetadataValue352></ProjMetadataValue352>
+  <ProjMetadataArrayKey352>0</ProjMetadataArrayKey352>
+  <ProjMetadataValue353></ProjMetadataValue353>
+  <ProjMetadataArrayKey353>0</ProjMetadataArrayKey353>
+  <ProjMetadataValue354></ProjMetadataValue354>
+  <ProjMetadataArrayKey354>0</ProjMetadataArrayKey354>
+  <ProjMetadataValue355></ProjMetadataValue355>
+  <ProjMetadataArrayKey355>0</ProjMetadataArrayKey355>
+  <ProjMetadataValue356></ProjMetadataValue356>
+  <ProjMetadataArrayKey356>0</ProjMetadataArrayKey356>
+  <ProjMetadataValue357></ProjMetadataValue357>
+  <ProjMetadataArrayKey357>0</ProjMetadataArrayKey357>
+  <ProjMetadataValue358></ProjMetadataValue358>
+  <ProjMetadataArrayKey358>0</ProjMetadataArrayKey358>
+  <ProjMetadataValue359></ProjMetadataValue359>
+  <ProjMetadataArrayKey359>0</ProjMetadataArrayKey359>
+  <ProjMetadataValue360></ProjMetadataValue360>
+  <ProjMetadataArrayKey360>0</ProjMetadataArrayKey360>
+  <ProjMetadataValue361></ProjMetadataValue361>
+  <ProjMetadataArrayKey361>0</ProjMetadataArrayKey361>
+  <ProjMetadataValue362></ProjMetadataValue362>
+  <ProjMetadataArrayKey362>0</ProjMetadataArrayKey362>
+  <ProjMetadataValue363></ProjMetadataValue363>
+  <ProjMetadataArrayKey363>0</ProjMetadataArrayKey363>
+  <ProjMetadataValue364></ProjMetadataValue364>
+  <ProjMetadataArrayKey364>0</ProjMetadataArrayKey364>
+  <ProjMetadataValue365></ProjMetadataValue365>
+  <ProjMetadataArrayKey365>0</ProjMetadataArrayKey365>
+  <ProjMetadataValue366></ProjMetadataValue366>
+  <ProjMetadataArrayKey366>0</ProjMetadataArrayKey366>
+  <ProjMetadataValue367></ProjMetadataValue367>
+  <ProjMetadataArrayKey367>0</ProjMetadataArrayKey367>
+  <ProjMetadataValue368></ProjMetadataValue368>
+  <ProjMetadataArrayKey368>0</ProjMetadataArrayKey368>
+  <ProjMetadataValue369></ProjMetadataValue369>
+  <ProjMetadataArrayKey369>0</ProjMetadataArrayKey369>
+  <ProjMetadataValue370></ProjMetadataValue370>
+  <ProjMetadataArrayKey370>0</ProjMetadataArrayKey370>
+  <ProjMetadataValue371></ProjMetadataValue371>
+  <ProjMetadataArrayKey371>0</ProjMetadataArrayKey371>
+  <ProjMetadataValue372></ProjMetadataValue372>
+  <ProjMetadataArrayKey372>0</ProjMetadataArrayKey372>
+  <ProjMetadataValue373></ProjMetadataValue373>
+  <ProjMetadataArrayKey373>0</ProjMetadataArrayKey373>
+  <ProjMetadataValue374></ProjMetadataValue374>
+  <ProjMetadataArrayKey374>0</ProjMetadataArrayKey374>
+  <ProjMetadataValue375></ProjMetadataValue375>
+  <ProjMetadataArrayKey375>0</ProjMetadataArrayKey375>
+  <ProjMetadataValue376></ProjMetadataValue376>
+  <ProjMetadataArrayKey376>0</ProjMetadataArrayKey376>
+  <ProjMetadataValue377></ProjMetadataValue377>
+  <ProjMetadataArrayKey377>0</ProjMetadataArrayKey377>
+  <ProjMetadataValue378></ProjMetadataValue378>
+  <ProjMetadataArrayKey378>0</ProjMetadataArrayKey378>
+  <ProjMetadataValue379></ProjMetadataValue379>
+  <ProjMetadataArrayKey379>0</ProjMetadataArrayKey379>
+  <ProjMetadataValue380></ProjMetadataValue380>
+  <ProjMetadataArrayKey380>0</ProjMetadataArrayKey380>
+  <ProjMetadataValue381></ProjMetadataValue381>
+  <ProjMetadataArrayKey381>0</ProjMetadataArrayKey381>
+  <ProjMetadataValue382></ProjMetadataValue382>
+  <ProjMetadataArrayKey382>0</ProjMetadataArrayKey382>
+  <ProductionFormat>14</ProductionFormat>
+  <ProfileNumber>7</ProfileNumber>
+  <StdSizeIndex>21</StdSizeIndex>
+  <MovieWidth>640</MovieWidth>
+  <MovieHeight>600</MovieHeight>
+  <StretchToFit>1</StretchToFit>
+  <MaintainAspectRatio>1</MaintainAspectRatio>
+  <DisableOverlayFading>0</DisableOverlayFading>
+  <DisableSlowZooms>0</DisableSlowZooms>
+  <MovieSize>1</MovieSize>
+  <Title></Title>
+  <Author></Author>
+  <Copyright></Copyright>
+  <Description></Description>
+  <VideoCompressor>Techsmith Screen Capture Codec</VideoCompressor>
+  <AudioCompressor>PCM</AudioCompressor>
+  <PIPBGImage></PIPBGImage>
+  <Interleave>1</Interleave>
+  <BackgroundColor>0x00000000</BackgroundColor>
+  <InterleaveRate>1</InterleaveRate>
+  <InterleaveByFrames>0</InterleaveByFrames>
+  <AviHandler>0x63637374</AviHandler>
+  <AviQuality>-1</AviQuality>
+  <AviKeyframeRate>80</AviKeyframeRate>
+  <AviDataRate>0</AviDataRate>
+  <AviFRRate>0x00000000</AviFRRate>
+  <AviFRScale>0x00000001</AviFRScale>
+  <AviFRTime>0x00000001</AviFRTime>
+  <BitsPixel>0</BitsPixel>
+  <AviEncodeAudio>1</AviEncodeAudio>
+  <M4VSubtype>2</M4VSubtype>
+  <MoviePresetSize>0</MoviePresetSize>
+  <AutomaticFramerate>1</AutomaticFramerate>
+  <CustomFramerate>10</CustomFramerate>
+  <AddMP3FileToProduction>0</AddMP3FileToProduction>
+  <AddIPODFileToProduction>0</AddIPODFileToProduction>
+  <AddPPTFileToProduction>0</AddPPTFileToProduction>
+  <PPTFileToAddToProduction></PPTFileToAddToProduction>
+  <MultiFileOutpytStyle>0</MultiFileOutpytStyle>
+  <IncludeWatermark>0</IncludeWatermark>
+  <WatermarkPath>C:\Archivos de programa\TechSmith\Camtasia Studio 6\Media\Studio\Images\watermark.png</WatermarkPath>
+  <WatermarkScale>20</WatermarkScale>
+  <WatermarkOpacity>50</WatermarkOpacity>
+  <WatermarkHorzOffset>5</WatermarkHorzOffset>
+  <WatermarkVertOffset>5</WatermarkVertOffset>
+  <WatermarkUseTransparentColor>0</WatermarkUseTransparentColor>
+  <WatermarkKeepAspectRatio>1</WatermarkKeepAspectRatio>
+  <WatermarkUseSmoothScaling>1</WatermarkUseSmoothScaling>
+  <WatermarkPreserveImageSize>0</WatermarkPreserveImageSize>
+  <WatermarkColorTransparent>0x00FFFFFF</WatermarkColorTransparent>
+  <WatermarkPlacement>8</WatermarkPlacement>
+  <WatermarkEmboss>0</WatermarkEmboss>
+  <WatermarkEmbossDepth>20</WatermarkEmbossDepth>
+  <WatermarkEmbossDirectfion>0</WatermarkEmbossDirectfion>
+  <MaxImageWidth>640</MaxImageWidth>
+  <MaxImageHeight>480</MaxImageHeight>
+  <CaptionLines>3</CaptionLines>
+  <OverlayCaption>0</OverlayCaption>
+  <CaptionHeight>84</CaptionHeight>
+  <CaptionFontFamily>Microsoft Sans Serif</CaptionFontFamily>
+  <WriteCCInfo>0</WriteCCInfo>
+  <SCORMVersion>0</SCORMVersion>
+  <HTMLAlignmentName>1</HTMLAlignmentName>
+  <TOCType>1</TOCType>
+  <AviAudioFmt>AQABACJWAABErAAAAgAQAAAA</AviAudioFmt>
+  <Mp3AudioFmt>AAcBACJWAAC4CwAAAQAAAAwAYwAEAAAAoQEBAAAA</Mp3AudioFmt>
+  <AdditionalMP3Format>3</AdditionalMP3Format>
+  <ProducedPPBefore>0</ProducedPPBefore>
+  <AutoPostProduction>0</AutoPostProduction>
+  <AutoFTPUploadPostProduction>0</AutoFTPUploadPostProduction>
+  <StartLogoImage></StartLogoImage>
+  <EndLogoImage></EndLogoImage>
+  <FullScreenOption>1</FullScreenOption>
+  <TOCLogoImage>Camtasia Studio sample</TOCLogoImage>
+  <AboutLogoImage></AboutLogoImage>
+  <AboutTitleBarLogoImage></AboutTitleBarLogoImage>
+  <AboutBoxUseText>1</AboutBoxUseText>
+  <AboutTitleBarText></AboutTitleBarText>
+  <TOCTitleText></TOCTitleText>
+  <SwfAudioFormat>2</SwfAudioFormat>
+  <SwfPcmFormat>0</SwfPcmFormat>
+  <SwfAdpcmFormat>0</SwfAdpcmFormat>
+  <SwfMp3Format>5</SwfMp3Format>
+  <SwfPlaybackControls>0</SwfPlaybackControls>
+  <SwfPauseAtStart>0</SwfPauseAtStart>
+  <SwfAllowResizing>0</SwfAllowResizing>
+  <SwfAllowResizingSSWF>1</SwfAllowResizingSSWF>
+  <SwfPreloadAdvanced>1</SwfPreloadAdvanced>
+  <SwfEndAction>0</SwfEndAction>
+  <SwfEndActionUrl></SwfEndActionUrl>
+  <SwfPreloadUrlBasic>Default Screen</SwfPreloadUrlBasic>
+  <SwfPreloadUrlAdvanced>Default Movie</SwfPreloadUrlAdvanced>
+  <SwfControlColor>0x00C0C0C0</SwfControlColor>
+  <SwfShowAboutBtn>0</SwfShowAboutBtn>
+  <SwfAboutBoxTxt></SwfAboutBoxTxt>
+  <SwfInfoBoxTxt></SwfInfoBoxTxt>
+  <SwfInfoBoxSelected>1</SwfInfoBoxSelected>
+  <SwfCCInitiallyVisible>1</SwfCCInitiallyVisible>
+  <SwfCCInitiallyVisibleSSWF>0</SwfCCInitiallyVisibleSSWF>
+  <SwfShowMovieDuration>1</SwfShowMovieDuration>
+  <SwfShowTimeElapsed>1</SwfShowTimeElapsed>
+  <SwfTimeDisplayFormat>MM:SS</SwfTimeDisplayFormat>
+  <SwfTimeFont>Arial</SwfTimeFont>
+  <SwfTimeFontColor>0x00000000</SwfTimeFontColor>
+  <SwfMatchPreloadMovieSize>0</SwfMatchPreloadMovieSize>
+  <SwfMainMovieLoadPercent>10</SwfMainMovieLoadPercent>
+  <SwfPreloadMinDisplayTime>3</SwfPreloadMinDisplayTime>
+  <JPEGQuality>50</JPEGQuality>
+  <EncodeJPEG>0</EncodeJPEG>
+  <SwfQuizIndentPercent>10</SwfQuizIndentPercent>
+  <SwfTargetVersion>8</SwfTargetVersion>
+  <SingleSWF>1</SingleSWF>
+  <CompressSWF>1</CompressSWF>
+  <SwfStartScreenText></SwfStartScreenText>
+  <SwfStartCustomThumbnail></SwfStartCustomThumbnail>
+  <SwfStartCustomThumbScale>45</SwfStartCustomThumbScale>
+  <SwfStartColor>0x00000000</SwfStartColor>
+  <SwfStartScreenShow>1</SwfStartScreenShow>
+  <SwfEndScreenShow>1</SwfEndScreenShow>
+  <SwfLoopAtEnd>0</SwfLoopAtEnd>
+  <SwfUseExternalConfig>0</SwfUseExternalConfig>
+  <SwfTransparencyScale>100</SwfTransparencyScale>
+  <SwfAboutBoxWidth>336</SwfAboutBoxWidth>
+  <SwfAboutBoxHeight>225</SwfAboutBoxHeight>
+  <SwfInitialVolume>100</SwfInitialVolume>
+  <SwfBrandContextMenu>0</SwfBrandContextMenu>
+  <SwfHTMLPauseAtStart>1</SwfHTMLPauseAtStart>
+  <SwfPausePlaybackAfterJump>1</SwfPausePlaybackAfterJump>
+  <SwfGetURLFunction>3</SwfGetURLFunction>
+  <SwfControllerSkinName>onyx</SwfControllerSkinName>
+  <JPEGThreshold>900</JPEGThreshold>
+  <LegacySWFOutput>0</LegacySWFOutput>
+  <MOVOptions>AAAAAAAAAAAAAAAAAAAEwXNlYW4AAAABAAAABgAAAAAAAAIjdmlkZQAAAAEAAAAQAAAAAAAAACJz
+cHRsAAAAAQAAAAAAAAAAYXZjMQAAAAAAGAAAAwAAAAAgdHBybAAAAAEAAAAAAAAAAAAAAgAAAAAA
+AAAAAAAAACRkcmF0AAAAAQAAAAAAAAAAAAAAAP//gAAAAAEAAAABAAAAABVtcHNvAAAAAQAAAAAA
+AAAAAAAAABhtZnJhAAAAAQAAAAAAAAAAAAAAAAAAABhwc2ZyAAAAAQAAAAAAAAAAAAAAAAAAABVi
+ZnJhAAAAAQAAAAAAAAAAAQAAABZtcGVzAAAAAQAAAAAAAAAAAAAAAAAoaGFyZAAAAAEAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFmVuZHMAAAABAAAAAAAAAAAAAAAAABZjZmxnAAAAAQAA
+AAAAAAAAAEQAAAAYY21mcgAAAAEAAAAAAAAAAGFwcGwAAAAUY2x1dAAAAAEAAAAAAAAAAAAAABx2
+ZXJzAAAAAQAAAAAAAAAAAAMAHAABAAAAAACIZWZmZQAAAAIAAAABAAAAAAAAAHRmeGZ4AAAAAQAA
+AAQAAAAAAAAAHHJlY3QAAAABAAAAAAAAAAAA6AGOAi4DcQAAABhzcGxpAAAAAQAAAAAAAAAAAAAA
+AAAAABhzcGxpAAAAAgAAAAAAAAAAAAAAAAAAABR0d2lzAAAAAQAAAAAAAAAAAAAAFXRybmMAAAAB
+AAAAAAAAAAAAAAABBmlzaXoAAAABAAAACQAAAAAAAAAYaXdkdAAAAAEAAAAAAAAAAAAAAAAAAAAY
+aWhndAAAAAEAAAAAAAAAAAAAAAAAAAAYcHdkdAAAAAEAAAAAAAAAAAAAAAAAAAAYcGhndAAAAAEA
+AAAAAAAAAAAAAAAAAAA0Y2xhcAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAHHBhc3AAAAABAAAAAAAAAAAAAAAAAAAAAAAAABhzY2FtAAAAAQAAAAAAAAAAAAAA
+AAAAABVkaW50AAAAAQAAAAAAAAAAAAAAABV1ZW5mAAAAAQAAAAAAAAAAAAAAARtzb3VuAAAAAQAA
+AAYAAAAAAAAAGHNzY3QAAAABAAAAAAAAAABtcDRhAAAAGHNzcnQAAAABAAAAAAAAAACsRAAAAAAA
+FnNzc3MAAAABAAAAAAAAAAAAEAAAABZzc2NjAAAAAQAAAAAAAAAAAAEAAACPY2RlYwAAAAEAAAAA
+AAAAAAAAAAxmcm1hbXA0YQAAAAxtcDRhAAAAAAAAADNlc2RzAAAAAAOAgIAiAAAABICAgBRAFQAY
+AAAA+gAAAPoABYCAgAISCAaAgIABAgAAAAxzcmNxQAAAAAAAAAxhY2JmAAAAAAAAAAgAAAAAAAAA
+ADCAHYgAAAAAAAACAAAAABx2ZXJzAAAAAQAAAAAAAAAAAAMAFAABAAAAAAAVZW52aQAAAAEAAAAA
+AAAAAAEAAAAVZW5zbwAAAAEAAAAAAAAAAAEAAAA/c2F2ZQAAAAEAAAACAAAAAAAAABVmYXN0AAAA
+AQAAAAAAAAAAAQAAABZzc3R5AAAAAQAAAAAAAAAAAAE=</MOVOptions>
+  <QTVideoCodecName>H.264</QTVideoCodecName>
+  <QtCodecType>0x61766331</QtCodecType>
+  <QtDepth>24</QtDepth>
+  <QtSpatialQuality>0x00000300</QtSpatialQuality>
+  <QtTemporalQuality>0x00000200</QtTemporalQuality>
+  <QtFrameRate>0</QtFrameRate>
+  <QtKeyframeRate>0</QtKeyframeRate>
+  <QtDataRate>0</QtDataRate>
+  <QtMinSpatialQuality>0x00000100</QtMinSpatialQuality>
+  <QtMinTemporalQuality>0x00000100</QtMinTemporalQuality>
+  <QTAudioCodecName>MPEG-4 Audio</QTAudioCodecName>
+  <QtAudioSampleRate>-1404829696</QtAudioSampleRate>
+  <QtAudioSampleSize>16</QtAudioSampleSize>
+  <QtAudioNumChannels>1</QtAudioNumChannels>
+  <QtAudioCodecType>0x6D703461</QtAudioCodecType>
+  <QtEncodeAudio>1</QtEncodeAudio>
+  <SFXRunMovie>0</SFXRunMovie>
+  <SFXPackageAgain>0</SFXPackageAgain>
+  <SFXIncludeCodec>1</SFXIncludeCodec>
+  <SFXUsePlayer>1</SFXUsePlayer>
+  <SFXPlayerAutoplay>1</SFXPlayerAutoplay>
+  <SFXPlayerExit>0</SFXPlayerExit>
+  <SFXPlayerRepeat>0</SFXPlayerRepeat>
+  <SFXPlayerLastFrame>0</SFXPlayerLastFrame>
+  <SFXPlayerOnTop>0</SFXPlayerOnTop>
+  <SFXPlayerMaximized>0</SFXPlayerMaximized>
+  <SFXPlayerFullscreen>0</SFXPlayerFullscreen>
+  <SFXPlayerNoTitle>0</SFXPlayerNoTitle>
+  <SFXPlayerNoMenu>0</SFXPlayerNoMenu>
+  <SFXPlayerNoTool>0</SFXPlayerNoTool>
+  <SFXPlayerNoStatus>0</SFXPlayerNoStatus>
+  <SFXPlayerNoDrag>0</SFXPlayerNoDrag>
+  <SFXPlayerBackColor>0x00000000</SFXPlayerBackColor>
+  <RealFileType>0x00000001</RealFileType>
+  <RealAudioType>0x00000000</RealAudioType>
+  <RealVideoQuality>0x00000002</RealVideoQuality>
+  <Real2PassEncoding>1</Real2PassEncoding>
+  <RealVBREncoding>1</RealVBREncoding>
+  <RealTargetAudiences>8</RealTargetAudiences>
+  <CfrBitsPixel>0x00000010</CfrBitsPixel>
+  <CfrPreroll>0x00002710</CfrPreroll>
+  <CfrKeyframeRate>0x0000000A</CfrKeyframeRate>
+  <CfrFRRate>0x00000000</CfrFRRate>
+  <CfrFRScale>0x00000001</CfrFRScale>
+  <CfrFRTime>0x00000001</CfrFRTime>
+  <CfrRealTargetAudiences>2</CfrRealTargetAudiences>
+  <CfrRealAudioType>0x00000000</CfrRealAudioType>
+  <CfrTargetBitrate28K>0x00000014</CfrTargetBitrate28K>
+  <CfrTargetBitrate56K>0x00000022</CfrTargetBitrate56K>
+  <CfrTargetBitrateSingleISDN>0x0000002D</CfrTargetBitrateSingleISDN>
+  <CfrTargetBitrateDualISDN>0x00000050</CfrTargetBitrateDualISDN>
+  <CfrTargetBitrateLAN>0x00000096</CfrTargetBitrateLAN>
+  <CfrTargetBitrate256K>0x000000E1</CfrTargetBitrate256K>
+  <CfrTargetBitrate384K>0x0000015E</CfrTargetBitrate384K>
+  <CfrTargetBitrate512K>0x000001C2</CfrTargetBitrate512K>
+  <WMProfile>Camtasia Studio Best Quality and File Size (Recommended)</WMProfile>
+  <WMIndexerOn>1</WMIndexerOn>
+  <WMDefaultProfile>1</WMDefaultProfile>
+  <FLVMaxBitRate>300</FLVMaxBitRate>
+  <FLVRateControlType>1</FLVRateControlType>
+  <FLVImageQuality>45</FLVImageQuality>
+  <FLVKeyFrameType>0</FLVKeyFrameType>
+  <FLVKeyFrameRate>30</FLVKeyFrameRate>
+  <FLVKFRSeconds>5</FLVKFRSeconds>
+  <FLVAudioSampleRate>22050</FLVAudioSampleRate>
+  <FLVAudioBitRate>96</FLVAudioBitRate>
+  <FLVPCMAudioSampleRate>22050</FLVPCMAudioSampleRate>
+  <FLVPCMAudioBitRate>16</FLVPCMAudioBitRate>
+  <FLVUseMP3Encoding>1</FLVUseMP3Encoding>
+  <FLVStereoAudio>0</FLVStereoAudio>
+  <FLVPCMStereoAudio>0</FLVPCMStereoAudio>
+  <MP4VideoBitRateMode>2</MP4VideoBitRateMode>
+  <MP4VideoSceneDetection>1</MP4VideoSceneDetection>
+  <MP4VideoPass>0</MP4VideoPass>
+  <MP4VideoBitRateAvg>819200</MP4VideoBitRateAvg>
+  <MP4VideoAdaptQuantMode>0</MP4VideoAdaptQuantMode>
+  <MP4AudioBitRateAverage>13</MP4AudioBitRateAverage>
+  <MP4AudioMPEGVersion>0</MP4AudioMPEGVersion>
+  <MP4AudioOutputFormat>1</MP4AudioOutputFormat>
+  <MP4AudioHighFreqCutOff>1</MP4AudioHighFreqCutOff>
+  <MP4AudioVBR>0</MP4AudioVBR>
+  <MP4AudioVBRQuality>6</MP4AudioVBRQuality>
+  <MP4AudioSBR>0</MP4AudioSBR>
+  <MP4AudioPS>0</MP4AudioPS>
+  <HTMLOutput>1</HTMLOutput>
+  <SCORMOutput>0</SCORMOutput>
+  <EmailQuizResults>0</EmailQuizResults>
+  <EmailQuizAddr>j.eaton@techsmith.com</EmailQuizAddr>
+  <EmailIncludeScore>1</EmailIncludeScore>
+  <JavaScriptQuizResults>0</JavaScriptQuizResults>
+  <QuizShowFeedback>1</QuizShowFeedback>
+  <AnswersSummary>Answers Summary</AnswersSummary>
+  <CreateMediaDir>1</CreateMediaDir>
+  <CreateSWFMediaDir>0</CreateSWFMediaDir>
+  <SCORMPackage>2</SCORMPackage>
+  <ManifestID>ID-F86FAF7F-062D-4F58-A04D-CA74BED4DA0E</ManifestID>
+  <ManifestTitle></ManifestTitle>
+  <ManifestDesc></ManifestDesc>
+  <ManifestSubject></ManifestSubject>
+  <SCOTitle></SCOTitle>
+  <ManifestLanguage>en</ManifestLanguage>
+  <VideoDuration>0:00:19;07</VideoDuration>
+  <HostingKey></HostingKey>
+  <HTMLController>1</HTMLController>
+  <HTMLAutoPlay>1</HTMLAutoPlay>
+  <WriteIndex>1</WriteIndex>
+  <WriteMultipleFiles>0</WriteMultipleFiles>
+  <ShortenIndexNames>1</ShortenIndexNames>
+  <ShortenedIndexLength>17</ShortenedIndexLength>
+  <NumberIndexMarkers>0</NumberIndexMarkers>
+  <HTMLTemplateName>Template.$[AnyExtension]</HTMLTemplateName>
+  <Path>2</Path>
+  <LastPathChosen>2</LastPathChosen>
+  <Distribution>5</Distribution>
+  <OutputFileName>Untitled.avi</OutputFileName>
+  <AdvMovieSize>3</AdvMovieSize>
+  <Connection>1</Connection>
+  <RecommendedFormat>14</RecommendedFormat>
+  <ScreenCaptureContent>1</ScreenCaptureContent>
+  <RealWorldContent>1</RealWorldContent>
+  <PowerPointContent>0</PowerPointContent>
+  <MicAudioContent>0</MicAudioContent>
+  <MusicAudioContent>0</MusicAudioContent>
+  <VideoQualitySlider>4</VideoQualitySlider>
+  <AudioQualitySlider>4</AudioQualitySlider>
+  <UsePresetOptions>0</UsePresetOptions>
+  <WhyRecommendFormat></WhyRecommendFormat>
+  <WhyRecommendVideoSettings></WhyRecommendVideoSettings>
+  <WhyRecommendAudioSettings></WhyRecommendAudioSettings>
+  <UsedRecommendation>0</UsedRecommendation>
+  <ClickedDisableSlowZooms>0</ClickedDisableSlowZooms>
+  <ClickedDisableOverlayFading>0</ClickedDisableOverlayFading>
+  <WebOpenProdFolder>1</WebOpenProdFolder>
+  <WebZip>0</WebZip>
+  <Web3rdPartyHosting>0</Web3rdPartyHosting>
+  <EmailOpenProdFolder>0</EmailOpenProdFolder>
+  <CDOpenProdFolder>1</CDOpenProdFolder>
+  <CDAddToMenuMaker>0</CDAddToMenuMaker>
+  <DVDOpenProdFolder>0</DVDOpenProdFolder>
+  <IPODOpenProdFolder>1</IPODOpenProdFolder>
+  <HardDriveOpenProdFolder>0</HardDriveOpenProdFolder>
+  <FlashSizePrevTemplate>0</FlashSizePrevTemplate>
+  <FlashSizePresetWidth>-1</FlashSizePresetWidth>
+  <FlashSizePresetHeight>-1</FlashSizePresetHeight>
+  <FlashSizeActualTotalWidth>640</FlashSizeActualTotalWidth>
+  <FlashSizeActualTotalHeight>618</FlashSizeActualTotalHeight>
+  <IPOD3rdPartyHosting>0</IPOD3rdPartyHosting>
+  <GifBitsPixel>0</GifBitsPixel>
+  <GifFRRate>0x00000000</GifFRRate>
+  <GifFRScale>0x00000001</GifFRScale>
+  <GifFRTime>0x00000001</GifFRTime>
+  <GifIterations>0</GifIterations>
+  <GifOptimizedPalette>1</GifOptimizedPalette>
+  <GifWindowsColors>1</GifWindowsColors>
+  <GifDither>0</GifDither>
+  <PipConfig>
+    <ProjMetadataSize>0</ProjMetadataSize>
+    <ProductionFormat>14</ProductionFormat>
+    <ProfileNumber>0</ProfileNumber>
+    <StdSizeIndex>3</StdSizeIndex>
+    <MovieWidth>160</MovieWidth>
+    <MovieHeight>120</MovieHeight>
+    <StretchToFit>1</StretchToFit>
+    <MaintainAspectRatio>1</MaintainAspectRatio>
+    <DisableOverlayFading>0</DisableOverlayFading>
+    <DisableSlowZooms>0</DisableSlowZooms>
+    <MovieSize>0</MovieSize>
+    <Title></Title>
+    <Author></Author>
+    <Copyright></Copyright>
+    <Description></Description>
+    <VideoCompressor>Techsmith Screen Capture Codec</VideoCompressor>
+    <AudioCompressor>PCM</AudioCompressor>
+    <PIPBGImage></PIPBGImage>
+    <Interleave>1</Interleave>
+    <BackgroundColor>0x00000000</BackgroundColor>
+    <InterleaveRate>1</InterleaveRate>
+    <InterleaveByFrames>0</InterleaveByFrames>
+    <AviHandler>0x63637374</AviHandler>
+    <AviQuality>-1</AviQuality>
+    <AviKeyframeRate>80</AviKeyframeRate>
+    <AviDataRate>0</AviDataRate>
+    <AviFRRate>0x00000000</AviFRRate>
+    <AviFRScale>0x00000001</AviFRScale>
+    <AviFRTime>0x00000001</AviFRTime>
+    <BitsPixel>0</BitsPixel>
+    <AviEncodeAudio>1</AviEncodeAudio>
+    <M4VSubtype>2</M4VSubtype>
+    <MoviePresetSize>0</MoviePresetSize>
+    <AutomaticFramerate>1</AutomaticFramerate>
+    <CustomFramerate>10</CustomFramerate>
+    <AddMP3FileToProduction>0</AddMP3FileToProduction>
+    <AddIPODFileToProduction>0</AddIPODFileToProduction>
+    <AddPPTFileToProduction>0</AddPPTFileToProduction>
+    <PPTFileToAddToProduction></PPTFileToAddToProduction>
+    <MultiFileOutpytStyle>2</MultiFileOutpytStyle>
+    <IncludeWatermark>0</IncludeWatermark>
+    <WatermarkPath>C:\Archivos de programa\TechSmith\Camtasia Studio 6\Media\Studio\Images\watermark.png</WatermarkPath>
+    <WatermarkScale>20</WatermarkScale>
+    <WatermarkOpacity>50</WatermarkOpacity>
+    <WatermarkHorzOffset>5</WatermarkHorzOffset>
+    <WatermarkVertOffset>5</WatermarkVertOffset>
+    <WatermarkUseTransparentColor>0</WatermarkUseTransparentColor>
+    <WatermarkKeepAspectRatio>1</WatermarkKeepAspectRatio>
+    <WatermarkUseSmoothScaling>1</WatermarkUseSmoothScaling>
+    <WatermarkPreserveImageSize>0</WatermarkPreserveImageSize>
+    <WatermarkColorTransparent>0x00FFFFFF</WatermarkColorTransparent>
+    <WatermarkPlacement>8</WatermarkPlacement>
+    <WatermarkEmboss>0</WatermarkEmboss>
+    <WatermarkEmbossDepth>20</WatermarkEmbossDepth>
+    <WatermarkEmbossDirectfion>0</WatermarkEmbossDirectfion>
+    <MaxImageWidth>1280</MaxImageWidth>
+    <MaxImageHeight>1024</MaxImageHeight>
+    <CaptionLines>3</CaptionLines>
+    <OverlayCaption>0</OverlayCaption>
+    <CaptionHeight>80</CaptionHeight>
+    <CaptionFontFamily>Microsoft Sans Serif</CaptionFontFamily>
+    <WriteCCInfo>0</WriteCCInfo>
+    <SCORMVersion>0</SCORMVersion>
+    <HTMLAlignmentName>1</HTMLAlignmentName>
+    <TOCType>1</TOCType>
+    <AviAudioFmt>AQABACJWAABErAAAAgAQAAAA</AviAudioFmt>
+    <Mp3AudioFmt>AAcBAESsAACAPgAAAQAAAAwAYwAEAAAAoQEBAAAA</Mp3AudioFmt>
+    <AdditionalMP3Format>5</AdditionalMP3Format>
+    <ProducedPPBefore>0</ProducedPPBefore>
+    <AutoPostProduction>0</AutoPostProduction>
+    <AutoFTPUploadPostProduction>0</AutoFTPUploadPostProduction>
+    <StartLogoImage></StartLogoImage>
+    <EndLogoImage></EndLogoImage>
+    <FullScreenOption>1</FullScreenOption>
+    <TOCLogoImage></TOCLogoImage>
+    <AboutLogoImage></AboutLogoImage>
+    <AboutTitleBarLogoImage></AboutTitleBarLogoImage>
+    <AboutBoxUseText>1</AboutBoxUseText>
+    <AboutTitleBarText></AboutTitleBarText>
+    <TOCTitleText></TOCTitleText>
+    <SwfAudioFormat>2</SwfAudioFormat>
+    <SwfPcmFormat>0</SwfPcmFormat>
+    <SwfAdpcmFormat>0</SwfAdpcmFormat>
+    <SwfMp3Format>5</SwfMp3Format>
+    <SwfPlaybackControls>2</SwfPlaybackControls>
+    <SwfPauseAtStart>0</SwfPauseAtStart>
+    <SwfAllowResizing>0</SwfAllowResizing>
+    <SwfAllowResizingSSWF>1</SwfAllowResizingSSWF>
+    <SwfPreloadAdvanced>1</SwfPreloadAdvanced>
+    <SwfEndAction>0</SwfEndAction>
+    <SwfEndActionUrl>http://</SwfEndActionUrl>
+    <SwfPreloadUrlBasic>Default Screen</SwfPreloadUrlBasic>
+    <SwfPreloadUrlAdvanced>Default Movie</SwfPreloadUrlAdvanced>
+    <SwfControlColor>0x00C0C0C0</SwfControlColor>
+    <SwfShowAboutBtn>1</SwfShowAboutBtn>
+    <SwfAboutBoxTxt></SwfAboutBoxTxt>
+    <SwfInfoBoxTxt></SwfInfoBoxTxt>
+    <SwfInfoBoxSelected>1</SwfInfoBoxSelected>
+    <SwfCCInitiallyVisible>1</SwfCCInitiallyVisible>
+    <SwfCCInitiallyVisibleSSWF>0</SwfCCInitiallyVisibleSSWF>
+    <SwfShowMovieDuration>1</SwfShowMovieDuration>
+    <SwfShowTimeElapsed>1</SwfShowTimeElapsed>
+    <SwfTimeDisplayFormat>MM:SS</SwfTimeDisplayFormat>
+    <SwfTimeFont>Arial</SwfTimeFont>
+    <SwfTimeFontColor>0x00000000</SwfTimeFontColor>
+    <SwfMatchPreloadMovieSize>0</SwfMatchPreloadMovieSize>
+    <SwfMainMovieLoadPercent>10</SwfMainMovieLoadPercent>
+    <SwfPreloadMinDisplayTime>3</SwfPreloadMinDisplayTime>
+    <JPEGQuality>50</JPEGQuality>
+    <EncodeJPEG>0</EncodeJPEG>
+    <SwfQuizIndentPercent>10</SwfQuizIndentPercent>
+    <SwfTargetVersion>8</SwfTargetVersion>
+    <SingleSWF>1</SingleSWF>
+    <CompressSWF>1</CompressSWF>
+    <SwfStartScreenText></SwfStartScreenText>
+    <SwfStartCustomThumbnail></SwfStartCustomThumbnail>
+    <SwfStartCustomThumbScale>100</SwfStartCustomThumbScale>
+    <SwfStartColor>0x001A1A1A</SwfStartColor>
+    <SwfStartScreenShow>1</SwfStartScreenShow>
+    <SwfEndScreenShow>1</SwfEndScreenShow>
+    <SwfLoopAtEnd>0</SwfLoopAtEnd>
+    <SwfUseExternalConfig>0</SwfUseExternalConfig>
+    <SwfTransparencyScale>100</SwfTransparencyScale>
+    <SwfAboutBoxWidth>336</SwfAboutBoxWidth>
+    <SwfAboutBoxHeight>270</SwfAboutBoxHeight>
+    <SwfInitialVolume>100</SwfInitialVolume>
+    <SwfBrandContextMenu>0</SwfBrandContextMenu>
+    <SwfHTMLPauseAtStart>1</SwfHTMLPauseAtStart>
+    <SwfPausePlaybackAfterJump>1</SwfPausePlaybackAfterJump>
+    <SwfGetURLFunction>0</SwfGetURLFunction>
+    <SwfControllerSkinName>glass</SwfControllerSkinName>
+    <JPEGThreshold>900</JPEGThreshold>
+    <LegacySWFOutput>0</LegacySWFOutput>
+    <MOVOptions>AAAAAAAAAAAAAAAAAAAEiXNlYW4AAAABAAAABgAAAAAAAAIjdmlkZQAAAAEAAAAQAAAAAAAAACJz
+cHRsAAAAAQAAAAAAAAAAYXZjMQAAAAAAGAAAAwAAAAAgdHBybAAAAAEAAAAAAAAAAAAAAgAAAAAA
+AAAAAAAAACRkcmF0AAAAAQAAAAAAAAAAAAAAAP//gAAAAAEAAAABAAAAABVtcHNvAAAAAQAAAAAA
+AAAAAAAAABhtZnJhAAAAAQAAAAAAAAAAAAAAAAAAABhwc2ZyAAAAAQAAAAAAAAAAAAAAAAAAABVi
+ZnJhAAAAAQAAAAAAAAAAAQAAABZtcGVzAAAAAQAAAAAAAAAAAAAAAAAoaGFyZAAAAAEAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFmVuZHMAAAABAAAAAAAAAAAAAAAAABZjZmxnAAAAAQAA
+AAAAAAAAAEQAAAAYY21mcgAAAAEAAAAAAAAAAGFwcGwAAAAUY2x1dAAAAAEAAAAAAAAAAAAAABx2
+ZXJzAAAAAQAAAAAAAAAAAAMAHAABAAAAAACIZWZmZQAAAAIAAAABAAAAAAAAAHRmeGZ4AAAAAQAA
+AAQAAAAAAAAAHHJlY3QAAAABAAAAAAAAAAAA6AGOAi4DcQAAABhzcGxpAAAAAQAAAAAAAAAAAAAA
+AAAAABhzcGxpAAAAAgAAAAAAAAAAAAAAAAAAABR0d2lzAAAAAQAAAAAAAAAAAAAAFXRybmMAAAAB
+AAAAAAAAAAAAAAAA1mlzaXoAAAABAAAABwAAAAAAAAAYaXdkdAAAAAEAAAAAAAAAAAAAAAAAAAAY
+aWhndAAAAAEAAAAAAAAAAAAAAAAAAAA0Y2xhcAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAHHBhc3AAAAABAAAAAAAAAAAAAAAAAAAAAAAAABhzY2FtAAAAAQAA
+AAAAAAAAAAAAAAAAABVkaW50AAAAAQAAAAAAAAAAAAAAABV1ZW5mAAAAAQAAAAAAAAAAAAAAARNz
+b3VuAAAAAQAAAAYAAAAAAAAAGHNzY3QAAAABAAAAAAAAAABtcDRhAAAAGHNzcnQAAAABAAAAAAAA
+AACsRAAAAAAAFnNzc3MAAAABAAAAAAAAAAAAEAAAABZzc2NjAAAAAQAAAAAAAAAAAAEAAACHY2Rl
+YwAAAAEAAAAAAAAAAAAAAAxmcm1hbXA0YQAAAAxtcDRhAAAAAAAAADNlc2RzAAAAAAOAgIAiAAAA
+BICAgBRAFQAYAAAA+gAAAPoABYCAgAISCAaAgIABAgAAAAxzcmNxQAAAAAAAAAxhY2JmAAAAAAAA
+AAgAAAAAAAAAADCAHYgAAAAcdmVycwAAAAEAAAAAAAAAAAADABQAAQAAAAAAFWVudmkAAAABAAAA
+AAAAAAABAAAAFWVuc28AAAABAAAAAAAAAAABAAAAP3NhdmUAAAABAAAAAgAAAAAAAAAVZmFzdAAA
+AAEAAAAAAAAAAAEAAAAWc3N0eQAAAAEAAAAAAAAAAAAB</MOVOptions>
+    <QTVideoCodecName>H.264</QTVideoCodecName>
+    <QtCodecType>0x61766331</QtCodecType>
+    <QtDepth>24</QtDepth>
+    <QtSpatialQuality>0x00000300</QtSpatialQuality>
+    <QtTemporalQuality>0x00000200</QtTemporalQuality>
+    <QtFrameRate>0</QtFrameRate>
+    <QtKeyframeRate>0</QtKeyframeRate>
+    <QtDataRate>0</QtDataRate>
+    <QtMinSpatialQuality>0x00000100</QtMinSpatialQuality>
+    <QtMinTemporalQuality>0x00000100</QtMinTemporalQuality>
+    <QTAudioCodecName>MPEG-4 Audio</QTAudioCodecName>
+    <QtAudioSampleRate>-1404829696</QtAudioSampleRate>
+    <QtAudioSampleSize>16</QtAudioSampleSize>
+    <QtAudioNumChannels>1</QtAudioNumChannels>
+    <QtAudioCodecType>0x6D703461</QtAudioCodecType>
+    <QtEncodeAudio>1</QtEncodeAudio>
+    <RealFileType>0x00000001</RealFileType>
+    <RealAudioType>0x00000000</RealAudioType>
+    <RealVideoQuality>0x00000002</RealVideoQuality>
+    <Real2PassEncoding>1</Real2PassEncoding>
+    <RealVBREncoding>1</RealVBREncoding>
+    <RealTargetAudiences>8</RealTargetAudiences>
+    <CfrBitsPixel>0x00000010</CfrBitsPixel>
+    <CfrPreroll>0x00002710</CfrPreroll>
+    <CfrKeyframeRate>0x0000000A</CfrKeyframeRate>
+    <CfrFRRate>0x00000000</CfrFRRate>
+    <CfrFRScale>0x00000001</CfrFRScale>
+    <CfrFRTime>0x00000001</CfrFRTime>
+    <CfrRealTargetAudiences>2</CfrRealTargetAudiences>
+    <CfrRealAudioType>0x00000000</CfrRealAudioType>
+    <CfrTargetBitrate28K>0x00000014</CfrTargetBitrate28K>
+    <CfrTargetBitrate56K>0x00000022</CfrTargetBitrate56K>
+    <CfrTargetBitrateSingleISDN>0x0000002D</CfrTargetBitrateSingleISDN>
+    <CfrTargetBitrateDualISDN>0x00000050</CfrTargetBitrateDualISDN>
+    <CfrTargetBitrateLAN>0x00000096</CfrTargetBitrateLAN>
+    <CfrTargetBitrate256K>0x000000E1</CfrTargetBitrate256K>
+    <CfrTargetBitrate384K>0x0000015E</CfrTargetBitrate384K>
+    <CfrTargetBitrate512K>0x000001C2</CfrTargetBitrate512K>
+    <WMProfile>Camtasia Studio Best Quality and File Size (Recommended)</WMProfile>
+    <WMIndexerOn>1</WMIndexerOn>
+    <WMDefaultProfile>1</WMDefaultProfile>
+    <FLVMaxBitRate>300</FLVMaxBitRate>
+    <FLVRateControlType>1</FLVRateControlType>
+    <FLVImageQuality>45</FLVImageQuality>
+    <FLVKeyFrameType>0</FLVKeyFrameType>
+    <FLVKeyFrameRate>30</FLVKeyFrameRate>
+    <FLVKFRSeconds>5</FLVKFRSeconds>
+    <FLVAudioSampleRate>22050</FLVAudioSampleRate>
+    <FLVAudioBitRate>96</FLVAudioBitRate>
+    <FLVPCMAudioSampleRate>22050</FLVPCMAudioSampleRate>
+    <FLVPCMAudioBitRate>16</FLVPCMAudioBitRate>
+    <FLVUseMP3Encoding>1</FLVUseMP3Encoding>
+    <FLVStereoAudio>0</FLVStereoAudio>
+    <FLVPCMStereoAudio>0</FLVPCMStereoAudio>
+    <MP4VideoBitRateMode>2</MP4VideoBitRateMode>
+    <MP4VideoSceneDetection>1</MP4VideoSceneDetection>
+    <MP4VideoPass>0</MP4VideoPass>
+    <MP4VideoBitRateAvg>819200</MP4VideoBitRateAvg>
+    <MP4VideoAdaptQuantMode>0</MP4VideoAdaptQuantMode>
+    <MP4AudioBitRateAverage>13</MP4AudioBitRateAverage>
+    <MP4AudioMPEGVersion>0</MP4AudioMPEGVersion>
+    <MP4AudioOutputFormat>1</MP4AudioOutputFormat>
+    <MP4AudioHighFreqCutOff>1</MP4AudioHighFreqCutOff>
+    <MP4AudioVBR>0</MP4AudioVBR>
+    <MP4AudioVBRQuality>6</MP4AudioVBRQuality>
+    <MP4AudioSBR>0</MP4AudioSBR>
+    <MP4AudioPS>0</MP4AudioPS>
+    <GifBitsPixel>0</GifBitsPixel>
+    <GifFRRate>0x00000000</GifFRRate>
+    <GifFRScale>0x00000001</GifFRScale>
+    <GifFRTime>0x00000001</GifFRTime>
+    <GifIterations>0</GifIterations>
+    <GifOptimizedPalette>1</GifOptimizedPalette>
+    <GifWindowsColors>1</GifWindowsColors>
+    <GifDither>0</GifDither>
+  </PipConfig>
+</ConfigArchive>

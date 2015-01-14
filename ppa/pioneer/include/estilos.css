@@ -1,0 +1,153 @@
+BODY {
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 12px;
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+.required, .edit, .delete {
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 10px;
+	COLOR: #eeeeee;
+	FONT-FAMILY: Verdana, Helvetica, sans-serif;
+	BACKGROUND-COLOR: #888888
+}
+.deleted {
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 10px;
+	COLOR: #222222;
+	FONT-FAMILY: Verdana, Helvetica, sans-serif;
+	BACKGROUND-COLOR: #DDDDDD;
+	text-decoration: line-through
+}
+
+
+.inputimage{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #222222;
+	margin: 0px;
+	padding: 0px;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+.inputtext, input, textarea{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #222222;
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid #aaaaaa;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+	clear: none;
+	float: none;
+	BACKGROUND-COLOR: #EEEEEE
+}
+select{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #222222;
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid #aaaaaa;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+	width: 220px;
+	clear: none;
+	float: none;
+	BACKGROUND-COLOR: #EEEEEE	
+}
+.short{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #222222;
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid #aaaaaa;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+	width: 100px;
+	clear: none;
+	float: none;
+	BACKGROUND-COLOR: #EEEEEE	
+}
+.textos,a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #222222;
+	
+}
+.titulo {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+}
+.subtitulo {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+}
+.destacados {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: italic;
+	font-weight: bold;
+}
+.destacadossin {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: italic;
+	font-weight: normal;
+}
+.subyarado {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: underline;
+
+}
+.subrayadocolor {
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #0066FF;
+	text-decoration: underline;
+}
+.textoscolor {
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FF00FF;
+}
+.tituloprin {
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #006699;
+}
+.selected{
+	background : #DDEEDD;
+}
+.style4 {
+		  color:#FFFFFF;
+        font-size: 12px;
+        font-style: normal;
+        line-height: normal;
+        font-weight: bold;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;		  
+}
+
+.description {
+		color:#777777;
+        font-size: 9px;
+        font-style: normal;
+        line-height: normal;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;		  
+}

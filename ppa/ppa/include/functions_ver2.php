@@ -1,0 +1,192 @@
+<?
+///////////////////////////////////////// FUNCIONES //////////////////////////////////////////////////////////////////////////
+/*Retorna una arreglo cuya primera posicion tiene las horas y la segunda tiene los programas que correponden a las horas, dada la matriz de programacion transpuesta y una fecha*/
+function getHoursProgramsfromMatrix( $matrix_row , $date ){
+  $arr = array();
+  $arr[0] = "";
+  $arr[1] = "";
+  $keys = array_keys( $matrix_row[$date] );
+  for( $i = 0; $i < count( $keys ); $i++ ){
+    if( trim( $matrix_row[$date][$keys[$i]] ) != "" ){
+      $arr[0] .= $keys[$i]."\t";
+      $arr[1] .= $matrix_row[$date][$keys[$i]]."\t";
+    }
+  }
+  return $arr;
+}
+
+
+/*Convierte el archo de programacion version 2 en una matriz, dado un número de mes y año*/
+function convertToMatrix( $file, $year, $month ){
+  $matrix = array();
+  $in = file( $file );
+  $dias_temp = explode("\t",$in[0]);
+  $dias = array();
+  for( $i = 1; $i < count( $dias_temp ); $i++ ){
+     if( $dias_temp[$i] != "" ){
+         $dias[] = $dias_temp[$i];     
+     }
+  }
+  $vars = explode("\t",$in[1]);
+  $vars[0] = str_replace("am", "", strtolower( $vars[0] ) );
+  $vars[0] = str_replace("pm", "", strtolower( $vars[0] ) );
+  $vars[0] = str_replace("a.m.", "", strtolower( $vars[0] ) );
+  $vars[0] = str_replace("p.m.", "", strtolower( $vars[0] ) );
+  $hora_corte = $vars[0];
+  for($i = 1; $i<count($in); $i++){
+    $vars = explode("\t",$in[$i]);
+    $vars[0] = str_replace("am", "", strtolower( $vars[0] ) );
+    $vars[0] = str_replace("pm", "", strtolower( $vars[0] ) );
+    $vars[0] = str_replace("a.m.", "", strtolower( $vars[0] ) );
+    $vars[0] = str_replace("p.m.", "", strtolower( $vars[0] ) );
+    $temp = explode(":", $vars[0] );
+    if( $temp[0] > 23 ){
+      $temp1 = $temp[0] - 24;
+      $vars[0] = $temp1.":".$temp[1];
+    }
+    if( strstr( $temp[0], "-" )  ){
+        $temp1 = 24 + $temp[0];
+        $vars[0] = $temp1.":".$temp[1];
+    }
+    $hora = trim( $vars[0] );
+    for($j = 1; $j<count($vars); $j++){
+      if(trim($vars[$j]) != ""){
+/*
+   	    if($j < 10) $dia = "0" . $j;
+	      else $dia = $j;
+*/
+        $dia = $dias[$j-1];
+   	    if($dia < 10) $dia = "0" . $dia;
+
+	    $fecha = date("Y-m-d",strtotime($year."-".$month."-".$dia));
+	    if(strtotime($hora) < strtotime($hora_corte) ){
+	      $fecha = date("Y-m-d", strtotime($fecha)+ (60*60*24));
+	    }   
+	    $title = trim($vars[$j]);
+	    $title = strtolower($title);
+	    $title = ucwords($title);
+	    $title = str_replace( "\n", "", $title );
+	    $title = str_replace( "\r", "", $title );
+	    $title = str_replace( chr(10), "", $title );
+	    $title = str_replace( chr(13), "", $title );
+		$title = str_replace( chr(160), "", $title );				
+	    $temp = explode(" ", $title );
+	    $title=ereg_replace (' +', ' ', trim($title));
+	    if( strstr($hora,":") ){
+	      $matrix[$hora][$fecha] = $title;
+	    }
+      }
+    }
+  }   
+  $matrix = orderMatrix( $matrix );
+  $matrix = transMatrix( $matrix );
+  return $matrix;
+}
+/*Ordena un arreglo de horas*/
+function orderHourArray( $hour_array ){
+
+  for( $i = count( $hour_array ); $i > 0; $i-- ){
+    for( $j = 1; $j < count( $hour_array ); $j++ ){
+      if( strtotime( $hour_array[$j-1] ) > strtotime( $hour_array[$j] ) && trim( $hour_array[$j] ) != "" ){
+	$temp = $hour_array[$j];
+	$hour_array[$j] = $hour_array[$j-1];
+	$hour_array[$j-1] = $temp;
+      }
+    }
+  }  
+  return $hour_array;
+}
+/*Ordena la matriz de programación por horas*/
+function orderMatrix( $matrix ){
+  $new_matrix = array();
+  $keys = array_keys( $matrix  );
+  $keys = orderHourArray( $keys );
+  $keys2 = array();
+  for( $i = 0 ; $i < count( $keys ); $i++ ){
+    $keys1 = array_keys( $matrix[$keys[$i]] );
+    for( $j = 0 ; $j < count( $keys1 ); $j++ ){
+      if( !in_array( $keys1[$j], $keys2 ) ){
+	$keys2[] = $keys1[$j];
+      }
+    }
+  }
+  
+  for( $i = count( $keys2 ); $i > 0; $i-- ){
+    for( $j = 1; $j < count( $keys2 ); $j++ ){
+      if( strtotime( $keys2[$j-1] ) > strtotime( $keys2[$j] ) && trim( $keys2[$j] ) != "" ){
+	$temp = $keys2[$j];
+	$keys2[$j] = $keys2[$j-1];
+	$keys2[$j-1] = $temp;
+      }
+    }
+  }  
+  for( $i = 0 ; $i < count( $keys ); $i++ ){
+    for( $j = 0 ; $j < count( $keys2 ); $j++ ){
+      $new_matrix[$keys[$i]][$keys2[$j]] = $matrix[$keys[$i]][$keys2[$j]];
+    }
+  }
+  return $new_matrix;
+}
+/*Transpone la matriz de programación*/
+function transMatrix( $matrix ){
+  $trans_matrix = array();
+  $keys = array_keys( $matrix  );
+  $keys2 = array();
+
+  for( $i = 0 ; $i < count( $keys ); $i++ ){
+    $keys1 = array_keys( $matrix[$keys[$i]] );
+    for( $j = 0 ; $j < count( $keys1 ); $j++ ){
+      if( !in_array( $keys1[$j], $keys2 ) ){
+	$keys2[] = $keys1[$j];
+      }
+    }
+  }
+  
+  for( $i = count( $keys2 ); $i > 0; $i-- ){
+    for( $j = 1; $j < count( $keys2 ); $j++ ){
+      if( strtotime( $keys2[$j-1] ) > strtotime( $keys2[$j] ) && trim( $keys2[$j] ) != "" ){
+	$temp = $keys2[$j];
+	$keys2[$j] = $keys2[$j-1];
+	$keys2[$j-1] = $temp;
+      }
+    }
+  }  
+  for( $i = 0; $i < count( $keys ); $i++ ){
+    for( $j = 0; $j < count( $keys2 ); $j++  ){
+      $trans_matrix[$keys2[$j]][$keys[$i]] = $matrix[$keys[$i]][$keys2[$j]];
+    }
+  }
+  return $trans_matrix;
+}
+/*Imprime la matriz de programacion version 2*/
+function printMatrix( $matrix ){
+  $keys = array_keys( $matrix  );
+  $keys1 = array_keys( $matrix[$keys[0]] );
+  echo "<table cellspacing='1' cellpadding='10' border='1'>";
+  echo "<tr>";
+  echo "<td>&nbsp;</td>";
+  for( $i = 0; $i < count( $keys1 ); $i++ ){
+    echo "<td>";
+    echo "<b>".$keys1[$i]."</b>";
+    echo "</td>";
+  }
+  echo "<tr><td>&nbsp;</td></tr>";
+  echo "</tr>"; 
+  for( $i = 0 ; $i < count( $keys ); $i++ ){
+    echo "<tr>";
+    echo "<td>";
+    echo "<b>".$keys[$i]."</b>";
+    echo "</td>";
+    for( $j = 0 ; $j < count( $matrix[$keys[$i]] ); $j++ ){
+      echo "<td>";
+      echo $matrix[$keys[$i]][$keys1[$j]];
+      echo "</td>";
+    }
+    echo "</tr>";
+  }
+
+  echo "</table>";
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+?>

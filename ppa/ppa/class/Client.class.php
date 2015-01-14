@@ -1,0 +1,515 @@
+<?
+require_once($path . "class/Channels.class.php");
+require_once($path . "class/Videos.class.php");
+/*************************************************
+* @ Client Class definition
+* @ author:		Juan Carlos Orrego
+* @ created:	August - 21 - 2003 - 12:19:05
+* @ modified:	November - 17 - 2006 by BendeR a.k.a Patrón
+* @ version:	1.0
+*************************************************/
+
+class Client {
+	/**
+	* @ Object var definitions.
+	*/
+	var $id;			//	PRIMARY KEY  int
+	var $name;			//	Client descriptive name
+	var $timezone;		//	Client Time Zone
+	var $channels;		//	Channels Container (Deprecated) by BendeR
+	var $channel_array;	//	Channel array
+	var $videos;		//	Videos Container
+	var $PPA;			//	PPA relation id
+	var $ip;            //  IP address of the client
+
+
+	/*************************************************
+	 * @ Constructor(s)
+	*************************************************/
+		/**
+		* @ Creates an empty Client Object or filled with values.
+		**/
+		function Client ( $aId = false, $aName = false, $aTimezone = false, $aChannels= false ,$aPPA = false, $aIp = false, $aVideos = false ) {
+			$channel_array = array();
+			
+			
+			if ($aId)$this->load($aId);
+		    if ($aName)$this->name= $aName;
+		    if ($aTimezone)$this->timezone= $aTimezone;
+		    if ($aChannels)$this->channels= $aChannels;
+			else if(!isset($this->channels)) $this->channels= new Channels($aId);
+		    if ($aPPA)$this->PPA= $aPPA;
+		    if ($aIp)$this->ip= $aIp;
+		    if ($aVideos)$this->videos= $aVideos;
+			else if(!isset($this->videos)) $this->videos= new Videos($aId);
+
+		}
+
+	/*************************************************
+	* @ Analizer(s) of object CLASS Client
+	*************************************************/
+		/**
+		* @ Returns HTML representation of object (DEBUG ONLY)
+		**/
+		function _print() {
+			echo "<br><b>(Client)</b><br>";
+			echo "<ul>";
+			echo "<li><b>id: </b> $this->id </li>";
+			echo "<li><b>name: </b> $this->name </li>";
+			echo "<li><b>timezone: </b> $this->timezone </li>";
+			echo "<li><b>ip: </b> $this->ip </li>";
+			echo "<li><b>PPA: </b> $this->PPA </li>";
+			echo "<li><b>channels[]: </b> ";
+			   $this->channels->_print();
+			echo "<li><b>videos[]: </b> ";
+			   $this->videos->_print();
+			echo "</li>";
+			echo "</ul>";
+		}
+
+		/**
+		* Returns id of CLASS Client
+		**/
+		function getId() {
+			return $this->id;
+		}
+
+		/**
+		* Returns name attribute
+		**/
+		function getName() {
+			return $this->name;
+		}
+
+		/**
+		* Returns ppa attribute
+		**/
+		function getPPA() {
+			return $this->PPA;
+		}
+
+		/**
+		* Returns timezone attribute
+		**/
+		function getTimezone() {
+			return $this->timezone;
+		}
+
+		/**
+		* Returns channels container
+		**/
+		function getChannels() {
+			return $this->channels;
+		}
+
+		/**
+		* Returns channels container
+		**/
+		function getChannel( $idChannel ) {
+			if( empty( $this->channel_array ) ) $this->getChannelArray();
+			foreach( $this->channel_array as $channel )
+			{
+				if( $channel["channel"]->getId() == $idChannel ) return $channel;
+			}
+		}
+
+		/**
+		* Returns channel array
+		**/
+		function getChannelArray()
+		{
+			if( empty( $this->channel_array ) )
+			{
+				$sql = "SELECT channel.id, channel.name, channel.shortname, " .
+					"channel.logo, channel.description, client_channel.number, " .
+					"client_channel._group, client_channel.custom_shortname " .
+					"FROM channel, client_channel " .
+					"WHERE channel.id = client_channel.channel AND client_channel.client = " . $this->id . " " .
+					"ORDER BY client_channel.number";
+				$result = db_query( $sql );
+				while( $row = db_fetch_array( $result ) )
+				{
+					unset( $channel );
+					$channel = new Channel();
+					$channel->setId( $row['id'] );
+					$channel->setName( $row['name'] );
+					$channel->setShortName( $row['shortname'] );
+					$channel->setGroup( $row['_group'] );
+					$channel->setLogo( $row['logo'] );
+					$channel->setDescription( $row['description'] );
+
+					$this->channel_array[] = array( "number" => $row['number'],
+						"channel" => $channel,
+						"custom_shortname" => $row['custom_shortname'],
+						"group" => $row['_group'],
+						);
+				}
+			}
+			return $this->channel_array;
+		}
+
+		/**
+		* Returns videos container
+		**/
+		function getVideos() {
+			return $this->videos;
+		}
+		/**
+		* Returns videos for a date container
+		* @deprecated
+		**/
+		function getVideosDate( $aDate ) {
+		  $videos = array();
+		  $sql = "SELECT v.id FROM video v, video_client vc WHERE v.dateinf <= '".$aDate."' AND v.datesup >= '".$aDate."' AND v.id = vc.video AND vc.client = ".$this->getId();
+		  $query = db_query( $sql );
+		  while( $row = db_fetch_array( $query ) ){
+		    $video = new Video( $row['id'] );
+		    $videos[] = $video;
+		  }
+		  return $videos;
+		}
+		/**
+		* Returns an array of channel ids of the client
+		**/
+		function getChannelsId() {
+           $sql = "select id from client_channel cc, channel c where cc.client = ".$this->getId()." and c.id = cc.channel order by name";
+		   $query = db_query( $sql );
+		   $channels = array();
+		   while( $row = db_fetch_array( $query ) ){
+		     $channels[] = $row['id'];
+		   }
+		   return $channels;
+		}
+		/**
+		* Returns the number of channels of the client
+		**/
+		function getNumchannels() {
+		   $channels = $this->channels;
+		   $channels = $channels->getChannels()	;
+		   return count( $channels );
+		}
+		/**
+		* Returns the ip of the client
+		**/
+		function getIp() {
+		   return $this->ip;
+		}
+	/*************************************************
+	* @ Modifier(s) of object CLASS Client
+	*************************************************/
+		/**
+		* Sets ID of CLASS Client
+		**/
+		function setId($aId) {
+			$this->id = $aId;
+		}
+
+		/**
+		* Sets name of CLASS Client
+		**/
+		function setName($aName) {
+			$this->name = $aName;
+		}
+
+		/**
+		* Sets timezone of CLASS Client
+		**/
+		function setTimezone($aTimezone) {
+			$this->timezone = $aTimezone;
+		}
+		
+		/**
+		* Sets PPA of CLASS Client
+		**/
+		function setPPA($aPPA) {
+			$this->PPA = $aPPA;
+		}
+
+		/**
+		* Sets channels container
+		**/
+		function setChannels($aChannels) {
+			$aChannels->setClient( $this->getId() );
+			$this->channels = $aChannels;
+		}
+		/**
+		* Sets videos container
+		**/
+		function setVideos($aVideos) {
+			$aVideos->setClient( $this->getId() );
+			$this->videos = $aVideos;
+		}
+		/**
+		* Sets channels container
+		**/
+		function setIp($aIp) {
+			$this->ip = $aIp;
+		}
+		
+		/**
+		* ADDS a channel to channels container
+		* OLD
+		**/
+		function addChannel( $aChannel, $aNumber = 0, $group = "", $csn = "", $replace = false )
+		{
+			$channel = new Channel( $aChannel );
+			$custom_shortname = ( $csn == "" || $csn == $channel->getShortName() ? "NULL" : "'" . $csn ."'" );
+
+			if( $replace )  {
+				$sql = "DELETE FROM client_channel
+						WHERE client = '" . $this->id . "'
+						AND number = '" . $aNumber . "'";
+				db_query( $sql );
+			}
+
+			$this->channels->addChannel( $aChannel, $aNumber, $group ); //to keep ppa 1.0 compliant; BendeR
+			$sql = "INSERT INTO client_channel ( client, channel, number, custom_shortname, _group ) " .
+				"VALUES " .
+				"( " .
+				"'" . $this->id . "', " .
+				"'" . $aChannel . "', " .
+				"'" . $aNumber . "', " .
+				$custom_shortname . ", " .
+				"'" . $group . "'" .
+				")";
+
+			if( db_query( $sql ) )
+			{
+				$this->channel_array = array();
+			}
+		}
+		
+		function editChannel( $idChannel, $number, $group, $csn, $old_number = null )
+		{
+			$channel = new Channel( $idChannel );
+			$custom_shortname = ( $csn == "" || $csn == $channel->getShortName() ? "NULL" : "'" . $csn ."'" );
+
+			$sql = "UPDATE client_channel SET " .
+				"number = '" . $number . "', " .
+				"_group = '" . $group . "', " .
+				"custom_shortname = " . $custom_shortname . " " .
+				"WHERE " .
+				"channel = " . $idChannel . " AND " .
+				"client = " . $this->id . ( $old_channel ? ' AND number = ' . $old_channel : '' );
+			if( db_query( $sql ) )
+				return true;
+			else
+				return false;
+		}
+
+		function removeChannel( $idChannel, $number = null )
+		{
+			$sql = "DELETE FROM client_channel WHERE " .
+				"channel = " . $idChannel. " AND " .
+				"client = " . $this->id . " " .
+				( $number ? ' AND number = ' . $number : '' ) .
+				" LIMIT 1";
+			if( db_query( $sql ) )
+				return true;
+			else
+				return false;
+		}
+
+		function changeVideoDirectories( $aPath, $aDate ){
+		  $videos = $this->getVideosDate( $aDate );
+		  $day = date("d", strtotime($aDate) );
+		  $month = date("m", strtotime($aDate) );
+		  $year = date("Y", strtotime($aDate) );
+		  unlink( $aPath."/".$this->getId()."/".$year."/".$month."/".$day."/videos.txt" );
+		  $handle = fopen( $aPath."/".$this->getId()."/".$year."/".$month."/".$day."/videos.txt", "w" );
+		  $str = "";
+		  for( $i = 0; $i < count( $videos ); $i++ ){
+		    $str .= $videos[$i]->getId()."\n";
+		  }
+		  fwrite( $handle, $str );
+		  return true;
+		}
+	/*************************************************
+	* @ Persistence of object CLASS Client
+	*************************************************/
+		/**
+		* @ Updates or Inserts Client Object information depending
+		* @ upon existence of valid primary key.
+		**/
+		function commit() {
+			if ($this->id) {
+				$sql  = " UPDATE client SET";
+				$sql .= " name = '$this->name',";
+				$sql .= " ppa = '$this->PPA',";
+				$sql .= " ip = '$this->ip',";
+				$sql .= " timezone = '$this->timezone'";
+				$sql .= " WHERE  id = $this->id";
+				db_query($sql);
+			    $this->channels->setClient( $this->getId() );
+//			    $this->channels->commit();
+				$this->videos->setClient( $this->getId() );
+				$this->videos->commit();
+			}else{
+				$sql = "INSERT INTO client ( name, timezone, ppa, ip ) VALUES ( '$this->name', '$this->timezone', '$this->PPA', '$this->ip' )";
+				db_query($sql);
+				$this->id = db_id_insert();
+    			$this->channels->setClient( $this->getId() );
+//			    $this->channels->commit();
+				$this->videos->setClient( $this->getId() );
+				$this->videos->commit();
+			}
+		}
+
+		/**
+		 * @ Deletes Client Object from database.
+		**/
+		function erase () {
+			if($this->id){
+				$sql = "DELETE FROM client";
+				$sql .= " WHERE id = " . $this->id;
+				db_query($sql);
+			}
+		    $this->channels->erase();
+		}
+
+		/**
+		 * @ Loads Client Object attributes from the database.
+		**/
+		function load ($aId) {
+			$sql = "SELECT * from client";
+			$sql .= " WHERE id = " . $aId;
+			$results = db_query($sql);
+			$row = db_fetch_array($results);
+			$this->id = $row['id'];
+			$this->name = $row['name'];
+			$this->timezone = $row['timezone'];
+			$this->ip = $row['ip'];
+			$this->PPA = $row['ppa'];
+			$this->channels = new Channels($aId);
+			$sql = "SELECT channel, number , _group from client_channel where client = " . $this->id . " ORDER BY number";
+			$query = db_query($sql);
+			while( $row = db_fetch_array( $query ) ){
+				$ch = new Channel( $row['channel'] );
+				$this->channels->addChannel( $ch, $row['number'], $row['_group'] );
+			}
+			$this->videos = new Videos($aId);
+			$sql = "SELECT video from video_client where client = " . $this->id;
+			$query = db_query($sql);
+			while( $row = db_fetch_array( $query ) ){
+				$video = new Video( $row['video'] );
+				$this->videos->addVideo( $video );
+			}
+		}
+		//Amaury
+  function programsByTime( $startHour, $endHour, $date, $channels, $diff, $path, $client_id ){
+    $slot_chapter = array();
+	 $slot_chapter_title = array();
+    if ( $startHour == '23:30:00')$endHour = '24:00:00';
+    $result = db_query( "select a.channel, a.time, c.spanishTitle, c.title,c.movie, c.serie, c.special, c.id, a.id, a.title " .
+			"from slot a, slot_chapter b, chapter c where a.date ='$date' and a.channel in ( " . implode( ",", $channels ). " ) " .
+			"and `time` >= '$startHour' and `time` <'$endHour' and a.id = b.slot and b.chapter= c.id group by a.date desc, a.time desc, a.channel " );
+	$result1 = db_query("select a.id, a.title, a.time, a.channel from slot a where a.date ='$date' and a.time >= '$startHour' and a.time < '$endHour' and a.channel in ( " . implode( ",", $channels ). " ) group by a.date desc, a.time desc, a.channel");
+	
+	while( $row = db_fetch_array( $result ) ){
+		if( trim( $row['2'] ) == "" ){
+			$title = ucwords( strtolower( $row['3'] ) );
+		}else{
+			$title = ucwords( strtolower( $row['2'] ) );
+		}
+		$slot_chapter_title[$row['8']] = $title;
+		$slot_chapter[$row['8']] = $row['7'];
+	}
+	$time = date("H:i:s", strtotime( $startHour )+((60*60)*$diff));
+    while( $row = db_fetch_array( $result1 ) ){
+		$title = $row['title'];
+		if( trim( $title ) == "" && isset( $slot_chapter_title[$row['id']] ) ){
+			$title = $slot_chapter_title[$row['id']];
+		}
+		$title = ucwords( strtolower( $title ) );
+		$row['time'] = date("H:i:s", strtotime( $row['time'] )+((60*60)*$diff));
+		if( isset( $slot_chapter[$row['id']] ) ){
+        $programs[ $row['channel'] ] = addToProgramHour( $time, $row['time'] ) .
+		 "<a href='#' onClick='".'consulta_chapter("'.$path."info_chapter.php?&chapterId=".$slot_chapter[$row['id']].'&title='.$title.'&channel='.$row['channel'].'&slot='.$row['id'].'&diff='.$diff.'&clientId='.$client_id.'"'.")'>".
+	     $title . "</a>" ;
+		}else{
+        $programs[ $row['channel'] ] = addToProgramHour( $time, $row['time'] ) . $title;
+		}
+	}
+    return $programs;
+  }
+  function lastPrograms( $time, $sql_complement, $channels, $totalChannels, $diff, $path, $client_id ){
+    $slot_chapter = array();
+	 $slot_chapter_title = array();
+ 	$time = date("H:i:s", strtotime( $time )+((60*60)*$diff));
+    $result = db_query( "select a.channel, a.time, c.spanishTitle, c.title, c.movie, c.serie, c.special, c.id, a.id, a.title " .
+			"from slot a, slot_chapter b, chapter c where a.channel in ( " . implode( ",", $channels ) . ") " .
+			"and  a.id=b.slot and b.chapter= c.id and " . $sql_complement .
+			" group by a.channel, a.date desc, a.time desc");
+	$result1 = db_query("select a.id, a.title, a.time, a.channel from slot a where ".$sql_complement." and a.channel in ( " . implode( ",", $channels ). " ) group by a.date desc, a.time desc, a.channel");
+	while( $row = db_fetch_array( $result ) ){
+		if( trim( $row['2'] ) == "" ){
+			$title = ucwords( strtolower( $row['3'] ) );
+		}else{
+			$title = ucwords( strtolower( $row['2'] ) );
+		}
+		$slot_chapter_title[$row['8']] = $title;
+		$slot_chapter[$row['8']] = $row['7'];
+	}
+
+    while( $row = db_fetch_array( $result1 ) ){
+		if( count( $programs[ $row['channel'] ] ) == 0 ){
+			$title = $row['title'];
+			if( trim( $title ) == "" && isset( $slot_chapter_title[$row['id']] ) ){
+				$title = $slot_chapter_title[$row['id']];
+			}
+			$title = ucwords( strtolower( $title ) );
+  			$row['time'] = date("H:i:s", strtotime( $row['time'] )+((60*60)*$diff));
+			if( isset( $slot_chapter[$row['id']] ) ){
+				$programs[ $row['channel'] ] = addToProgramHour( $time, $row['time'] ) .
+		 		"<a href='#' onClick='".'consulta_chapter("'.$path."info_chapter.php?&chapterId=".$slot_chapter[$row['id']].'&title='.$title.'&channel='.$row['channel'].'&slot='.$row['id'].'&diff='.$diff.'&clientId='.$client_id.'"'.")'>".
+	  			$title . "</a>";
+			}else{
+        		$programs[ $row['channel'] ] = addToProgramHour( $time, $row['time'] ) . $title;
+			}
+			if ( count( $programs ) == $totalChannels )
+ 				 break;
+     	}
+    }
+    return $programs;
+  }
+  
+  function  webProgramming( $date, $time, $channels, $totalChannels, $groups, $numbers, $path, $diff, $client_id ){
+    $date = date( "Y-m-d", strtotime( $date." ".$time )-(60*60)*$diff );
+    $time = date( "H:i:s", strtotime( $time )-(60*60)*$diff );
+
+    if ( $time == "22:30:00" ){
+      $sql = "a.date = '$date' and a.time < '" . date( "H:i:00", strtotime( $time ) + 30 * 60 ) . "'";
+    } elseif ( $time == "23:00:00" ){
+      $sql = "a.date = '$date' and time < '" . date( "H:i:00", strtotime( $time ) + 30 * 60 ) . "'";
+    } elseif ( $time == "23:30:00" ){
+      $sql = "a.date = '$date' and a.time < '24:00:00'";
+    } else{
+      $sql = "  ( ( date = '$date' and a.time < '" . date( "H:i:00", strtotime( $time ) + 30 * 60 ) . "' ) ".
+	"or ( date = '" . date( "Y-m-d", mktime( 1,1,1, substr( $date, 5, 2),
+						 substr( $date, 8, 2) - 1, substr( $date, 0, 4 ) ) ) ."' and a.time < '24:00:00') )";
+    }
+    $programs[0] = $this->lastPrograms( $time, $sql, $channels, $totalChannels, $diff, $path, $client_id );
+    for( $i = 1; $i < 4; $i++ ){
+      $programs[$i]= $this->programsByTime( date( "H:i:00", strtotime( $time ) + 30 * 60 * $i ),
+					    date( "H:i:00", strtotime( $time ) + 30 * 60 * ( $i + 1 ) ),
+					    date( "Y-m-d", mktime( ( $time == '23:30:00' ? 24 : substr( $time, 0, 2 ) ),
+								   substr( $time, 3, 2 ) + 30 * $i ,1,
+								   substr( $date, 5, 2), substr( $date, 8, 2),
+								   substr( $date, 0, 4 ) ) ), $channels, $diff, $path, $client_id  ) ;
+    }
+    for( $i = 0; $i < count( $channels ); $i++ ){
+      if( $i % 2 == 1 ){
+	$bgcolor = "#eeeeff";
+      }else{
+	$bgcolor = "#cdcaf6";
+      }
+      $html .= ( $groups[ $channels[$i] ] != $group ? "<tr><td colspan = '6'><a name='".$groups[ $channels[$i] ]."'>". "<img width='500'src='".$path."images/tipos/".strtolower( $groups[ $channels[$i] ] ).".gif'>" . "</td></tr>" . "\n" .
+		 htmlHeadHour( date( "H:i:s", strtotime( $time )+(60*60)*$diff ), "" ) : "" );
+      $html .= "<tr height='50'>". htmlChannelContent( $numbers[ $channels[$i] ], $channels[$i], array( $programs[0][$channels[$i]], $programs[1][$channels[$i]],$programs[2][$channels[$i]], $programs[3][$channels[$i]] ),$bgcolor ) ."</tr>" . "\n";
+      $group = $groups[ $channels[$i] ];
+      
+    }
+    return $html;
+  }
+}
+?>

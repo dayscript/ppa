@@ -1,0 +1,61 @@
+####################################
+# properties file for 
+# create_files.php application
+# Te application generate files for
+# Pioneer settop boxes
+####################################
+
+# INTERCABLE
+id = 66
+
+#GMT default is 0
+GMT = 5
+
+# Prefix
+prefix = pi
+
+# PPV Prices
+channel_720 = 0
+channel_719 = 0
+channel_718 = 0
+channel_432 = 0
+channel_467 = 0
+channel_388 = 0
+channel_387 = 0
+channel_386 = 0
+channel_385 = 0
+channel_383 = 0
+channel_384 = 0
+channel_382 = 0
+channel_381 = 0
+channel_379 = 0
+channel_380 = 0
+channel_378 = 0
+channel_376 = 0
+channel_377 = 0
+channel_375 = 0
+
+# Default categories
+cat_adultos = 30 
+cat_audio = 18 
+cat_deportes = 302 
+cat_educativo = 306 
+cat_especializados = 306 
+cat_infantil = 254 
+cat_multicultural = 306 
+cat_musica = 18 
+cat_noticias = 305 
+cat_religioso = 58 
+
+#default program type
+ptype_ppv = 01
+ptype_cine = 01
+ptype_premium = 01
+ptype_internacional = 32
+ptype_series = 32
+ptype_religioso = 27
+
+#store information
+ftp_server = intercable.dayscript.com
+ftp_user = pioneer
+ftp_passwd = pi0505
