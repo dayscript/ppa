@@ -1,0 +1,4 @@
+extern function srch()
+{
+	WMLBrowser.go("?l=prg&t=simpson" );
+}

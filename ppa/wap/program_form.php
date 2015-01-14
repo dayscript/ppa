@@ -1,0 +1,1 @@
+<form method="get" action="index.php"><p><input type="text" name="t"/><br/><input type="submit" value="Buscar"/><input type="hidden" name="l" value="<?=$slang['program']?>"/></p></form>
